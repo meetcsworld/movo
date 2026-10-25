@@ -64,7 +64,7 @@ class StreamableHttpMcpClient:
             "params": {
                 "protocolVersion": MCP_PROTOCOL_VERSION,
                 "capabilities": {},
-                "clientInfo": {"name": "MOVO", "version": "0.1.0"},
+                "clientInfo": {"name": "QianyiClaw", "version": "0.1.0"},
             },
         }
         response = await client.post(self._endpoint, json=payload, headers=headers)

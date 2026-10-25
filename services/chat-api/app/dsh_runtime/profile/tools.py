@@ -308,7 +308,7 @@ class ToolProfileCompiler:
 
     @staticmethod
     def _description(row: dict[str, Any]) -> str:
-        return str(row.get("description") or row.get("usageHint") or row.get("name") or "MOVO enterprise tool")[:4000]
+        return str(row.get("description") or row.get("usageHint") or row.get("name") or "QianyiClaw enterprise tool")[:4000]
 
     @staticmethod
     def _timeout_ms(config: dict[str, Any]) -> int:

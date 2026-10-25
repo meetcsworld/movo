@@ -18,7 +18,7 @@ class Settings(BaseSettings):
     bootstrap_admin_password: str = ""
     bootstrap_admin_display_name: str = "系统管理员"
     bootstrap_admin_role_name: str = "平台超级管理员"
-    bootstrap_admin_org_name: str = "MOVO 平台"
+    bootstrap_admin_org_name: str = "QianyiClaw 平台"
     bootstrap_main_id: str = "default"
     user_portal_base_url: str = "http://localhost:3000"
     invite_token_ttl_hours: int = 72

@@ -6,7 +6,7 @@ router = APIRouter()
 @router.get("/meta")
 async def meta() -> dict[str, object]:
     return {
-        "product": "MOVO Admin",
+        "product": "QianyiClaw Admin",
         "mode": "shell",
         "modules": [
             "organizations",

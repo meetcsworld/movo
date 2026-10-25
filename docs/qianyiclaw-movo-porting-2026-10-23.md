@@ -36,13 +36,38 @@
 3. `services/chat-api/app/services/token_usage_service.py`
    - 将 DSH kernel session id 映射回 chat 会话，使 DSH 轮次的 token 日志能在 Usage 页面展示。
 
+### 3.1 品牌去 MOVO 化（源码 29 个文件 + 3 个镜像重建）
+
+- **AI 人设**：`services/chat-api/dsh/runtime-host/src/runtime-persona.mjs` 首行 `You are QianyiClaw, an enterprise AI assistant powered by the DeepSeek Harness runtime.`（容器内 `QianyiClaw` 计数 5、`MOVO` 计数 0）。
+- **预设**：`config/agent-presets/askai-enterprise/preset.yml` → `name: QianyiClaw 企业助手`；`agent.cordis.yml` 同步。
+- **服务端品牌常量**：`services/chat-api/app/core/config.py` `PROJECT_NAME = "QianyiClaw"`；`services/admin-api/app/core/config.py` `bootstrap_admin_org_name = "QianyiClaw 平台"`；`product_edition.py`、`setup.py`、`system.py`、`main.py` 及 `enterprise_capabilities/*` 中对外可见的品牌串统一改为 QianyiClaw。
+- **镜像重建**：因继承镜像构建链在 `apt-get` 阶段失败，采用 thin Dockerfile（`FROM <svc>:prebrand-20261026` + `COPY` 变更目录）重建 `movo-chat-api`、`movo-admin-api`、`movo-dsh-runtime-host` 并 `--force-recreate`，容器内已核对生效；thin Dockerfile 属临时构建产物，未入库。
+
+### 3.2 questions 轮询 404 修复
+
+- **现象**：网关 access log 每 8 秒出现 `GET /askai-api/api/dsh/conversations/{id}/questions 404`。
+- **根因**：`services/chat-api/app/api/endpoints/user_questions.py::_owning_binding` 对「无 `active_run`」的会话直接抛 404，而前端 `useUserQuestions` 会持续后台轮询。
+- **修复**：`_owning_binding` 增加 `require_active_run` 参数；GET `/{conversation_id}/questions` 以 `require_active_run=False` 调用，无在途运行时返回 `{"questions": []}`；POST 回答仍保留严格校验。重建 chat-api 后网关日志由 `404 35` 变为 `200 16`。
+
 ## 四、验收方式
 
 - 全部使用真实 headed Chrome（`channel: 'chrome'`，`headless: false`）逐页目视检查并截图，不以脚本/无头结果替代。
-- 覆盖页面：`/`、`/skills`、`/plugins`、`/tools`、`/knowledge`、`/scheduled-tasks`、`/usage`。
+- 覆盖页面：`/`、`/skills`、`/plugins`、`/tools`、`/knowledge`、`/scheduled-tasks`、`/usage`、`/admin` 后台。
 - 判定：页面非空、无横向溢出（overflowX=0）、无 console 报错、无 HTTP ≥400。
+- **本轮验收记录（2026-10-23）**：
+  - 8 个页面 headed Chrome 回归全部通过（title 正确、`overflowX=0`、页面内无可见 `MOVO` 文案、`errors=[]`），截图 `reg-*.png`。
+  - AI 助手自述：「我是 QianyiClaw，一个企业级 AI 助手，能够帮你处理文档、分析数据、调研信息并生成各类办公成果。」；历史会话重开渲染正确，截图 `brand-03-reopen.png`。
+  - questions 轮询：重开历史会话观察 12s，无 ≥400 请求（`BAD=[]`），网关日志 404→200，截图 `fix-01-history.png`。
+  - 管理后台「QianyiClaw 智能体控制台」深色侧栏，无 MOVO，截图 `reg-admin.png`。
 
-## 五、待办
+## 五、边界与说明
+
+- **变更侧栏仅桌面版可用**：web 模式固定 `codeInspector:false`、`localWorkspacePicker:false`、`localDshRuntime:false`，浏览器版（3000 / 8443）不会渲染 `ProjectWorkspacePanel`，属设计预期，非缺陷。
+- **内部标识保留**：`mode: 'movo' | 'external'`、`movo.desktop-tool-panel-width`、`movo:install-skill-zip`、`extensionId: 'movo.community'`、`MOVO_*` 环境变量等均为内部实现标识，用户不可见，暂不修改以免破坏兼容。
+- **未引用的 `apps/*/public/movo-logo.png`** 可后续清理。
+
+## 六、待办
 
 - [ ] 逐步评估 #10–#13 的移植优先级（需产品确认范围）。
 - [ ] 8443 独立前端快照在前端发布后需同步核对。
+- [ ] `git push origin main` 返回 403（`Permission to himovo/movo.git denied to meetcsworld`），需确认推送凭据 / fork 归属后再推送。

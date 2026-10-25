@@ -34,7 +34,7 @@ configure_logging(settings)
 logger = logging.getLogger(__name__)
 
 app = FastAPI(
-    title="MOVO Backend",
+    title="QianyiClaw Backend",
     description="API for Multi-Agent Platform",
     version="0.1.0"
 )
@@ -396,7 +396,7 @@ async def health_check():
     return {
         "status": "ok",
         "version": "0.1.0",
-        "service": "MOVO Backend",
+        "service": "QianyiClaw Backend",
         "agent_kernel": "dsh",
         "dsh_host": "healthy" if dsh_healthy else "degraded",
     }
@@ -410,11 +410,11 @@ async def readiness_check():
         raise HTTPException(status_code=503, detail="DSH Runtime Host is unavailable")
     return {
         "status": "ready",
-        "service": "MOVO Backend",
+        "service": "QianyiClaw Backend",
         "agent_kernel": "dsh",
         "dsh_host": "healthy",
     }
 
 @app.get("/")
 async def root():
-    return {"message": "Welcome to MOVO Agent Platform API"}
+    return {"message": "Welcome to QianyiClaw Agent Platform API"}

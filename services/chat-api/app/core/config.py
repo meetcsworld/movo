@@ -4,7 +4,7 @@ from functools import lru_cache
 
 class Settings(BaseSettings):
     API_V1_STR: str = "/api/v1"
-    PROJECT_NAME: str = "MOVO"
+    PROJECT_NAME: str = "QianyiClaw"
     ALLOWED_ORIGINS: str = "http://localhost:3000,http://localhost:8080"
     
     # OpenAI

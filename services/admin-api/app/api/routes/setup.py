@@ -95,7 +95,7 @@ class SetupExternalSearchRequest(BaseModel):
     endpoint: str = Field(default="", max_length=500)
     baseUrl: str = Field(default="", max_length=500)
     model: str = Field(default="", max_length=200)
-    query: str = Field(default="MOVO enterprise AI", max_length=300)
+    query: str = Field(default="QianyiClaw enterprise AI", max_length=300)
 
 
 class SetupInitRequest(BaseModel):

@@ -13,4 +13,4 @@ async def current_knowledge_source(authorization: str | None = Header(default=No
     resolved = await _resolve_session_user(authorization)
     main_id = str(resolved.get("main_id") or resolved["user"].get("main_id") or "default")
     source = await get_knowledge_source(main_id)
-    return {"mode": str(source.get("mode") or "movo"), "displayName": str(source.get("displayName") or "MOVO 知识库")}
+    return {"mode": str(source.get("mode") or "movo"), "displayName": str(source.get("displayName") or "QianyiClaw 知识库")}

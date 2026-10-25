@@ -27,9 +27,9 @@ from app.product.extensions import get_admin_product_extension
 
 def create_app() -> FastAPI:
     app = FastAPI(
-        title="MOVO Admin API",
+        title="QianyiClaw Admin API",
         version="0.1.0",
-        description="Control plane API for MOVO admin backend",
+        description="Control plane API for QianyiClaw admin backend",
     )
 
     app.add_middleware(

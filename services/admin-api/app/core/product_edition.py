@@ -41,7 +41,7 @@ def community_organization_fields(
 ) -> dict[str, Any]:
     return {
         "main_id": main_id,
-        "org_name": org_name or "MOVO 社区组织",
+        "org_name": org_name or "QianyiClaw 社区组织",
         "edition": COMMUNITY_EDITION,
         "tier": COMMUNITY_EDITION,
         "billing_enabled": False,
@@ -85,7 +85,7 @@ async def migrate_bootstrapped_community_organization() -> bool:
     owner = await db[USER_COLLECTION].find_one({"main_id": main_id}, {"_id": 1}) or {}
     await ensure_community_organization(
         main_id=main_id,
-        org_name=str(state.get("org_name") or "MOVO 社区组织"),
+        org_name=str(state.get("org_name") or "QianyiClaw 社区组织"),
         owner_user_id=str(owner.get("_id") or ""),
         total_points=int(quota.get("total_tokens") or 0),
     )
