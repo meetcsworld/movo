@@ -55,10 +55,12 @@
 - 覆盖页面：`/`、`/skills`、`/plugins`、`/tools`、`/knowledge`、`/scheduled-tasks`、`/usage`、`/admin` 后台。
 - 判定：页面非空、无横向溢出（overflowX=0）、无 console 报错、无 HTTP ≥400。
 - **本轮验收记录（2026-10-23）**：
-  - 8 个页面 headed Chrome 回归全部通过（title 正确、`overflowX=0`、页面内无可见 `MOVO` 文案、`errors=[]`），截图 `reg-*.png`。
-  - AI 助手自述：「我是 QianyiClaw，一个企业级 AI 助手，能够帮你处理文档、分析数据、调研信息并生成各类办公成果。」；历史会话重开渲染正确，截图 `brand-03-reopen.png`。
-  - questions 轮询：重开历史会话观察 12s，无 ≥400 请求（`BAD=[]`），网关日志 404→200，截图 `fix-01-history.png`。
-  - 管理后台「QianyiClaw 智能体控制台」深色侧栏，无 MOVO，截图 `reg-admin.png`。
+  - **提交与备份**：品牌去 MOVO 化 + questions 轮询 404 修复已提交为 `a683ff2`（29 files changed, 77 insertions(+), 63 deletions(-)），工作区 clean；源码备份 `C:/projects/movo-backups/movo-src-20261026-043305-a683ff2.tar.gz`（7,886,035 bytes）。
+  - **服务在线实测**：gateway `http://localhost:3000` = 200、Caddy `https://localhost:8443` = 200；14 个容器全部 Up，chat-api / admin-api / dsh-runtime-host 均 healthy。
+  - **8 个页面 headed Chrome 回归全部通过**：`/`、`/skills`、`/plugins`、`/tools`、`/knowledge`、`/scheduled-tasks`、`/usage`、`/admin`，title 正确（前台为「QianyiClaw 企业级 AI DevOps 智能开发平台」，后台为「QianyiClaw 管理后台」）、`overflowX=0`、页面内无可见 `MOVO` 文案（`movoVisible=false`）、`errors=[]`，截图 `reg-*.png`。
+  - **AI 助手自述**：「我是 QianyiClaw，一个企业级 AI 助手，能够帮你处理文档、分析数据、调研信息并生成各类办公成果。」；历史会话重开渲染正确，截图 `brand-03-reopen.png`、`fix-01-history.png`。
+  - **questions 轮询 404 复验**：重开历史会话观察 12s，无 ≥400 请求（`BAD=[]`），网关日志 404→200，截图 `fix-01-history.png`。
+  - **管理后台**「QianyiClaw 智能体控制台」深色侧栏，无 MOVO，截图 `reg-admin.png`。
 
 ## 五、边界与说明
 
