@@ -184,8 +184,28 @@ class InternalKnowledgeQAService:
             top_n=max(1, min(50, int(top_k or 8))),
         )
         from app.knowledge.agents.knowledge_qa_agent import knowledge_qa_agent
+        from app.llm.configured_models import (
+            get_configured_model_context,
+            get_default_model_config,
+            reset_configured_model_context,
+            set_configured_model_context,
+        )
 
-        result = await knowledge_qa_agent.answer(request)
+        # Personal knowledge QA is invoked outside the capability runtime, which
+        # normally binds the tenant's configured chat model. Without an explicit
+        # binding the LLM factory falls back to environment defaults and fails.
+        previous_model: dict[str, Any] | None = None
+        applied_model = False
+        if get_configured_model_context() is None:
+            default_model = await get_default_model_config(request.main_id)
+            if default_model:
+                previous_model = set_configured_model_context(default_model)
+                applied_model = True
+        try:
+            result = await knowledge_qa_agent.answer(request)
+        finally:
+            if applied_model:
+                reset_configured_model_context(previous_model)
         used_chunks = _used_chunks(result)
         citations = [_model_dump(item) for item in list(result.citations or [])]
         evidence_bundle = build_evidence_bundle(q, list(result.citations or []))

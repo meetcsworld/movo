@@ -15,6 +15,15 @@ class EmbeddingProviderError(RuntimeError):
     pass
 
 
+# Some OpenAI-compatible gateways (for example an upstream behind Cloudflare)
+# reject the default "Python-urllib/x.y" signature and intermittently answer
+# 403 / 500 "not implemented". Presenting a stable client identity keeps
+# embedding requests consistent with the rest of the platform clients.
+_DEFAULT_USER_AGENT = "QianyiClaw-Knowledge/1.0"
+_EMBEDDING_RETRY_STATUSES = {403, 408, 409, 425, 429, 500, 502, 503, 504}
+_EMBEDDING_RETRY_ATTEMPTS = 5
+
+
 _BATCH_LIMIT_PATTERNS = (
     re.compile(r"should not be larger than\s+(\d+)", re.IGNORECASE),
     re.compile(r"(?:maximum|max)\s+batch\s+size(?:\s+is|:)?\s+(\d+)", re.IGNORECASE),
@@ -85,6 +94,7 @@ def _azure_embed_texts(texts: list[str], *, batch_size: int, timeout: int) -> li
                 "api-key": api_key,
                 "Content-Type": "application/json",
                 "Accept": "application/json",
+                "User-Agent": _DEFAULT_USER_AGENT,
             },
             method="POST",
         )
@@ -113,13 +123,19 @@ def _model_center_embed_texts(
     if is_azure:
         api_version = runtime["apiVersion"] or "2025-04-01-preview"
         url = f"{base_url}/openai/deployments/{model_name}/embeddings?api-version={api_version}"
-        headers = {"api-key": api_key, "Content-Type": "application/json", "Accept": "application/json"}
+        headers = {
+            "api-key": api_key,
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+            "User-Agent": _DEFAULT_USER_AGENT,
+        }
     else:
         url = base_url if base_url.endswith("/embeddings") else f"{base_url}/embeddings"
         headers = {
             "Authorization": f"Bearer {api_key}",
             "Content-Type": "application/json",
             "Accept": "application/json",
+            "User-Agent": _DEFAULT_USER_AGENT,
         }
     results: list[list[float]] = []
     batch = max(1, min(batch_size, 256))
@@ -159,7 +175,7 @@ def _model_center_embed_texts(
 
 
 def _open_json_with_retry(request: urllib.request.Request, *, timeout: int) -> dict[str, Any]:
-    attempts = 3
+    attempts = _EMBEDDING_RETRY_ATTEMPTS
     last_exc: Exception | None = None
     for attempt in range(attempts):
         try:
@@ -169,7 +185,14 @@ def _open_json_with_retry(request: urllib.request.Request, *, timeout: int) -> d
                 return body if isinstance(body, dict) else {}
         except urllib.error.HTTPError as exc:
             detail = exc.read().decode("utf-8", errors="replace")
-            raise EmbeddingProviderError(f"Embedding 请求失败: HTTP {exc.code} {detail[:500]}") from exc
+            last_exc = EmbeddingProviderError(f"Embedding 请求失败: HTTP {exc.code} {detail[:500]}")
+            # Upstream gateways can fail transiently (Cloudflare 1010 signature
+            # blocks, 5xx "not implemented", rate limits). Retry those instead of
+            # failing the whole knowledge indexing job on a single blip.
+            if exc.code in _EMBEDDING_RETRY_STATUSES and attempt < attempts - 1:
+                time.sleep(0.5 * (attempt + 1))
+                continue
+            raise last_exc from exc
         except urllib.error.URLError as exc:
             last_exc = exc
             if attempt >= attempts - 1:

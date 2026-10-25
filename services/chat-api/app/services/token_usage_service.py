@@ -5,6 +5,8 @@ import json
 from datetime import datetime, timedelta
 from typing import Any, Dict
 
+from bson import ObjectId
+
 from app.core.db import get_db
 from app.core.tenant import add_main_scope, resolve_main_id
 from app.token_usage.status import REQUEST_STATUS_VALUES, normalize_request_status
@@ -24,8 +26,9 @@ class TokenUsageService:
     ) -> Dict[str, Any]:
         db = get_db()
         coll = db.token_usage_logs
+        kernel_session_map = await self._load_kernel_session_map(user_id=user_id, main_id=main_id)
         session_ids = await self._load_visible_session_ids(user_id=user_id, main_id=main_id)
-        if not session_ids:
+        if not session_ids and not kernel_session_map:
             return {
                 "summary": self._summary_defaults(),
                 "items": [],
@@ -38,6 +41,7 @@ class TokenUsageService:
             user_id=user_id,
             main_id=main_id,
             session_ids=session_ids,
+            kernel_session_map=kernel_session_map,
             query=query,
             stage=stage,
             status=status,
@@ -95,7 +99,11 @@ class TokenUsageService:
             rows = [row for row in rows if str(row.get("request_status") or "") == requested_status]
         total = len(rows)
         page_rows = rows[page_offset : page_offset + page_limit]
-        request_texts = await self._load_request_texts(page_rows, main_id=main_id)
+        request_texts = await self._load_request_texts(
+            page_rows,
+            main_id=main_id,
+            kernel_session_map=kernel_session_map,
+        )
         items = [self._serialize_item(row, request_texts=request_texts) for row in page_rows]
         summary = self._summary_from_rows(rows)
         return {
@@ -113,13 +121,27 @@ class TokenUsageService:
         user_id: str,
         main_id: str | None,
         session_ids: list[str],
+        kernel_session_map: Dict[str, str] | None = None,
         query: str,
         stage: str,
         status: str,
     ) -> Dict[str, Any]:
+        scoped_user = str(user_id or "").strip()
+        session_clauses: list[Dict[str, Any]] = []
+        if session_ids:
+            session_clauses.append({"session_id": {"$in": session_ids}})
+        # DSH kernel turns record the kernel session id (``dsh-...``) instead of
+        # the chat session id. Map those rows back to the owning chat session so
+        # the usage page reflects real agent activity. The kernel session id is
+        # unique per conversation and the row carries the same owning user.
+        for kernel_session_id in (kernel_session_map or {}):
+            session_clauses.append({
+                "session_id": kernel_session_id,
+                "user_id": scoped_user,
+            })
         base: Dict[str, Any] = {
-            "user_id": str(user_id or "").strip(),
-            "session_id": {"$in": session_ids},
+            "user_id": scoped_user,
+            "$or": session_clauses or [{"session_id": {"$in": session_ids}}],
         }
         if str(stage or "").strip():
             base["stage"] = str(stage).strip()
@@ -152,7 +174,32 @@ class TokenUsageService:
         rows = await db.chat_sessions.find(match, {"_id": 1}).to_list(length=5000)
         return [str(row.get("_id") or "") for row in rows if str(row.get("_id") or "").strip()]
 
-    async def _load_request_texts(self, rows: list[Dict[str, Any]], *, main_id: str | None) -> Dict[str, str]:
+    async def _load_kernel_session_map(self, *, user_id: str, main_id: str | None) -> Dict[str, str]:
+        db = get_db()
+        # Kernel bindings are keyed by tenant_id (not main_id) and record the
+        # kernel session id used by the DSH runtime when logging token usage.
+        rows = await db.agent_kernel_bindings.find(
+            {
+                "user_id": str(user_id or "").strip(),
+                "tenant_id": resolve_main_id(main_id),
+            },
+            {"kernel_session_id": 1, "conversation_id": 1},
+        ).to_list(length=5000)
+        result: Dict[str, str] = {}
+        for row in rows:
+            kernel_session_id = str(row.get("kernel_session_id") or "").strip()
+            conversation_id = str(row.get("conversation_id") or "").strip()
+            if kernel_session_id:
+                result[kernel_session_id] = conversation_id
+        return result
+
+    async def _load_request_texts(
+        self,
+        rows: list[Dict[str, Any]],
+        *,
+        main_id: str | None,
+        kernel_session_map: Dict[str, str] | None = None,
+    ) -> Dict[str, str]:
         ids = [
             str(row.get("_id") or "").strip()
             for row in rows
@@ -161,16 +208,49 @@ class TokenUsageService:
         if not ids:
             return {}
         db = get_db()
+        result: Dict[str, str] = {}
+        # DSH agent turns are logged against the kernel session id, so their
+        # request id never appears in chat_messages. Resolve the owning
+        # conversation's latest user message instead so the usage list shows
+        # the actual question rather than a runtime-context snapshot.
+        kernel_rows: list[Dict[str, Any]] = []
+        for row in rows:
+            group_id = str(row.get("_id") or "").strip()
+            session_id = str(row.get("session_id") or "").strip()
+            conversation_id = (kernel_session_map or {}).get(session_id, "")
+            if group_id and conversation_id:
+                kernel_rows.append({"group_id": group_id, "conversation_id": conversation_id})
+        for entry in kernel_rows:
+            conversation_id = entry["conversation_id"]
+            session_refs: list[Any] = [conversation_id]
+            if ObjectId.is_valid(conversation_id):
+                session_refs.append(ObjectId(conversation_id))
+            user_msg = await db.chat_messages.find_one(
+                add_main_scope(
+                    {
+                        "session_id": {"$in": session_refs},
+                        "role": "user",
+                        "message_type": {"$ne": "context_summary"},
+                    },
+                    resolve_main_id(main_id),
+                ),
+                {"content": 1},
+                sort=[("seq", -1)],
+            )
+            content = str((user_msg or {}).get("content") or "").strip()
+            if content:
+                result[entry["group_id"]] = content
         assistant_rows = await db.chat_messages.find(
             add_main_scope({"message_id": {"$in": ids}, "message_type": {"$ne": "context_summary"}}, resolve_main_id(main_id)),
             {"message_id": 1, "session_id": 1, "seq": 1},
         ).to_list(length=len(ids))
-        result: Dict[str, str] = {}
         for assistant in assistant_rows:
             message_id = str(assistant.get("message_id") or "").strip()
             session_id = assistant.get("session_id")
             seq = int(assistant.get("seq") or 0)
             if not message_id or not session_id or seq <= 0:
+                continue
+            if message_id in result:
                 continue
             user_msg = await db.chat_messages.find_one(
                 add_main_scope(
@@ -442,6 +522,15 @@ class TokenUsageService:
         match = re.search(r'"user_request"\s*:\s*"([^"]+)"', text)
         if match:
             value = match.group(1)
+            try:
+                return TokenUsageService._repair_mojibake(json.loads(f'"{value}"')).strip()
+            except Exception:
+                return TokenUsageService._repair_mojibake(value).strip()
+        # DSH agent turns log a long runtime-context snapshot as the prompt; the
+        # real user question lives in the "user_request" turn-context field.
+        turn_match = re.search(r'"user_request"\s*:\s*"((?:[^"\\]|\\.)*)"', text)
+        if turn_match:
+            value = turn_match.group(1)
             try:
                 return TokenUsageService._repair_mojibake(json.loads(f'"{value}"')).strip()
             except Exception:
