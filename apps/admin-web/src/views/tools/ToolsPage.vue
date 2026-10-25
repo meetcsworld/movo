@@ -361,7 +361,7 @@ onMounted(loadRows);
 
 .shell-card {
   border-radius: 14px;
-  border: 1px solid #e6ebf5;
+  border: 1px solid #e6e9ee;
   background: #fff;
   box-shadow: 0 6px 20px rgba(16, 38, 84, 0.05);
 }
@@ -385,7 +385,7 @@ onMounted(loadRows);
 
 .hero-subtitle {
   margin-top: 8px;
-  color: #5f6f85;
+  color: #4b5563;
   font-size: 15px;
 }
 
@@ -416,7 +416,7 @@ onMounted(loadRows);
 }
 
 .metric-card {
-  border: 1px solid #e6ebf5;
+  border: 1px solid #e6e9ee;
   background: #fff;
   box-shadow: 0 4px 12px rgba(29, 54, 110, 0.04);
 }
@@ -449,8 +449,8 @@ onMounted(loadRows);
 }
 
 .metric-icon-total {
-  color: #2d63ff;
-  background: #eaf0ff;
+  color: #c96a12;
+  background: #fff6ee;
 }
 
 .metric-icon-enabled {
@@ -459,23 +459,23 @@ onMounted(loadRows);
 }
 
 .metric-icon-mcp {
-  color: #7456e0;
-  background: #f0ebff;
+  color: #e8811f;
+  background: #fff6ee;
 }
 
 .metric-icon-pass {
-  color: #d9860a;
-  background: #fff2df;
+  color: #c96a12;
+  background: #fff6ee;
 }
 
 .metric-label {
-  color: #606f8a;
+  color: #6b7280;
   font-size: 12px;
   line-height: 1.3;
 }
 
 .metric-value {
-  color: #0f1f45;
+  color: #1f2329;
   font-size: 24px;
   font-weight: 600;
   line-height: 1.1;
@@ -483,7 +483,7 @@ onMounted(loadRows);
 
 .metric-note {
   margin-top: 6px;
-  color: #708099;
+  color: #6b7280;
   font-size: 12px;
 }
 
@@ -513,7 +513,7 @@ onMounted(loadRows);
 .list-filter-row {
   padding: 0 44px 12px;
   margin: 0 -44px 12px;
-  border-bottom: 1px solid #edf1f7;
+  border-bottom: 1px solid #eff1f4;
 }
 
 .list-body {
@@ -550,7 +550,7 @@ onMounted(loadRows);
 
 .tool-card:hover,
 .tool-card:focus-visible {
-  border-color: rgba(54, 106, 255, 0.36);
+  border-color: rgba(232, 129, 31, 0.36);
   box-shadow:
     0 14px 34px rgba(33, 58, 126, 0.14),
     0 4px 10px rgba(33, 58, 126, 0.08);
@@ -566,13 +566,13 @@ onMounted(loadRows);
 }
 
 .card-title {
-  color: #17233d;
+  color: #1f2329;
   font-size: 16px;
   font-weight: 800;
 }
 
 .card-desc {
-  color: #5f6f85;
+  color: #4b5563;
   font-size: 13px;
   line-height: 1.55;
   display: -webkit-box;
@@ -583,12 +583,12 @@ onMounted(loadRows);
 
 .card-footnote,
 .no-tag {
-  color: #7a8797;
+  color: #6b7280;
   font-size: 12px;
 }
 
 .status-switch-label {
-  color: #5f6f85;
+  color: #4b5563;
   font-size: 12px;
   white-space: nowrap;
 }
@@ -601,7 +601,7 @@ onMounted(loadRows);
 }
 
 .tool-tag {
-  background: #f1f5f9;
+  background: #eff1f4;
 }
 
 .card-footrow {
@@ -640,7 +640,7 @@ onMounted(loadRows);
 
 .empty-shell {
   min-height: 320px;
-  border: 1px dashed #d8e2f2;
+  border: 1px dashed #d5dae2;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
@@ -648,7 +648,7 @@ onMounted(loadRows);
   justify-content: center;
   gap: 12px;
   text-align: center;
-  background: linear-gradient(180deg, #fbfdff, #fff);
+  background: linear-gradient(180deg, #fbfbfc, #fff);
 }
 
 .empty-visual {
@@ -660,9 +660,9 @@ onMounted(loadRows);
   width: 54px;
   height: 36px;
   border-radius: 10px;
-  border: 1px solid #d8e2f2;
+  border: 1px solid #d5dae2;
   background: #fff;
-  color: #2d63ff;
+  color: #c96a12;
   display: grid;
   place-items: center;
   font-weight: 700;

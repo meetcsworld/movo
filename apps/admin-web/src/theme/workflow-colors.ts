@@ -9,5 +9,5 @@ export function workflowAccent(color: string, dark: boolean): string {
 
 export function workflowButtonColors(color: string, background: string, dark: boolean) {
   if (!dark) return { color, background, borderColor: background };
-  return { color: workflowAccent(color, true), background: '#26364a', borderColor: '#354359' };
+  return { color: workflowAccent(color, true), background: '#2a2e36', borderColor: '#2a2e36' };
 }

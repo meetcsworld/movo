@@ -60,7 +60,7 @@ const passwordPlaceholder = computed(() => (props.mode === 'create' ? t('legacy.
   padding: 16px 16px 2px;
   border: 1px solid #dbe4f0;
   border-radius: 12px;
-  background: #f8fafc;
+  background: #f7f8fa;
 }
 
 .credentials-heading {
@@ -73,14 +73,14 @@ const passwordPlaceholder = computed(() => (props.mode === 'create' ? t('legacy.
 
 .credentials-heading h3 {
   margin: 0;
-  color: #172033;
+  color: #1f2329;
   font-size: 15px;
   line-height: 22px;
 }
 
 .credentials-heading p {
   margin: 3px 0 0;
-  color: #64748b;
+  color: #6b7280;
   font-size: 12px;
   line-height: 18px;
 }

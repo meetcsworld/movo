@@ -1,87 +1,87 @@
 /* Windows-only dark user-web styles. */
 /* Workflow and writing-style editors use fixed light surfaces upstream. */
 html.platform-desktop.theme-dark .app-shell .skill-config-page {
-  color: #e9f1fd !important;
-  background: #111b2b !important;
+  color: #fff6ee !important;
+  background: #14171c !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .skill-config-page :is(.workflow-toolbar, .style-toolbar, .shell-panel, .shell-card) {
-  color: #e9f1fd !important;
-  background: #19263a !important;
-  border-color: #364960 !important;
+  color: #fff6ee !important;
+  background: #3a2819 !important;
+  border-color: #604a36 !important;
   box-shadow: 0 8px 28px rgba(0, 0, 0, .14) !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .skill-config-page :is(.toolbar-title, .page-title, .config-title, .content-title, .add-title, .section-title, .field-label, .preview-value, .preview-section-row, .test-head, .result-title) {
-  color: #f1f6ff !important;
+  color: #fff6ee !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .skill-config-page :is(.page-subtitle, .config-note, .preview-label, .preview-empty, .flow-empty, .empty-result, .quick-node-help p, .result-meta) {
-  color: #b2c4da !important;
+  color: #ffb574 !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .skill-config-page :is(.step-card, .add-step-box, .section-node-card, .section-empty, .flow-node, .quick-node-help, .result-card, .empty-result) {
-  color: #e3edfa !important;
-  background: #1e2d43 !important;
-  border-color: #405675 !important;
+  color: #ffe9d5 !important;
+  background: #432f1e !important;
+  border-color: #a0520c !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .skill-config-page :is(.step-card.active, .quick-node-button:hover) {
-  background: #243d5f !important;
-  border-color: #6099eb !important;
+  background: #5c4027 !important;
+  border-color: #f59a3c !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .skill-config-page :is(.preview-section-row, .preview-section-row.child, .preview-chip, .quick-node-button) {
-  color: #c7ddff !important;
-  background: #243a59 !important;
-  border-color: #49678d !important;
+  color: #ffe9d5 !important;
+  background: #573d26 !important;
+  border-color: #c96a12 !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .skill-config-page :is(.n-input, .n-base-selection) {
-  --n-color: #142238 !important;
-  --n-color-active: #142238 !important;
-  --n-text-color: #edf4ff !important;
-  --n-placeholder-color: #a4b7ce !important;
-  --n-border: 1px solid #415674 !important;
-  --n-border-hover: 1px solid #6b9ee2 !important;
-  --n-border-focus: 1px solid #6b9ee2 !important;
+  --n-color: #352517 !important;
+  --n-color-active: #352517 !important;
+  --n-text-color: #fff6ee !important;
+  --n-placeholder-color: #ffb574 !important;
+  --n-border: 1px solid #a0520c !important;
+  --n-border-hover: 1px solid #f59a3c !important;
+  --n-border-focus: 1px solid #f59a3c !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .skill-config-page :is(.n-button--default-type, .n-button--secondary-type) {
-  --n-color: #263a58 !important;
-  --n-color-hover: #315078 !important;
-  --n-color-pressed: #20334f !important;
-  --n-color-focus: #315078 !important;
-  --n-border: 1px solid #496486 !important;
-  --n-border-hover: 1px solid #6f9dd7 !important;
-  --n-text-color: #dce8fa !important;
+  --n-color: #583d26 !important;
+  --n-color-hover: #a0520c !important;
+  --n-color-pressed: #4e3621 !important;
+  --n-color-focus: #a0520c !important;
+  --n-border: 1px solid #c96a12 !important;
+  --n-border-hover: 1px solid #f59a3c !important;
+  --n-text-color: #ffe9d5 !important;
   --n-text-color-hover: #ffffff !important;
   --n-text-color-pressed: #ffffff !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .skill-config-page :is(.n-tag, .n-tag__content) {
-  color: #c9ddfa !important;
+  color: #ffe9d5 !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .skill-config-page :is(.n-input__input-el, .n-input__textarea-el, .n-base-selection-label) {
-  color: #edf4ff !important;
+  color: #fff6ee !important;
 }
 
 /* Naive UI teleports the node-help popover outside .skill-config-page. */
 html.platform-desktop.theme-dark .n-popover:has(.quick-node-help) {
-  --n-color: #1e2d43 !important;
-  --n-text-color: #e3edfa !important;
-  background: #1e2d43 !important;
-  border: 1px solid #49617f !important;
-  box-shadow: 0 14px 36px rgba(2, 8, 20, .48) !important;
+  --n-color: #432f1e !important;
+  --n-text-color: #ffe9d5 !important;
+  background: #432f1e !important;
+  border: 1px solid #c96a12 !important;
+  box-shadow: 0 14px 36px rgba(15, 11, 7, .48) !important;
 }
 
 html.platform-desktop.theme-dark .n-popover:has(.quick-node-help) .n-popover-arrow {
-  background: #1e2d43 !important;
-  border-color: #49617f !important;
+  background: #432f1e !important;
+  border-color: #c96a12 !important;
 }
 
-html.platform-desktop.theme-dark .n-popover .quick-node-help { color: #d6e3f4 !important; }
-html.platform-desktop.theme-dark .n-popover .quick-node-help strong { color: #f2f7ff !important; }
-html.platform-desktop.theme-dark .n-popover .quick-node-help > div { border-color: #425a79 !important; }
-html.platform-desktop.theme-dark .n-popover .quick-node-help > div span { color: #96c4ff !important; }
+html.platform-desktop.theme-dark .n-popover .quick-node-help { color: #ffe9d5 !important; }
+html.platform-desktop.theme-dark .n-popover .quick-node-help strong { color: #fff6ee !important; }
+html.platform-desktop.theme-dark .n-popover .quick-node-help > div { border-color: #a0520c !important; }
+html.platform-desktop.theme-dark .n-popover .quick-node-help > div span { color: #ffd0a6 !important; }

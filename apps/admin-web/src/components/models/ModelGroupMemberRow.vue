@@ -131,7 +131,7 @@ async function remove() {
 .member-icon { flex: none; color: #6384c5; }
 .member-toggle strong, .member-toggle small { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .member-toggle small { color: #728097; }
-.member-fields { padding: 4px 14px 14px; border-top: 1px solid #edf0f5; }
+.member-fields { padding: 4px 14px 14px; border-top: 1px solid #eff1f4; }
 .field-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 12px; }
 .member-actions { justify-content: flex-end; padding: 8px 0 0; }
 @media (max-width: 720px) { .field-grid { grid-template-columns: 1fr; } }

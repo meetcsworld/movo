@@ -93,7 +93,7 @@ onBeforeUnmount(() => {
 </template>
 
 <style scoped>
-.image-preview-backdrop { position: fixed; inset: 0; z-index: 1000; background: rgba(3, 9, 22, .88); padding: 64px 24px 24px; }
+.image-preview-backdrop { position: fixed; inset: 0; z-index: 1000; background: rgba(17, 12, 8, .88); padding: 64px 24px 24px; }
 .image-preview-toolbar { position: absolute; top: 16px; right: 20px; display: flex; gap: 8px; }
 .image-preview-toolbar button { border: 1px solid rgba(255,255,255,.28); border-radius: 8px; background: rgba(255,255,255,.12); color: #fff; padding: 7px 14px; cursor: pointer; }
 .image-preview-toolbar button:hover:not(:disabled), .image-preview-toolbar button:focus-visible { background: rgba(255,255,255,.25); }

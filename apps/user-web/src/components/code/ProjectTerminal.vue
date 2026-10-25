@@ -14,7 +14,7 @@ let observer: ResizeObserver | null = null
 let disposeEvents = () => {}
 
 onMounted(async () => {
-  terminal = new Terminal({ cursorBlink: true, convertEol: true, fontSize: 12, fontFamily: 'SFMono-Regular, Menlo, Monaco, Consolas, monospace', theme: { background: '#0b1220', foreground: '#dbe5f2', cursor: '#93c5fd', selectionBackground: '#334155' } })
+  terminal = new Terminal({ cursorBlink: true, convertEol: true, fontSize: 12, fontFamily: 'SFMono-Regular, Menlo, Monaco, Consolas, monospace', theme: { background: '#1f2329', foreground: '#ffe9d5', cursor: '#ffb574', selectionBackground: '#374151' } })
   fit = new FitAddon(); terminal.loadAddon(fit); terminal.open(host.value!); fit.fit()
   disposeEvents = onDshProjectTerminalEvent(event => {
     if (event.session_id !== props.sessionId || (terminalId && event.terminal_id !== terminalId)) return
@@ -38,5 +38,5 @@ onBeforeUnmount(() => {
 </script>
 
 <template><div ref="host" class="project-terminal" aria-label="Project terminal"></div></template>
-<style scoped>.project-terminal{box-sizing:border-box;width:100%;height:100%;overflow:hidden;background:#0b1220;padding:8px}:deep(.xterm){height:100%}:deep(.xterm-viewport){border-radius:6px}</style>
+<style scoped>.project-terminal{box-sizing:border-box;width:100%;height:100%;overflow:hidden;background:#1f2329;padding:8px}:deep(.xterm){height:100%}:deep(.xterm-viewport){border-radius:6px}</style>
 

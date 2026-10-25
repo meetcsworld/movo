@@ -475,7 +475,7 @@ onMounted(loadOverview);
   padding: 14px 16px;
   border: 1px solid #dbe5f5;
   border-radius: 12px;
-  background: linear-gradient(135deg, #ffffff 0%, #f5f8ff 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #fbfbfc 100%);
   box-shadow: 0 8px 22px rgba(28, 55, 104, 0.06);
 }
 
@@ -519,7 +519,7 @@ onMounted(loadOverview);
 
 .deployment-status span {
   overflow: hidden;
-  color: #64748b;
+  color: #6b7280;
   font-size: 12px;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -531,7 +531,7 @@ onMounted(loadOverview);
   margin-top: 10px;
   padding-top: 10px;
   border-top: 1px solid #e6edf7;
-  color: #64748b;
+  color: #6b7280;
   font-size: 12px;
 }
 
@@ -583,7 +583,7 @@ onMounted(loadOverview);
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #64748b;
+  color: #6b7280;
 }
 
 .metric-icon,
@@ -597,8 +597,8 @@ onMounted(loadOverview);
   width: 30px;
   height: 30px;
   border-radius: 8px;
-  background: #eef4ff;
-  color: #2563eb;
+  background: #fff6ee;
+  color: #e8811f;
 }
 
 .metric-icon :deep(svg),
@@ -619,7 +619,7 @@ onMounted(loadOverview);
 
 .metric-value {
   margin-top: 16px;
-  color: #0f172a;
+  color: #14171c;
   font-size: 25px;
   font-weight: 800;
   line-height: 1.1;
@@ -627,7 +627,7 @@ onMounted(loadOverview);
 
 .metric-note {
   margin-top: 8px;
-  color: #64748b;
+  color: #6b7280;
   font-size: 12px;
 }
 
@@ -679,7 +679,7 @@ onMounted(loadOverview);
 
 .table-head {
   min-height: 34px;
-  color: #64748b;
+  color: #6b7280;
   font-size: 12px;
   font-weight: 800;
 }
@@ -702,7 +702,7 @@ onMounted(loadOverview);
 
 .activity-main small,
 .table-muted {
-  color: #64748b;
+  color: #6b7280;
 }
 
 .table-model {
@@ -726,7 +726,7 @@ onMounted(loadOverview);
   align-items: center;
   width: 100%;
   padding: 12px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #e6e9ee;
   border-radius: 8px;
   background: #ffffff;
   cursor: pointer;
@@ -736,15 +736,15 @@ onMounted(loadOverview);
 .todo-item:hover,
 .asset-card:hover {
   border-color: #9db8f8;
-  background: #f8fbff;
-  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.08);
+  background: #fbfbfc;
+  box-shadow: 0 8px 20px rgba(232, 129, 31, 0.08);
 }
 
 .todo-mark {
   width: 8px;
   height: 34px;
   border-radius: 999px;
-  background: #3b82f6;
+  background: #f59a3c;
 }
 
 .todo-error {
@@ -756,7 +756,7 @@ onMounted(loadOverview);
 }
 
 .todo-info {
-  background: #3b82f6;
+  background: #f59a3c;
 }
 
 .todo-copy {
@@ -775,13 +775,13 @@ onMounted(loadOverview);
 
 .todo-copy small {
   margin-top: 2px;
-  color: #64748b;
+  color: #6b7280;
   font-size: 12px;
   line-height: 1.4;
 }
 
 .todo-arrow {
-  color: #94a3b8;
+  color: #98a0ae;
   font-size: 20px;
 }
 
@@ -794,7 +794,7 @@ onMounted(loadOverview);
 .asset-card {
   min-height: 146px;
   padding: 14px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #e6e9ee;
   border-radius: 8px;
   background: #ffffff;
   cursor: pointer;
@@ -802,14 +802,14 @@ onMounted(loadOverview);
 }
 
 .asset-title {
-  color: #64748b;
+  color: #6b7280;
   font-size: 13px;
   font-weight: 700;
 }
 
 .asset-value {
   margin-top: 10px;
-  color: #0f172a;
+  color: #14171c;
   font-size: 30px;
   font-weight: 800;
   line-height: 1;
@@ -820,7 +820,7 @@ onMounted(loadOverview);
   flex-direction: column;
   gap: 3px;
   margin-top: 14px;
-  color: #64748b;
+  color: #6b7280;
   font-size: 12px;
 }
 
@@ -840,7 +840,7 @@ onMounted(loadOverview);
   place-items: center;
   min-height: 260px;
   padding: 30px;
-  color: #64748b;
+  color: #6b7280;
   text-align: center;
 }
 
@@ -854,8 +854,8 @@ onMounted(loadOverview);
   width: 46px;
   height: 46px;
   border-radius: 10px;
-  background: #eef4ff;
-  color: #2563eb;
+  background: #fff6ee;
+  color: #e8811f;
 }
 
 .empty-title {

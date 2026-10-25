@@ -46,7 +46,7 @@ function submit() {
 </script>
 
 <template>
-  <section class="mb-3 overflow-hidden rounded-2xl border border-blue-200 bg-white shadow-[0_8px_30px_rgba(28,75,151,0.10)]" aria-live="polite">
+  <section class="mb-3 overflow-hidden rounded-2xl border border-blue-200 bg-white shadow-[0_8px_30px_rgb(160, 82, 12,0.10)]" aria-live="polite">
     <div class="flex items-center gap-3 border-b border-blue-100 bg-blue-50/70 px-5 py-3">
       <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-blue-100 text-blue-700" aria-hidden="true">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 4.3 1.7c-1.1 1-1.8 1.4-1.8 2.8"/><path d="M12 17h.01"/></svg>

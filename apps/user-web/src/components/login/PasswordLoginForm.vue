@@ -76,11 +76,11 @@ async function submit() {
     <div class="space-y-2">
       <label for="movo-login-username" class="text-sm font-medium text-slate-700">{{ t('login.username_label') }}</label>
       <input
-        id="movo-login-username"
+        id="qianyiclaw-login-username"
         v-model="username"
         type="text"
         autocomplete="username"
-        class="min-h-[44px] w-full rounded-2xl border border-slate-200 px-4 text-slate-900 outline-none transition-colors focus:border-slate-400 focus-visible:ring-2 focus-visible:ring-slate-200"
+        class="min-h-[44px] w-full rounded-ctl border border-brand-200 px-4 text-slate-900 outline-none transition-colors focus:border-accent-400 focus-visible:ring-2 focus-visible:ring-accent-100"
         :placeholder="t('login.username_placeholder')"
         :disabled="pendingSelection"
         @input="resetError"
@@ -90,11 +90,11 @@ async function submit() {
     <div class="space-y-2">
       <label for="movo-login-password" class="text-sm font-medium text-slate-700">{{ t('login.password_label') }}</label>
       <input
-        id="movo-login-password"
+        id="qianyiclaw-login-password"
         v-model="password"
         type="password"
         autocomplete="current-password"
-        class="min-h-[44px] w-full rounded-2xl border border-slate-200 px-4 text-slate-900 outline-none transition-colors focus:border-slate-400 focus-visible:ring-2 focus-visible:ring-slate-200"
+        class="min-h-[44px] w-full rounded-ctl border border-brand-200 px-4 text-slate-900 outline-none transition-colors focus:border-accent-400 focus-visible:ring-2 focus-visible:ring-accent-100"
         :placeholder="t('login.password_placeholder')"
         :disabled="pendingSelection"
         @input="resetError"
@@ -104,9 +104,9 @@ async function submit() {
     <div v-if="pendingSelection" class="space-y-2">
       <label for="movo-login-tenant" class="text-sm font-medium text-slate-700">{{ t('login.select_org_label') }}</label>
       <select
-        id="movo-login-tenant"
+        id="qianyiclaw-login-tenant"
         v-model="selectedMainId"
-        class="min-h-[44px] w-full rounded-2xl border border-slate-200 px-4 text-slate-900 outline-none focus:border-slate-400 focus-visible:ring-2 focus-visible:ring-slate-200"
+        class="min-h-[44px] w-full rounded-ctl border border-brand-200 px-4 text-slate-900 outline-none focus:border-accent-400 focus-visible:ring-2 focus-visible:ring-accent-100"
         @change="resetError"
       >
         <option v-for="tenant in tenantCandidates" :key="tenant.mainId" :value="tenant.mainId">
@@ -115,19 +115,19 @@ async function submit() {
       </select>
     </div>
 
-    <p v-if="errorMessage" role="alert" class="rounded-2xl bg-rose-50 px-3 py-2 text-sm text-rose-600">
+    <p v-if="errorMessage" role="alert" class="rounded-ctl bg-rose-50 px-3 py-2 text-sm text-rose-600">
       {{ errorMessage }}
     </p>
 
     <button
       type="submit"
-      class="min-h-[44px] w-full rounded-2xl bg-slate-900 px-4 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-slate-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-70"
+      class="min-h-[44px] w-full rounded-ctl bg-accent-500 px-4 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-accent-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-300 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-70"
       :disabled="isSubmitting || (pendingSelection && !selectedMainId)"
     >
       {{ isSubmitting ? t('phase.verifying') : pendingSelection ? t('login.btn_enter_org') : t('login.password_submit') }}
     </button>
 
-    <p class="rounded-2xl bg-slate-50 px-3 py-2 text-xs leading-5 text-slate-500">
+    <p class="rounded-ctl bg-brand-50 px-3 py-2 text-xs leading-5 text-slate-500">
       {{ pendingSelection ? t('login.multiple_org_notice') : t('login.password_help') }}
     </p>
   </form>

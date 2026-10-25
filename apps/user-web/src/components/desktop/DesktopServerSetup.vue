@@ -32,13 +32,13 @@ async function connect() {
 <template>
   <main class="min-h-screen bg-slate-50 px-6 py-16 text-slate-900">
     <div class="fixed inset-x-0 top-0 h-12" style="-webkit-app-region: drag" aria-hidden="true"></div>
-    <section class="mx-auto grid w-full max-w-5xl overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-[0_24px_80px_rgba(15,23,42,0.12)] md:grid-cols-[0.9fr_1.1fr]">
-      <div class="flex flex-col justify-between bg-[#173f9f] p-10 text-white md:p-12">
+    <section class="mx-auto grid w-full max-w-5xl overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-[0_24px_80px_rgb(40, 28, 17,0.12)] md:grid-cols-[0.9fr_1.1fr]">
+      <div class="flex flex-col justify-between bg-[#c96a12] p-10 text-white md:p-12">
         <div>
           <div class="mb-10 flex h-14 w-16 items-center justify-center rounded-2xl border border-white/25 bg-white/10" aria-hidden="true">
-            <img src="/movo-logo.png" alt="" class="h-10 w-12 object-contain" />
+            <img src="/qianyiclaw-logo.svg" alt="" class="h-10 w-10 object-contain" />
           </div>
-          <p class="text-xs font-semibold uppercase tracking-[0.22em] text-blue-100">MOVO Desktop</p>
+          <p class="text-xs font-semibold uppercase tracking-[0.22em] text-blue-100">QianyiClaw Desktop</p>
           <h1 class="mt-4 text-3xl font-semibold leading-tight">{{ t('desktop.server.title') }}</h1>
           <p class="mt-4 max-w-sm text-sm leading-6 text-blue-100">{{ t('desktop.server.description') }}</p>
         </div>

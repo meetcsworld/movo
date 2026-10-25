@@ -9,18 +9,18 @@ html.platform-desktop.theme-dark .updates article,
 html.platform-desktop.theme-dark .feedback .replies,
 html.platform-desktop.theme-dark .feedback .replying,
 html.platform-desktop.theme-dark .zip-dropzone {
-  background: #1b2a40 !important;
-  border-color: #3d5473 !important;
-  color: #dce8f7 !important;
+  background: #402c1b !important;
+  border-color: #a0520c !important;
+  color: #ffe9d5 !important;
   box-shadow: none !important;
 }
 html.platform-desktop.theme-dark .zip-dropzone.dragging,
 html.platform-desktop.theme-dark .view-tabs button.active {
-  background: #274572 !important;
-  border-color: #74a6f4 !important;
-  color: #ecf4ff !important;
+  background: #a0520c !important;
+  border-color: #ffb574 !important;
+  color: #fff6ee !important;
 }
-html.platform-desktop.theme-dark .view-tabs button:hover { background: #273951 !important; color: #f0f6ff !important; }
+html.platform-desktop.theme-dark .view-tabs button:hover { background: #513b27 !important; color: #fff6ee !important; }
 html.platform-desktop.theme-dark .sender-copy strong,
 html.platform-desktop.theme-dark .skill-name,
 html.platform-desktop.theme-dark .skill-summary strong,
@@ -31,25 +31,25 @@ html.platform-desktop.theme-dark .detail-section h3,
 html.platform-desktop.theme-dark .preview-title,
 html.platform-desktop.theme-dark .section-label,
 html.platform-desktop.theme-dark .zip-dropzone strong,
-html.platform-desktop.theme-dark .comment .meta strong { color: #eef5ff !important; }
-html.platform-desktop.theme-dark .feedback .composer { background: #121e30 !important; border-color: #3d5473 !important; }
+html.platform-desktop.theme-dark .comment .meta strong { color: #fff6ee !important; }
+html.platform-desktop.theme-dark .feedback .composer { background: #2e2014 !important; border-color: #a0520c !important; }
 html.platform-desktop.theme-dark .feedback > header,
 html.platform-desktop.theme-dark .feedback .comments > section,
-html.platform-desktop.theme-dark .comment.reply { border-color: #3d5473 !important; }
+html.platform-desktop.theme-dark .comment.reply { border-color: #a0520c !important; }
 html.platform-desktop.theme-dark .comment .body p,
 html.platform-desktop.theme-dark .comment .reply-to,
 html.platform-desktop.theme-dark .feedback .total,
 html.platform-desktop.theme-dark .updates p,
 html.platform-desktop.theme-dark .updates small,
-html.platform-desktop.theme-dark .skill-heading span { color: #acbfd8 !important; }
-html.platform-desktop.theme-dark .comment.highlighted { animation: none !important; background: #294872 !important; }
+html.platform-desktop.theme-dark .skill-heading span { color: #ffb574 !important; }
+html.platform-desktop.theme-dark .comment.highlighted { animation: none !important; background: #a0520c !important; }
 html.platform-desktop.theme-dark .detail-section p {
-  background: #17253a !important;
-  color: #cad9ed !important;
+  background: #392718 !important;
+  color: #ffd0a6 !important;
 }
 html.platform-desktop.theme-dark .sender-avatar,
 html.platform-desktop.theme-dark .skill-mark,
 html.platform-desktop.theme-dark .comment .avatar {
-  background: #294c77 !important;
-  color: #c9e0ff !important;
+  background: #a0520c !important;
+  color: #ffe9d5 !important;
 }

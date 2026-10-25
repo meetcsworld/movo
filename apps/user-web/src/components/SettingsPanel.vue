@@ -147,7 +147,7 @@ async function onAgentAction(action: 'start' | 'stop' | 'restart') {
       <n-space vertical :size="14">
         <div class="flex items-center gap-3">
           <n-badge
-            :color="status.running ? '#10b981' : '#94a3b8'"
+            :color="status.running ? '#10b981' : '#98a0ae'"
             dot
             :processing="status.running"
           >

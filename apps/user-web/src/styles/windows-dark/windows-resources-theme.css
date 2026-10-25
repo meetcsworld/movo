@@ -1,27 +1,27 @@
 /* Windows resource-page adjustments; Mac keeps its existing presentation. */
 html.platform-windows:not(.theme-dark) .skills-page .empty-shell,
 html.platform-windows:not(.theme-dark) .tools-page .empty-shell {
-  background: #f8fbff !important;
-  border-color: #cbd9eb !important;
+  background: #f7f8fa !important;
+  border-color: #ffd0a6 !important;
 }
 
 html.platform-windows:not(.theme-dark) .skills-page .empty-title,
 html.platform-windows:not(.theme-dark) .tools-page .empty-title {
-  color: #203650 !important;
+  color: #4e3722 !important;
 }
 
 html.platform-windows:not(.theme-dark) .skills-page .empty-desc,
 html.platform-windows:not(.theme-dark) .tools-page .empty-desc,
 html.platform-windows:not(.theme-dark) .skills-page .metric-note,
 html.platform-windows:not(.theme-dark) .tools-page .metric-note {
-  color: #52677f !important;
+  color: #6b7280 !important;
 }
 
 html.platform-desktop.theme-dark .skills-page,
 html.platform-desktop.theme-dark .tools-page,
 html.theme-dark .plugin-workspace {
-  background: #0f172a !important;
-  color: #e2e8f0 !important;
+  background: #14171c !important;
+  color: #e6e9ee !important;
 }
 
 html.platform-desktop.theme-dark .skills-page .shell-card,
@@ -33,45 +33,45 @@ html.platform-desktop.theme-dark .tools-page .metric-card,
 html.platform-desktop.theme-dark .tools-page .tool-card,
 html.platform-desktop.theme-dark .tools-page .editor-card,
 html.platform-desktop.theme-dark .tools-page .tools-header {
-  background: #182131 !important;
-  border-color: #334155 !important;
-  color: #e2e8f0 !important;
+  background: #312418 !important;
+  border-color: #374151 !important;
+  color: #e6e9ee !important;
 }
 
 html.platform-desktop.theme-dark .skills-page .skill-card-disabled {
-  background: #141d2b !important;
+  background: #2b1f14 !important;
 }
 
 html.theme-dark .plugin-workspace .plugin-card-disabled {
-  background: #141d2b !important;
+  background: #2b1f14 !important;
 }
 
 html.theme-dark .plugin-workspace :is(.metric-value, .card-title, .empty-title) {
-  color: #f1f5f9 !important;
+  color: #eff1f4 !important;
 }
 
 html.theme-dark .plugin-workspace :is(.metric-label, .metric-note, .card-time, .card-desc, .empty-desc, .diagnosis, .diagnosis strong) {
-  color: #a8b7ca !important;
+  color: #ffb574 !important;
 }
 
 html.theme-dark .plugin-workspace .empty-shell {
-  background: #111827 !important;
-  border-color: #334155 !important;
+  background: #14171c !important;
+  border-color: #374151 !important;
 }
 
 html.theme-dark .plugin-workspace :is(.list-heading-row, .list-filter-row) {
-  border-color: #2c3b4f !important;
+  border-color: #4f3c2c !important;
 }
 
 html.theme-dark .plugin-workspace .list-heading {
-  background: #294a78 !important;
-  color: #eaf2ff !important;
+  background: #a0520c !important;
+  color: #fff6ee !important;
 }
 
 html.theme-dark .plugin-workspace .card-switch {
-  background: #223750 !important;
-  border-color: #435d7f !important;
-  color: #b5c9e1 !important;
+  background: #503722 !important;
+  border-color: #a0520c !important;
+  color: #ffd0a6 !important;
 }
 
 html.platform-desktop.theme-dark .skills-page .metric-value,
@@ -81,16 +81,16 @@ html.platform-desktop.theme-dark .tools-page .metric-value,
 html.platform-desktop.theme-dark .tools-page .card-title,
 html.platform-desktop.theme-dark .tools-page .empty-title,
 html.platform-desktop.theme-dark .tools-page .tools-header h1 {
-  color: #f1f5f9 !important;
+  color: #eff1f4 !important;
 }
 
 html.platform-desktop.theme-dark :is(.skills-page, .tools-page) .metric-icon {
-  box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.16) !important;
+  box-shadow: inset 0 0 0 1px rgba(152, 160, 174, 0.16) !important;
 }
 
 html.platform-desktop.theme-dark :is(.skills-page, .tools-page) .metric-icon-total {
-  color: #8bb8ff !important;
-  background: #1d3556 !important;
+  color: #ffb574 !important;
+  background: #513823 !important;
 }
 
 html.platform-desktop.theme-dark .skills-page .metric-icon-writing,
@@ -107,8 +107,8 @@ html.platform-desktop.theme-dark .tools-page .metric-icon-pass {
 
 html.platform-desktop.theme-dark .skills-page .metric-icon-config,
 html.platform-desktop.theme-dark .tools-page .metric-icon-mcp {
-  color: #b9a7ff !important;
-  background: #322951 !important;
+  color: #ffd0a6 !important;
+  background: #513c29 !important;
 }
 
 html.platform-desktop.theme-dark .skills-page .metric-label,
@@ -122,91 +122,91 @@ html.platform-desktop.theme-dark .tools-page .card-desc,
 html.platform-desktop.theme-dark .tools-page .card-footnote,
 html.platform-desktop.theme-dark .tools-page .empty-desc,
 html.platform-desktop.theme-dark .tools-page .muted {
-  color: #a8b7ca !important;
+  color: #ffb574 !important;
 }
 
 html.platform-desktop.theme-dark .skills-page .empty-shell,
 html.platform-desktop.theme-dark .tools-page .empty-shell {
-  background: #111827 !important;
-  border-color: #334155 !important;
+  background: #14171c !important;
+  border-color: #374151 !important;
 }
 
 html.platform-desktop.theme-dark .skills-page :is(.view-tabs, .list-filter-row),
 html.platform-desktop.theme-dark .tools-page .list-filter-row {
-  border-color: #2c3b4f !important;
+  border-color: #4f3c2c !important;
 }
 
 html.platform-desktop.theme-dark .skills-page .view-tabs button {
-  color: #9eacc0 !important;
+  color: #98a0ae !important;
 }
 
 html.platform-desktop.theme-dark .skills-page .view-tabs button:hover {
-  color: #e5edf8 !important;
-  background: #233149 !important;
+  color: #ffe9d5 !important;
+  background: #493523 !important;
 }
 
 html.platform-desktop.theme-dark .skills-page .view-tabs button.active {
-  color: #eaf2ff !important;
-  background: #294a78 !important;
+  color: #fff6ee !important;
+  background: #a0520c !important;
 }
 
 html.platform-desktop.theme-dark .tasks-page {
-  color: #e2e8f0 !important;
-  background: #0f172a !important;
+  color: #e6e9ee !important;
+  background: #14171c !important;
 }
 
 html.platform-desktop.theme-dark .tasks-page :is(.tasks-header, .shell-card, .task-card) {
-  border-color: #334155 !important;
-  color: #e2e8f0 !important;
-  background: #182131 !important;
+  border-color: #374151 !important;
+  color: #e6e9ee !important;
+  background: #312418 !important;
   box-shadow: none !important;
 }
 
 html.platform-desktop.theme-dark .tasks-page .list-filter-row {
-  border-color: #2c3b4f !important;
+  border-color: #4f3c2c !important;
 }
 
 html.platform-desktop.theme-dark .tasks-page :is(.tasks-header h1, .card-title, .empty-title) {
-  color: #f1f5f9 !important;
+  color: #eff1f4 !important;
 }
 
 html.platform-desktop.theme-dark .tasks-page :is(.card-desc, .card-time, .card-meta, .meta-item, .empty-desc) {
-  color: #a8b7ca !important;
+  color: #ffb574 !important;
 }
 
 html.platform-desktop.theme-dark .tasks-page .empty-shell {
-  border-color: #334155 !important;
-  background: #111827 !important;
+  border-color: #374151 !important;
+  background: #14171c !important;
 }
 
 html.platform-desktop.theme-dark .tasks-page .empty-visual span {
-  color: #bfdbfe !important;
-  background: #223b5c !important;
+  color: #ffd0a6 !important;
+  background: #583d26 !important;
 }
 
 html.platform-desktop.theme-dark .tasks-page .card-switch {
-  border-color: #435d7f !important;
-  background: #223750 !important;
+  border-color: #a0520c !important;
+  background: #503722 !important;
 }
 
 html.platform-desktop.theme-dark .skills-page :is(.card-switch, .feedback-btn-unread),
 html.platform-desktop.theme-dark .tools-page :is(.test-summary, .result-panel, .schema-grid, .schema-head) {
-  background: #223750 !important;
-  border-color: #435d7f !important;
+  background: #503722 !important;
+  border-color: #a0520c !important;
 }
 
 html.platform-desktop.theme-dark .skills-page :is(.card-switch-label, .feedback-btn, .edit-type-value),
 html.platform-desktop.theme-dark .tools-page :is(.status-switch-label, .response-summary, .test-metrics-row span, .schema-head) {
-  color: #b5c9e1 !important;
+  color: #ffd0a6 !important;
 }
 
 html.platform-desktop.theme-dark .tools-page :is(.debug-overview strong, .result-title, .json-pre-panel) {
-  color: #eaf2ff !important;
+  color: #fff6ee !important;
 }
 
 html.platform-desktop.theme-dark .tools-page .json-pre-panel {
-  background: #132238 !important;
-  border-color: #3d5574 !important;
+  background: #352517 !important;
+  border-color: #a0520c !important;
 }
 
 html.platform-desktop.theme-dark .tools-page :is(.success-text, .metric-icon-enabled) {
@@ -219,19 +219,19 @@ html.platform-desktop.theme-dark .tools-page .error-text {
 
 html.platform-desktop.theme-dark .skills-page .empty-visual span,
 html.platform-desktop.theme-dark .tools-page .empty-visual span {
-  background: #1e3a5f !important;
-  border-color: #3b82f6 !important;
-  color: #bfdbfe !important;
+  background: #1f2329 !important;
+  border-color: #f59a3c !important;
+  color: #ffd0a6 !important;
 }
 
 html.platform-desktop.theme-dark .skills-page :is(.n-button--default-type, .n-button--secondary-type),
 html.platform-desktop.theme-dark .tools-page :is(.n-button--default-type, .n-button--secondary-type) {
-  --n-color: #263a58 !important;
-  --n-color-hover: #315078 !important;
-  --n-color-pressed: #20334f !important;
-  --n-border: 1px solid #496486 !important;
-  --n-border-hover: 1px solid #6f9dd7 !important;
-  --n-text-color: #dce8fa !important;
+  --n-color: #583d26 !important;
+  --n-color-hover: #a0520c !important;
+  --n-color-pressed: #4e3621 !important;
+  --n-border: 1px solid #c96a12 !important;
+  --n-border-hover: 1px solid #f59a3c !important;
+  --n-text-color: #ffe9d5 !important;
   --n-text-color-hover: #ffffff !important;
   --n-text-color-pressed: #ffffff !important;
 }

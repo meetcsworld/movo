@@ -33,8 +33,8 @@ const metrics = computed(() => [
 
 <style scoped>
 .metrics-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;padding:12px}
-.metric-card{border:1px solid #e6ebf5;border-radius:8px;background:#fff;box-shadow:0 4px 12px rgba(29,54,110,.04)}
-.metric-main{display:flex;align-items:flex-start;gap:12px}.metric-label{color:#606f8a;font-size:12px;line-height:1.3}.metric-value{margin-top:4px;color:#0f1f45;font-size:24px;font-weight:600;line-height:1.1}.metric-note{margin-top:6px;color:#708099;font-size:12px}
-.metric-icon{width:44px;height:44px;border-radius:50%;display:grid;place-items:center}.metric-icon :deep(svg){width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.metric-icon-total{color:#2d63ff;background:#eaf0ff}.metric-icon-total :deep(svg){fill:currentColor;stroke:none}.metric-icon-enabled{color:#0f9964;background:#e8f8ef}.metric-icon-disabled{color:#d9860a;background:#fff2df}.metric-icon-tools{color:#7456e0;background:#f0ebff}
+.metric-card{border:1px solid #e6e9ee;border-radius:8px;background:#fff;box-shadow:0 4px 12px rgba(29,54,110,.04)}
+.metric-main{display:flex;align-items:flex-start;gap:12px}.metric-label{color:#6b7280;font-size:12px;line-height:1.3}.metric-value{margin-top:4px;color:#1f2329;font-size:24px;font-weight:600;line-height:1.1}.metric-note{margin-top:6px;color:#6b7280;font-size:12px}
+.metric-icon{width:44px;height:44px;border-radius:50%;display:grid;place-items:center}.metric-icon :deep(svg){width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.metric-icon-total{color:#c96a12;background:#fff6ee}.metric-icon-total :deep(svg){fill:currentColor;stroke:none}.metric-icon-enabled{color:#0f9964;background:#e8f8ef}.metric-icon-disabled{color:#c96a12;background:#fff6ee}.metric-icon-tools{color:#e8811f;background:#fff6ee}
 @media(max-width:1200px){.metrics-row{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:640px){.metrics-row{grid-template-columns:1fr}}
 </style>

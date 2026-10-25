@@ -879,7 +879,7 @@ watch(documentId, (next, previous) => {
   justify-content: space-between;
   gap: 18px;
   padding: 14px 16px;
-  border: 1px solid #e6ebf5;
+  border: 1px solid #e6e9ee;
   border-radius: 8px;
   background: #fff;
   box-shadow: 0 4px 14px rgba(16, 38, 84, 0.05);
@@ -904,7 +904,7 @@ watch(documentId, (next, previous) => {
 }
 
 .title-icon {
-  color: #366aff;
+  color: #e8811f;
 }
 
 .title-icon svg,
@@ -921,7 +921,7 @@ watch(documentId, (next, previous) => {
 .page-title {
   min-width: 0;
   overflow: hidden;
-  color: #17233d;
+  color: #1f2329;
   font-size: 16px;
   font-weight: 800;
   text-overflow: ellipsis;
@@ -930,7 +930,7 @@ watch(documentId, (next, previous) => {
 
 .page-meta {
   margin-top: 4px;
-  color: #687789;
+  color: #6b7280;
   font-size: 12px;
 }
 
@@ -949,7 +949,7 @@ watch(documentId, (next, previous) => {
 .preview-shell {
   min-height: 0;
   overflow: hidden;
-  border: 1px solid #e6ebf5;
+  border: 1px solid #e6e9ee;
   border-radius: 8px;
   background: #fff;
 }
@@ -982,7 +982,7 @@ watch(documentId, (next, previous) => {
   align-items: center;
   gap: 8px;
   padding: 8px 6px;
-  border: 1px solid #e6ebf5;
+  border: 1px solid #e6e9ee;
   border-radius: 8px;
   background: #fff;
   box-shadow: 0 4px 14px rgba(16, 38, 84, 0.04);
@@ -998,7 +998,7 @@ watch(documentId, (next, previous) => {
   border: 1px solid transparent;
   border-radius: 8px;
   background: transparent;
-  color: #687789;
+  color: #6b7280;
   cursor: pointer;
   transition: color 0.16s ease, background 0.16s ease, border-color 0.16s ease;
 }
@@ -1006,8 +1006,8 @@ watch(documentId, (next, previous) => {
 .rail-button:hover,
 .rail-button.active {
   border-color: #dbe6ff;
-  background: #f1f5ff;
-  color: #366aff;
+  background: #f7f8fa;
+  color: #e8811f;
 }
 
 .rail-button svg {
@@ -1029,7 +1029,7 @@ watch(documentId, (next, previous) => {
   padding: 0 4px;
   border: 1px solid #fff;
   border-radius: 999px;
-  background: #366aff;
+  background: #e8811f;
   color: #fff;
   font-size: 10px;
   line-height: 14px;
@@ -1039,7 +1039,7 @@ watch(documentId, (next, previous) => {
 .detail-card {
   min-height: 0;
   padding: 16px;
-  border: 1px solid #e6ebf5;
+  border: 1px solid #e6e9ee;
   border-radius: 8px;
   background: #fff;
   box-shadow: 0 4px 14px rgba(16, 38, 84, 0.04);
@@ -1051,7 +1051,7 @@ watch(documentId, (next, previous) => {
   display: flex;
   flex-direction: column;
   padding: 14px;
-  border: 1px solid #e6ebf5;
+  border: 1px solid #e6e9ee;
   border-radius: 8px;
   background: #fff;
   box-shadow: 0 4px 14px rgba(16, 38, 84, 0.04);
@@ -1062,14 +1062,14 @@ watch(documentId, (next, previous) => {
   height: 100%;
   overflow-y: auto;
   padding: 16px;
-  border: 1px solid #e6ebf5;
+  border: 1px solid #e6e9ee;
   border-radius: 8px;
   background: #fff;
   box-shadow: 0 4px 14px rgba(16, 38, 84, 0.04);
 }
 
 .detail-card-title {
-  color: #17233d;
+  color: #1f2329;
   font-size: 15px;
   font-weight: 800;
 }
@@ -1083,7 +1083,7 @@ watch(documentId, (next, previous) => {
 
 .chunks-subtitle {
   margin-top: 4px;
-  color: #7a8797;
+  color: #6b7280;
   font-size: 12px;
 }
 
@@ -1093,7 +1093,7 @@ watch(documentId, (next, previous) => {
   border: 1px solid #cfe0ff;
   border-radius: 8px;
   background: linear-gradient(180deg, #f7faff 0%, #ffffff 100%);
-  box-shadow: 0 8px 20px rgba(54, 106, 255, 0.08);
+  box-shadow: 0 8px 20px rgba(232, 129, 31, 0.08);
 }
 
 .source-target-head {
@@ -1109,8 +1109,8 @@ watch(documentId, (next, previous) => {
   align-items: center;
   justify-content: center;
   border-radius: 6px;
-  color: #366aff;
-  background: #eaf1ff;
+  color: #e8811f;
+  background: #fff6ee;
 }
 
 .source-target-icon svg {
@@ -1124,7 +1124,7 @@ watch(documentId, (next, previous) => {
 }
 
 .source-target-title {
-  color: #17233d;
+  color: #1f2329;
   font-size: 13px;
   font-weight: 800;
 }
@@ -1141,7 +1141,7 @@ watch(documentId, (next, previous) => {
   display: inline-flex;
   align-items: center;
   border-radius: 999px;
-  background: #eef4ff;
+  background: #fff6ee;
   padding: 0 8px;
   color: #3158bc;
   font-size: 12px;
@@ -1150,7 +1150,7 @@ watch(documentId, (next, previous) => {
 
 .source-target-path {
   margin-top: 8px;
-  color: #687789;
+  color: #6b7280;
   font-size: 12px;
   line-height: 1.6;
 }
@@ -1169,7 +1169,7 @@ watch(documentId, (next, previous) => {
 
 .source-target-loading {
   margin-top: 8px;
-  color: #7a8797;
+  color: #6b7280;
   font-size: 12px;
 }
 
@@ -1181,7 +1181,7 @@ watch(documentId, (next, previous) => {
   display: inline-flex;
   width: 15px;
   height: 15px;
-  color: #8a96a8;
+  color: #98a0ae;
 }
 
 .input-icon svg {
@@ -1217,13 +1217,13 @@ watch(documentId, (next, previous) => {
   padding: 12px;
   border: 1px solid #e8eef7;
   border-radius: 8px;
-  background: #fbfdff;
+  background: #fbfbfc;
 }
 
 .chunk-item.is-target {
-  border-color: #366aff;
-  background: #f5f8ff;
-  box-shadow: 0 10px 24px rgba(54, 106, 255, 0.14);
+  border-color: #e8811f;
+  background: #fbfbfc;
+  box-shadow: 0 10px 24px rgba(232, 129, 31, 0.14);
 }
 
 .chunk-item-head {
@@ -1234,7 +1234,7 @@ watch(documentId, (next, previous) => {
 }
 
 .chunk-index {
-  color: #366aff;
+  color: #e8811f;
   font-size: 12px;
   font-weight: 800;
 }
@@ -1255,7 +1255,7 @@ watch(documentId, (next, previous) => {
   align-items: center;
   padding: 0 7px;
   border-radius: 999px;
-  background: #eef4ff;
+  background: #fff6ee;
   color: #456083;
   font-size: 11px;
   overflow: hidden;
@@ -1277,13 +1277,13 @@ watch(documentId, (next, previous) => {
   border: 1px solid #b8caff;
   border-radius: 6px;
   background: #fff;
-  color: #366aff;
+  color: #e8811f;
   font-size: 11px;
   cursor: pointer;
 }
 
 .chunk-image-button:hover {
-  background: #f1f5ff;
+  background: #f7f8fa;
 }
 
 .chunk-image-button svg {
@@ -1367,8 +1367,8 @@ watch(documentId, (next, previous) => {
   height: 44px;
   place-items: center;
   border-radius: 10px;
-  background: #eef4ff;
-  color: #366aff;
+  background: #fff6ee;
+  color: #e8811f;
 }
 
 .empty-icon svg {
@@ -1386,14 +1386,14 @@ watch(documentId, (next, previous) => {
 }
 
 .empty-title {
-  color: #17233d;
+  color: #1f2329;
   font-size: 14px;
   font-weight: 800;
 }
 
 .empty-copy {
   max-width: 260px;
-  color: #687789;
+  color: #6b7280;
   font-size: 12px;
   line-height: 1.6;
 }
@@ -1427,7 +1427,7 @@ watch(documentId, (next, previous) => {
 }
 
 .meta-row span {
-  color: #7a8797;
+  color: #6b7280;
   font-size: 12px;
 }
 
@@ -1448,7 +1448,7 @@ watch(documentId, (next, previous) => {
   display: grid;
   place-items: center;
   padding: 24px;
-  background: #f8fafc;
+  background: #f7f8fa;
 }
 
 .image-preview img {
@@ -1463,8 +1463,8 @@ watch(documentId, (next, previous) => {
   margin: 0;
   overflow: auto;
   padding: 24px;
-  color: #17233d;
-  background: #fbfdff;
+  color: #1f2329;
+  background: #fbfbfc;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   font-size: 13px;
   line-height: 1.7;
@@ -1489,7 +1489,7 @@ watch(documentId, (next, previous) => {
   gap: 12px;
   padding: 32px;
   text-align: center;
-  background: #f8fafc;
+  background: #f7f8fa;
 }
 
 .converting-icon {
@@ -1498,8 +1498,8 @@ watch(documentId, (next, previous) => {
   height: 56px;
   place-items: center;
   border-radius: 12px;
-  background: #eaf0ff;
-  color: #366aff;
+  background: #fff6ee;
+  color: #e8811f;
 }
 
 .converting-icon svg {
@@ -1526,14 +1526,14 @@ watch(documentId, (next, previous) => {
 }
 
 .converting-title {
-  color: #17233d;
+  color: #1f2329;
   font-size: 16px;
   font-weight: 800;
 }
 
 .converting-copy {
   max-width: 420px;
-  color: #687789;
+  color: #6b7280;
   font-size: 13px;
   line-height: 1.6;
 }
@@ -1542,7 +1542,7 @@ watch(documentId, (next, previous) => {
   height: 100%;
   display: grid;
   place-items: center;
-  background: #f8fafc;
+  background: #f7f8fa;
 }
 
 .unsupported-icon {
@@ -1551,8 +1551,8 @@ watch(documentId, (next, previous) => {
   height: 56px;
   place-items: center;
   border-radius: 12px;
-  background: #eaf0ff;
-  color: #366aff;
+  background: #fff6ee;
+  color: #e8811f;
 }
 
 .unsupported-icon svg {
@@ -1566,14 +1566,14 @@ watch(documentId, (next, previous) => {
 }
 
 .unsupported-title {
-  color: #17233d;
+  color: #1f2329;
   font-size: 16px;
   font-weight: 800;
 }
 
 .unsupported-copy {
   max-width: 420px;
-  color: #687789;
+  color: #6b7280;
   font-size: 13px;
   line-height: 1.6;
 }
@@ -1597,7 +1597,7 @@ watch(documentId, (next, previous) => {
 }
 
 html.dark .header-doc-title {
-  color: #e2e8f0;
+  color: #e6e9ee;
 }
 
 .header-doc-meta {

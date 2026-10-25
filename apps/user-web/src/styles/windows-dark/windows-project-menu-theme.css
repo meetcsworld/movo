@@ -2,25 +2,25 @@
 /* Windows dark project picker. Preserve the disabled state without hiding its
    title or reason, and keep the footer within the same surface hierarchy. */
 html.platform-desktop.theme-dark .app-shell .workspace-menu:has(.workspace-choices) {
-  background: #19283d !important;
-  border-color: #405875 !important;
-  color: #e9f1fd !important;
-  box-shadow: 0 24px 52px rgba(2, 8, 18, .42) !important;
+  background: #3c2a1a !important;
+  border-color: #a0520c !important;
+  color: #fff6ee !important;
+  box-shadow: 0 24px 52px rgba(14, 10, 6, .42) !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .workspace-choices .choice-heading {
   padding: 16px 18px 12px !important;
-  border-bottom: 1px solid #344a65 !important;
+  border-bottom: 1px solid #a0520c !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .workspace-choices .choice-heading strong {
-  color: #f2f7ff !important;
+  color: #fff6ee !important;
   font-size: 14px !important;
   font-weight: 600 !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .workspace-choices :is(.choice-heading span, .choice-state) {
-  color: #b6c7dd !important;
+  color: #ffd0a6 !important;
   font-size: 12px !important;
   line-height: 1.5 !important;
 }
@@ -34,58 +34,58 @@ html.platform-desktop.theme-dark .app-shell .workspace-choices .choice-list {
 html.platform-desktop.theme-dark .app-shell .workspace-choices .choice-item {
   min-height: 58px !important;
   background: transparent !important;
-  color: #e4edfa !important;
+  color: #ffe9d5 !important;
   transition: background-color 180ms ease, border-color 180ms ease !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .workspace-choices .choice-item:hover:not(:disabled),
 html.platform-desktop.theme-dark .app-shell .workspace-choices .choice-item:focus-visible {
-  background: #294565 !important;
+  background: #63452b !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .workspace-choices .choice-item.selected {
-  background: #254465 !important;
-  box-shadow: inset 3px 0 0 #81b4f2 !important;
+  background: #614329 !important;
+  box-shadow: inset 3px 0 0 #ffb574 !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .workspace-choices .choice-item:disabled {
   opacity: 1 !important;
-  background: #1c2c42 !important;
+  background: #422e1c !important;
   cursor: not-allowed !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .workspace-choices .choice-item:disabled .choice-copy strong {
-  color: #b8c8dc !important;
+  color: #ffd0a6 !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .workspace-choices .choice-copy small {
-  color: #a9bdd5 !important;
+  color: #ffb574 !important;
   font-size: 11px !important;
   line-height: 1.4 !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .workspace-choices .folder-mark {
-  background: #273c57 !important;
-  color: #aac6e7 !important;
+  background: #573d27 !important;
+  color: #ffd0a6 !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .workspace-choices .choice-item:disabled .folder-mark {
-  background: #29394e !important;
-  color: #94abc6 !important;
+  background: #4e3a29 !important;
+  color: #ffb574 !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .workspace-choices .add-project {
   min-height: 48px !important;
-  background: #1e3551 !important;
-  border-color: #405875 !important;
-  color: #c3ddff !important;
+  background: #4e3621 !important;
+  border-color: #a0520c !important;
+  color: #ffe9d5 !important;
   font-size: 13px !important;
   font-weight: 600 !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .workspace-choices .add-project:hover,
 html.platform-desktop.theme-dark .app-shell .workspace-choices .add-project:focus-visible {
-  background: #2b4c72 !important;
+  background: #a0520c !important;
   color: #fff !important;
 }
 
@@ -97,82 +97,82 @@ html.platform-desktop.theme-dark .app-shell .workspace-choices .add-project:focu
 
 /* Project details and run-mode chooser share the picker shell but not the list markup. */
 html.platform-desktop.theme-dark .app-shell .workspace-menu:has(.workspace-heading) {
-  background: #18283d !important;
-  border-color: #405875 !important;
-  color: #e9f1fd !important;
+  background: #3c291a !important;
+  border-color: #a0520c !important;
+  color: #fff6ee !important;
   box-shadow: 0 24px 52px #02081270 !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .workspace-menu .project-mark {
-  background: #284566 !important;
-  color: #9dc9ff !important;
+  background: #63452b !important;
+  color: #ffd0a6 !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .workspace-menu .workspace-heading span,
 html.platform-desktop.theme-dark .app-shell .workspace-menu .detail-grid span,
 html.platform-desktop.theme-dark .app-shell .workspace-menu .mode-options legend,
 html.platform-desktop.theme-dark .app-shell .workspace-menu .mode-options small {
-  color: #afc3dc !important;
+  color: #ffb574 !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .workspace-menu .heading-copy {
   background: transparent !important;
-  color: #a9c9f0 !important;
+  color: #ffd0a6 !important;
 }
 html.platform-desktop.theme-dark .app-shell .workspace-menu .heading-copy:is(:hover, :focus-visible) {
-  background: #2a4565 !important;
-  color: #f2f7ff !important;
+  background: #64462b !important;
+  color: #fff6ee !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .workspace-menu .detail-grid {
-  border-color: #405875 !important;
-  background: #405875 !important;
+  border-color: #a0520c !important;
+  background: #a0520c !important;
 }
 html.platform-desktop.theme-dark .app-shell .workspace-menu .detail-grid > div {
-  background: #1c3049 !important;
+  background: #47311e !important;
 }
 html.platform-desktop.theme-dark .app-shell .workspace-menu .detail-grid strong,
 html.platform-desktop.theme-dark .app-shell .workspace-menu .mode-options strong {
-  color: #eef5ff !important;
+  color: #fff6ee !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .workspace-menu .mode-options button {
   border-color: transparent !important;
   background: transparent !important;
-  color: #e0eaf8 !important;
+  color: #ffe9d5 !important;
   transition: background-color 180ms ease, border-color 180ms ease !important;
 }
 html.platform-desktop.theme-dark .app-shell .workspace-menu .mode-options button:is(:hover, :focus-visible) {
-  background: #263f5d !important;
+  background: #5c4027 !important;
 }
 html.platform-desktop.theme-dark .app-shell .workspace-menu .mode-options button.active,
 html.platform-desktop.theme-dark .app-shell .workspace-menu .mode-options button.active:is(:hover, :focus-visible) {
-  border-color: #679be0 !important;
-  background: #234369 !important;
+  border-color: #f59a3c !important;
+  background: #62442a !important;
 }
 html.platform-desktop.theme-dark .app-shell .workspace-menu .mode-options .radio {
-  border-color: #9db4d0 !important;
+  border-color: #ffb574 !important;
 }
 html.platform-desktop.theme-dark .app-shell .workspace-menu .mode-options .active .radio {
-  border-color: #88baff !important;
+  border-color: #ffb574 !important;
 }
 html.platform-desktop.theme-dark .app-shell .workspace-menu .mode-options .active .radio i {
-  background: #88baff !important;
+  background: #ffb574 !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .workspace-menu .menu-actions {
-  border-color: #405875 !important;
+  border-color: #a0520c !important;
 }
 html.platform-desktop.theme-dark .app-shell .workspace-menu .menu-actions button {
-  background: #18283d !important;
-  color: #dbe9fb !important;
+  background: #3c291a !important;
+  color: #ffe9d5 !important;
 }
 html.platform-desktop.theme-dark .app-shell .workspace-menu .menu-actions button:is(:hover, :focus-visible) {
-  background: #29486d !important;
+  background: #69492d !important;
   color: #fff !important;
 }
 html.platform-desktop.theme-dark .app-shell .workspace-menu button:focus-visible {
-  outline: 2px solid #8abaff !important;
+  outline: 2px solid #ffb574 !important;
   outline-offset: -2px;
 }
 

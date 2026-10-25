@@ -99,6 +99,6 @@ async function revoke(row: InviteHistoryItem) {
 .history-filters { display:flex; gap:10px; margin-bottom:12px; }
 .history-filters :deep(.n-select) { min-width:0; flex:1; }
 .history-scroll { flex:1; min-height:0; overflow-y:auto; }
-.history-footer { flex:none; display:flex; justify-content:space-between; align-items:center; gap:12px; padding-top:12px; color:#64748b; font-size:13px; }
+.history-footer { flex:none; display:flex; justify-content:space-between; align-items:center; gap:12px; padding-top:12px; color:#6b7280; font-size:13px; }
 @media (max-width:650px) { .history-filters { flex-wrap:wrap; } .history-filters :deep(.n-select) { flex-basis:40%; } }
 </style>

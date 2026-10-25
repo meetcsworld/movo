@@ -40,10 +40,10 @@ const steps = computed(() => [
 <style scoped>
 .progress-card {
   padding: 16px 24px;
-  border: 1px solid #dfe7f5;
+  border: 1px solid #e6e9ee;
   border-radius: 18px;
   background: rgba(255, 255, 255, .92);
-  box-shadow: 0 12px 36px rgba(27, 55, 116, .08);
+  box-shadow: 0 12px 36px rgba(20, 23, 28, .06);
 }
 
 ol {
@@ -59,7 +59,7 @@ li {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #7b879f;
+  color: #6b7280;
   font-size: 12px;
   font-weight: 600;
 }
@@ -71,7 +71,7 @@ li:not(:last-child)::after {
   right: 12px;
   left: 48px;
   height: 1px;
-  background: #dfe7f5;
+  background: #e6e9ee;
   content: '';
 }
 
@@ -83,7 +83,7 @@ li:not(:last-child)::after {
   height: 30px;
   flex: 0 0 30px;
   place-items: center;
-  border: 1px solid #d7e0ef;
+  border: 1px solid #d5dae2;
   border-radius: 50%;
   background: #fff;
 }
@@ -105,8 +105,8 @@ li:not(:last-child)::after {
   white-space: nowrap;
 }
 
-li.active { color: #2457d6; }
-li.active .step-marker { border-color: #3568e8; background: #3568e8; color: #fff; box-shadow: 0 0 0 4px #e8efff; }
+li.active { color: #c96a12; }
+li.active .step-marker { border-color: #e8811f; background: #e8811f; color: #fff; box-shadow: 0 0 0 4px #ffe9d5; }
 li.complete { color: #248466; }
 li.complete .step-marker { border-color: #b7ead8; background: #e8f8f2; color: #168461; }
 li.complete::after { background: #b7ead8; }

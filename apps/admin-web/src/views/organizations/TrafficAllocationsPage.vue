@@ -475,7 +475,7 @@ onMounted(async () => {
 }
 
 .metric-card {
-  border: 1px solid #e6ebf5;
+  border: 1px solid #e6e9ee;
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(29, 54, 110, 0.04);
@@ -494,8 +494,8 @@ onMounted(async () => {
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  color: #2563eb;
-  background: #eff6ff;
+  color: #e8811f;
+  background: #fff6ee;
 }
 
 .metric-icon :deep(svg),
@@ -511,13 +511,13 @@ onMounted(async () => {
 
 .metric-label,
 .metric-note {
-  color: #64748b;
+  color: #6b7280;
   font-size: 12px;
 }
 
 .metric-value {
   margin-top: 4px;
-  color: #0f172a;
+  color: #14171c;
   font-size: 24px;
   font-weight: 700;
 }
@@ -544,14 +544,14 @@ onMounted(async () => {
 
 .period-hint {
   margin-top: 2px;
-  color: #64748b;
+  color: #6b7280;
   font-size: 12px;
   line-height: 1.6;
 }
 
 .period-hint span {
   display: block;
-  color: #334155;
+  color: #374151;
 }
 
 .wide-input {
@@ -560,7 +560,7 @@ onMounted(async () => {
 
 .list-filter-row {
   padding: 16px 0 12px;
-  border-bottom: 1px solid #edf1f7;
+  border-bottom: 1px solid #eff1f4;
   margin-bottom: 12px;
 }
 
@@ -601,7 +601,7 @@ onMounted(async () => {
 }
 
 .user-main-line strong {
-  color: #0f172a;
+  color: #14171c;
   font-weight: 650;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -619,14 +619,14 @@ onMounted(async () => {
   flex-wrap: wrap;
   gap: 4px 10px;
   min-width: 0;
-  color: #8b97a8;
+  color: #98a0ae;
   font-size: 14px;
   line-height: 20px;
   word-break: break-all;
 }
 
 .user-contact-item {
-  color: #8b97a8;
+  color: #98a0ae;
   font-size: 14px;
   line-height: 20px;
   word-break: break-all;
@@ -637,7 +637,7 @@ onMounted(async () => {
   max-width: 100%;
   border-radius: 4px;
   background: #f6f8fb;
-  color: #8b97a8;
+  color: #98a0ae;
   font-size: 14px;
   line-height: 22px;
   padding: 0 6px;
@@ -647,7 +647,7 @@ onMounted(async () => {
 }
 
 .usage-cell span {
-  color: #64748b;
+  color: #6b7280;
   font-size: 12px;
 }
 
@@ -664,7 +664,7 @@ onMounted(async () => {
 }
 
 .user-inline span {
-  color: #64748b;
+  color: #6b7280;
   font-size: 12px;
 }
 
@@ -674,8 +674,8 @@ onMounted(async () => {
   justify-content: space-between;
   gap: 12px;
   padding-top: 14px;
-  border-top: 1px solid #edf1f7;
-  color: #64748b;
+  border-top: 1px solid #eff1f4;
+  color: #6b7280;
   font-size: 12px;
 }
 

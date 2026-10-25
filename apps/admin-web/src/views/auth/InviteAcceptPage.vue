@@ -61,9 +61,9 @@
       </n-card>
     </div>
 
-    <footer class="invite-brand-footer" aria-label="MOVO Brand">
-      <img class="invite-brand-logo" :src="movoLogo" alt="MOVO" />
-      <span class="brand-text">Powered by MOVO</span>
+    <footer class="invite-brand-footer" aria-label="QianyiClaw Brand">
+      <img class="invite-brand-logo" :src="movoLogo" alt="QianyiClaw" />
+      <span class="brand-text">Powered by QianyiClaw</span>
     </footer>
   </div>
 </template>
@@ -74,7 +74,7 @@ import { useRoute } from 'vue-router';
 import axios from 'axios';
 import { acceptInviteLink, fetchInviteLinkDetail, type InviteLinkDetail } from '@/api/directory';
 import { t } from '@/composables/i18n';
-import movoLogo from '@/assets/images/movo-logo.png';
+import movoLogo from '@/assets/images/qianyiclaw-logo.svg';
 
 const route = useRoute();
 const state = ref<'loading' | 'ready' | 'success' | 'error'>('loading');
@@ -189,7 +189,7 @@ onMounted(async () => {
 <style scoped>
 .invite-page {
   min-height: 100vh;
-  background: linear-gradient(160deg, #edf2ff 0%, #f5f8ff 48%, #eef8ff 100%);
+  background: linear-gradient(160deg, #edf2ff 0%, #fbfbfc 48%, #eef8ff 100%);
   padding: 44px 24px 64px;
 }
 
@@ -204,7 +204,7 @@ onMounted(async () => {
 .invite-hero {
   border: 1px solid #dbe5ff;
   border-radius: 18px;
-  background: linear-gradient(145deg, #366aff 0%, #5d86ff 100%);
+  background: linear-gradient(145deg, #e8811f 0%, #5d86ff 100%);
   color: #fff;
   padding: 28px;
   min-height: 360px;

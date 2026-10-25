@@ -118,13 +118,13 @@ onMounted(load);
 .audit-content { display: grid; gap: 18px; min-width: 0; }
 .page-head { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
 .metric-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
-.metric-card { display: grid; gap: 4px; padding: 16px 18px; border: 1px solid #edf0f5; border-radius: 10px; background: #fafbfc; }
-.metric-card span, .metric-card small, .pager-row { color: #667085; }
-.metric-card strong { color: #172033; font-size: 28px; line-height: 1.2; }
+.metric-card { display: grid; gap: 4px; padding: 16px 18px; border: 1px solid #eff1f4; border-radius: 10px; background: #fafbfc; }
+.metric-card span, .metric-card small, .pager-row { color: #6b7280; }
+.metric-card strong { color: #1f2329; font-size: 28px; line-height: 1.2; }
 .metric-card strong.danger { color: #d03050; }
-.audit-table-card { overflow: hidden; border: 1px solid #edf0f5; border-radius: 10px; }
+.audit-table-card { overflow: hidden; border: 1px solid #eff1f4; border-radius: 10px; }
 .toolbar, .pager-row { padding: 14px 16px; }
-.toolbar { border-bottom: 1px solid #edf0f5; }
-.pager-row { display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #edf0f5; }
+.toolbar { border-bottom: 1px solid #eff1f4; }
+.pager-row { display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #eff1f4; }
 @media (max-width: 980px) { .metric-grid { grid-template-columns: repeat(2, 1fr); } .page-head { align-items: flex-start; flex-direction: column; } }
 </style>

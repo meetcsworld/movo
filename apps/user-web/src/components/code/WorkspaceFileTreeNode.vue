@@ -39,5 +39,5 @@ async function activate() {
 </template>
 
 <style scoped>
-button{display:flex;width:100%;height:32px;align-items:center;gap:5px;border:0;border-radius:7px;background:transparent;padding:0 7px;color:#475569;text-align:left;cursor:pointer}button:focus{outline:0}button:hover{background:#eef4ff;color:#1e40af}button.selected{background:#dbeafe;color:#1d4ed8}.children{margin-left:15px}.chevron{width:12px;height:12px;flex:none;transition:transform .15s ease}.chevron.expanded{transform:rotate(90deg)}.kind{width:16px;height:16px;flex:none;color:#64748b}.folder{color:#2563eb}span{min-width:0;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px}small{color:#94a3b8}
+button{display:flex;width:100%;height:32px;align-items:center;gap:5px;border:0;border-radius:7px;background:transparent;padding:0 7px;color:#4b5563;text-align:left;cursor:pointer}button:focus{outline:0}button:hover{background:#fff6ee;color:#a0520c}button.selected{background:#ffe9d5;color:#c96a12}.children{margin-left:15px}.chevron{width:12px;height:12px;flex:none;transition:transform .15s ease}.chevron.expanded{transform:rotate(90deg)}.kind{width:16px;height:16px;flex:none;color:#6b7280}.folder{color:#e8811f}span{min-width:0;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px}small{color:#98a0ae}
 </style>

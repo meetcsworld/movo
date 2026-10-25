@@ -1507,17 +1507,17 @@ watch(() => [props.userId, props.mainId], () => {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  background: #f6f8fc;
+  background: #f7f8fa;
   padding: 12px;
 }
 
 .tools-header {
   width: 100%;
   padding: 14px 18px;
-  border: 1px solid #e6ebf5;
+  border: 1px solid #e6e9ee;
   border-radius: 8px;
   background: #fff;
-  box-shadow: 0 4px 12px rgba(29, 54, 110, 0.04);
+  box-shadow: 0 4px 12px rgba(97, 68, 42, 0.04);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1526,7 +1526,7 @@ watch(() => [props.userId, props.mainId], () => {
 
 .tools-header h1 {
   margin: 0;
-  color: #101c3d;
+  color: #362517;
   font-size: 20px;
   line-height: 1.2;
   font-weight: 800;
@@ -1540,9 +1540,9 @@ watch(() => [props.userId, props.mainId], () => {
 
 .shell-card {
   border-radius: 14px;
-  border: 1px solid #e6ebf5;
+  border: 1px solid #e6e9ee;
   background: #fff;
-  box-shadow: 0 6px 20px rgba(16, 38, 84, 0.05);
+  box-shadow: 0 6px 20px rgba(70, 49, 30, 0.05);
 }
 
 .metrics-row {
@@ -1624,7 +1624,7 @@ watch(() => [props.userId, props.mainId], () => {
 
 .content-title,
 .section-title {
-  color: #17233d;
+  color: #1f2329;
   font-size: 16px;
   font-weight: 800;
 }
@@ -1645,22 +1645,22 @@ watch(() => [props.userId, props.mainId], () => {
   display: flex;
   align-items: center;
   gap: 10px;
-  border: 1px solid #e6edf7;
+  border: 1px solid #e6e9ee;
   border-radius: 8px;
-  background: #f8fbff;
+  background: #f7f8fa;
   padding: 10px 12px;
 }
 
 .debug-overview span {
   flex: 0 0 auto;
-  color: #2563eb;
+  color: #e8811f;
   font-size: 12px;
   font-weight: 800;
 }
 
 .debug-overview strong {
   min-width: 0;
-  color: #17233d;
+  color: #1f2329;
   font-size: 12px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1674,7 +1674,7 @@ watch(() => [props.userId, props.mainId], () => {
 }
 
 .debug-group-title {
-  color: #64748b;
+  color: #6b7280;
   font-size: 12px;
   font-weight: 800;
 }
@@ -1688,7 +1688,7 @@ watch(() => [props.userId, props.mainId], () => {
 
 .debug-param-row label {
   min-width: 0;
-  color: #34415a;
+  color: #5a4634;
   font-size: 12px;
   font-weight: 700;
   overflow: hidden;
@@ -1702,9 +1702,9 @@ watch(() => [props.userId, props.mainId], () => {
 
 .test-summary {
   overflow: hidden;
-  border: 1px solid #e6edf7;
+  border: 1px solid #e6e9ee;
   border-radius: 8px;
-  background: #f8fbff;
+  background: #f7f8fa;
 }
 
 .test-metrics-row {
@@ -1722,12 +1722,12 @@ watch(() => [props.userId, props.mainId], () => {
 }
 
 .test-metrics-row > div:last-child {
-  border-left: 1px solid #e6edf7;
+  border-left: 1px solid #e6e9ee;
 }
 
 .test-metrics-row span {
   flex: none;
-  color: #64748b;
+  color: #6b7280;
   font-size: 12px;
 }
 
@@ -1747,8 +1747,8 @@ watch(() => [props.userId, props.mainId], () => {
 
 .response-summary {
   padding: 9px 12px;
-  border-top: 1px solid #e6edf7;
-  color: #475569;
+  border-top: 1px solid #e6e9ee;
+  color: #4b5563;
   font-size: 12px;
   line-height: 1.5;
   overflow-wrap: anywhere;
@@ -1762,16 +1762,16 @@ watch(() => [props.userId, props.mainId], () => {
 }
 
 .result-panel {
-  border: 1px solid #e6edf7;
+  border: 1px solid #e6e9ee;
   border-radius: 8px;
-  background: #fbfdff;
+  background: #f7f8fa;
   overflow: hidden;
 }
 
 .result-title {
   padding: 8px 10px;
-  border-bottom: 1px solid #edf2f8;
-  color: #334155;
+  border-bottom: 1px solid #fff6ee;
+  color: #374151;
   font-size: 12px;
   font-weight: 800;
 }
@@ -1788,7 +1788,7 @@ watch(() => [props.userId, props.mainId], () => {
   max-height: 220px;
   overflow: auto;
   padding: 10px;
-  color: #17233d;
+  color: #1f2329;
   font-size: 12px;
   line-height: 1.5;
   white-space: pre-wrap;
@@ -1810,7 +1810,7 @@ watch(() => [props.userId, props.mainId], () => {
   align-items: center;
   gap: 10px;
   padding: 8px 10px;
-  border: 1px solid #e7edf7;
+  border: 1px solid #ffe9d5;
   border-radius: 8px;
   background: #fff;
   width: 100%;
@@ -1832,11 +1832,11 @@ watch(() => [props.userId, props.mainId], () => {
 }
 
 .schema-editor :deep(.schema-head) {
-  color: #6a7890;
+  color: #6b7280;
   font-size: 12px;
   font-weight: 700;
-  background: #f7f9fd;
-  border-color: #eef2f8;
+  background: #fff6ee;
+  border-color: #fff6ee;
 }
 
 .schema-editor :deep(.schema-actions) {
@@ -1853,9 +1853,9 @@ watch(() => [props.userId, props.mainId], () => {
 }
 
 .metric-card {
-  border: 1px solid #e6ebf5;
+  border: 1px solid #e6e9ee;
   background: #fff;
-  box-shadow: 0 4px 12px rgba(29, 54, 110, 0.04);
+  box-shadow: 0 4px 12px rgba(97, 68, 42, 0.04);
 }
 
 .metric-main {
@@ -1888,19 +1888,19 @@ watch(() => [props.userId, props.mainId], () => {
   stroke-linejoin: round;
 }
 
-.metric-icon-total { color: #2d63ff; background: #eaf0ff; }
+.metric-icon-total { color: #e8811f; background: #fff6ee; }
 .metric-icon-enabled { color: #0f9964; background: #e8f8ef; }
-.metric-icon-mcp { color: #7456e0; background: #f0ebff; }
+.metric-icon-mcp { color: #f59a3c; background: #fff6ee; }
 .metric-icon-pass { color: #d9860a; background: #fff2df; }
 
 .metric-label {
-  color: #606f8a;
+  color: #6b7280;
   font-size: 12px;
   line-height: 1.3;
 }
 
 .metric-value {
-  color: #0f1f45;
+  color: #3b2919;
   font-size: 24px;
   font-weight: 600;
   line-height: 1.1;
@@ -1908,7 +1908,7 @@ watch(() => [props.userId, props.mainId], () => {
 
 .metric-note {
   margin-top: 6px;
-  color: #708099;
+  color: #6b7280;
   font-size: 12px;
 }
 
@@ -1931,7 +1931,7 @@ watch(() => [props.userId, props.mainId], () => {
 .list-filter-row {
   padding: 0 44px 12px;
   margin: 0 -44px 12px;
-  border-bottom: 1px solid #edf1f7;
+  border-bottom: 1px solid #eff1f4;
 }
 
 .list-body {
@@ -1949,10 +1949,10 @@ watch(() => [props.userId, props.mainId], () => {
 .tool-card {
   min-height: 188px;
   padding: 14px;
-  border: 1px solid rgba(28, 45, 82, 0.08);
+  border: 1px solid rgba(77, 54, 33, 0.08);
   border-radius: 8px;
   background: #fff;
-  box-shadow: 0 8px 18px rgba(15, 31, 69, 0.06), 0 1px 2px rgba(15, 31, 69, 0.04);
+  box-shadow: 0 8px 18px rgba(59, 41, 25, 0.06), 0 1px 2px rgba(59, 41, 25, 0.04);
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -1962,8 +1962,8 @@ watch(() => [props.userId, props.mainId], () => {
 }
 
 .tool-card:hover {
-  border-color: rgba(54, 106, 255, 0.36);
-  box-shadow: 0 14px 34px rgba(33, 58, 126, 0.14), 0 4px 10px rgba(33, 58, 126, 0.08);
+  border-color: rgba(245, 154, 60, 0.36);
+  box-shadow: 0 14px 34px rgba(160, 82, 12, 0.14), 0 4px 10px rgba(160, 82, 12, 0.08);
   transform: translateY(-2px);
 }
 
@@ -1984,24 +1984,24 @@ watch(() => [props.userId, props.mainId], () => {
 .card-footnote,
 .no-tag,
 .muted {
-  color: #7a8797;
+  color: #98a0ae;
   font-size: 12px;
 }
 
 .status-switch-label {
-  color: #5f6f85;
+  color: #6b7280;
   font-size: 12px;
   white-space: nowrap;
 }
 
 .card-title {
-  color: #17233d;
+  color: #1f2329;
   font-size: 16px;
   font-weight: 800;
 }
 
 .card-desc {
-  color: #5f6f85;
+  color: #6b7280;
   font-size: 13px;
   line-height: 1.55;
   display: -webkit-box;
@@ -2041,7 +2041,7 @@ watch(() => [props.userId, props.mainId], () => {
 
 .empty-shell {
   min-height: 320px;
-  border: 1px dashed #d8e2f2;
+  border: 1px dashed #d5dae2;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
@@ -2049,7 +2049,7 @@ watch(() => [props.userId, props.mainId], () => {
   justify-content: center;
   gap: 12px;
   text-align: center;
-  background: linear-gradient(180deg, #fbfdff, #fff);
+  background: linear-gradient(180deg, #f7f8fa, #fff);
 }
 
 .empty-visual {
@@ -2061,9 +2061,9 @@ watch(() => [props.userId, props.mainId], () => {
   width: 54px;
   height: 36px;
   border-radius: 10px;
-  border: 1px solid #d8e2f2;
+  border: 1px solid #d5dae2;
   background: #fff;
-  color: #2d63ff;
+  color: #e8811f;
   display: grid;
   place-items: center;
   font-weight: 700;
@@ -2071,14 +2071,14 @@ watch(() => [props.userId, props.mainId], () => {
 }
 
 .empty-title {
-  color: #101c3d;
+  color: #362517;
   font-size: 24px;
   line-height: 1.2;
   font-weight: 800;
 }
 
 .empty-desc {
-  color: #65748c;
+  color: #6b7280;
   font-size: 14px;
 }
 

@@ -94,7 +94,7 @@ async function run() {
 </template>
 
 <style scoped>
-.group-test-pane { display: flex; flex-direction: column; gap: 14px; min-width: 0; min-height: 0; overflow-y: auto; padding: 20px; border-left: 1px solid #e4eaf3; background: #f8faff; }
+.group-test-pane { display: flex; flex-direction: column; gap: 14px; min-width: 0; min-height: 0; overflow-y: auto; padding: 20px; border-left: 1px solid #e4eaf3; background: #fbfbfc; }
 h3 { margin: 0; font-size: 16px; }
 .test-title { display: flex; align-items: center; gap: 8px; color: #253a61; }.test-title .n-icon { color: #4774cb; }
 .helper { margin: 0; color: #697789; font-size: 12px; }

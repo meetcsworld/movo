@@ -2,54 +2,54 @@
 /* Presentation editor chrome follows Windows dark mode. Slide pixels and user
    chosen fill colors remain untouched. */
 html.platform-desktop.theme-dark .pe-overlay {
-  background: #0b1423 !important;
+  background: #20160e !important;
 }
 
 html.platform-desktop.theme-dark .pe-sidebar,
 html.platform-desktop.theme-dark .pe-toolbar {
-  background: #18273d !important;
-  border-color: #3e5574 !important;
+  background: #3c291a !important;
+  border-color: #a0520c !important;
 }
 
 html.platform-desktop.theme-dark .pe-sidebar-header,
 html.platform-desktop.theme-dark .pe-page-label {
-  color: #dce9f8 !important;
-  border-color: #3e5574 !important;
+  color: #ffe9d5 !important;
+  border-color: #a0520c !important;
 }
 
 html.platform-desktop.theme-dark .pe-badge,
 html.platform-desktop.theme-dark .pe-slide-num,
 html.platform-desktop.theme-dark .pe-btn-group {
-  background: #2a405e !important;
-  color: #d3e3f7 !important;
+  background: #5e422a !important;
+  color: #ffe9d5 !important;
 }
 
 html.platform-desktop.theme-dark .pe-slide-title,
 html.platform-desktop.theme-dark .pe-tool-value {
-  color: #d3e3f7 !important;
+  color: #ffe9d5 !important;
 }
 
 html.platform-desktop.theme-dark .pe-tool-label {
-  color: #b2c5df !important;
+  color: #ffd0a6 !important;
 }
 
 html.platform-desktop.theme-dark .pe-slide-item:hover,
 html.platform-desktop.theme-dark .pe-btn-ghost:hover,
 html.platform-desktop.theme-dark .pe-btn-icon:hover,
 html.platform-desktop.theme-dark .pe-btn-sm:hover {
-  background: #294365 !important;
+  background: #63452b !important;
 }
 
 html.platform-desktop.theme-dark .pe-slide-active,
 html.platform-desktop.theme-dark .pe-btn-active,
 html.platform-desktop.theme-dark .pe-btn-sm.pe-btn-active {
-  background: #285385 !important;
-  border-color: #79adf1 !important;
+  background: #a0520c !important;
+  border-color: #ffb574 !important;
 }
 
 html.platform-desktop.theme-dark .pe-slide-active .pe-slide-title,
 html.platform-desktop.theme-dark .pe-btn-active {
-  color: #f1f7ff !important;
+  color: #fff6ee !important;
 }
 
 html.platform-desktop.theme-dark .pe-input-num,
@@ -57,16 +57,16 @@ html.platform-desktop.theme-dark .pe-angle-dial,
 html.platform-desktop.theme-dark .pe-btn-outline,
 html.platform-desktop.theme-dark .pe-btn-icon,
 html.platform-desktop.theme-dark .pe-btn-sm {
-  background: #203550 !important;
-  border-color: #4b6689 !important;
-  color: #e2edfb !important;
+  background: #4e3722 !important;
+  border-color: #c96a12 !important;
+  color: #ffe9d5 !important;
 }
 
 html.platform-desktop.theme-dark .pe-btn-outline:hover,
 html.platform-desktop.theme-dark .pe-btn-icon:hover,
 html.platform-desktop.theme-dark .pe-btn-sm:hover {
-  background: #2b4c73 !important;
-  border-color: #7aa9e7 !important;
+  background: #a0520c !important;
+  border-color: #ffb574 !important;
 }
 
 html.platform-desktop.theme-dark .pe-btn-danger {
@@ -80,13 +80,13 @@ html.platform-desktop.theme-dark .pe-btn-danger:hover {
 }
 
 html.platform-desktop.theme-dark .pe-btn-ghost {
-  color: #c2d5ec !important;
+  color: #ffd0a6 !important;
 }
 
 html.platform-desktop.theme-dark .pe-toolbar-sep {
-  background: #405674 !important;
+  background: #4b5563 !important;
 }
 
 html.platform-desktop.theme-dark .pe-canvas-area {
-  background: #26364d !important;
+  background: #4d3826 !important;
 }

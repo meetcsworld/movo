@@ -3,49 +3,49 @@
 html.platform-desktop.theme-dark .shortcut-panel .panel-head h3,
 html.platform-desktop.theme-dark .group-card .entry-name strong,
 html.platform-desktop.theme-dark .member-info strong,
-html.platform-desktop.theme-dark .tree-frame .target strong { color: #edf4ff !important; }
+html.platform-desktop.theme-dark .tree-frame .target strong { color: #fff6ee !important; }
 html.platform-desktop.theme-dark .shortcut-panel .panel-head p,
 html.platform-desktop.theme-dark .group-card .entry-name small,
 html.platform-desktop.theme-dark .member-info span,
 html.platform-desktop.theme-dark .member-role,
 html.platform-desktop.theme-dark .intro,
-html.platform-desktop.theme-dark .hint { color: #aebed3 !important; }
+html.platform-desktop.theme-dark .hint { color: #ffb574 !important; }
 html.platform-desktop.theme-dark .group-card,
 html.platform-desktop.theme-dark .group-card.locked,
 html.platform-desktop.theme-dark .tree-frame,
 html.platform-desktop.theme-dark .member-row,
 html.platform-desktop.theme-dark .dropzone,
 html.platform-desktop.theme-dark .preview-pane {
-  background: #1b2a40 !important;
-  border-color: #3c5372 !important;
+  background: #402c1b !important;
+  border-color: #a0520c !important;
 }
 html.platform-desktop.theme-dark .preview-pane iframe { background: #fff !important; }
-html.platform-desktop.theme-dark .preview-pane .preview-message { color: #bed0e6 !important; }
+html.platform-desktop.theme-dark .preview-pane .preview-message { color: #ffd0a6 !important; }
 html.platform-desktop.theme-dark .group-card .entry-row,
-html.platform-desktop.theme-dark .files > div { border-color: #344a66 !important; }
-html.platform-desktop.theme-dark .group-card .shortcut-icon-button { color: #ccdaec !important; }
+html.platform-desktop.theme-dark .files > div { border-color: #a0520c !important; }
+html.platform-desktop.theme-dark .group-card .shortcut-icon-button { color: #ffd0a6 !important; }
 html.platform-desktop.theme-dark .group-card .shortcut-icon-button:hover,
 html.platform-desktop.theme-dark .group-card .shortcut-action-button:hover,
 html.platform-desktop.theme-dark .shortcut-panel .shortcut-action-button:hover {
-  background: #284467 !important;
-  color: #eaf3ff !important;
+  background: #64462b !important;
+  color: #fff6ee !important;
 }
 html.platform-desktop.theme-dark .tree-frame .n-tree-node-content--selected,
 html.platform-desktop.theme-dark .dropzone.dragging,
-html.platform-desktop.theme-dark .target { background: #254775 !important; color: #e7f0fb !important; }
+html.platform-desktop.theme-dark .target { background: #a0520c !important; color: #fff6ee !important; }
 html.platform-desktop.theme-dark .status-pill.status-success { background: #173e37 !important; color: #8be5b4 !important; border-color: #39816b !important; }
-html.platform-desktop.theme-dark .status-pill.status-learning { background: #213e67 !important; color: #a9ceff !important; border-color: #4d79b3 !important; }
+html.platform-desktop.theme-dark .status-pill.status-learning { background: #5f4229 !important; color: #ffd0a6 !important; border-color: #e8811f !important; }
 html.platform-desktop.theme-dark .status-pill.status-failed { background: #503139 !important; color: #ffb7bc !important; border-color: #a65c68 !important; }
 html.platform-desktop.theme-dark .status-pill.status-revoked,
-html.platform-desktop.theme-dark .status-pill.status-deleted { background: #283649 !important; color: #b7c6d9 !important; border-color: #4b617d !important; }
+html.platform-desktop.theme-dark .status-pill.status-deleted { background: #493728 !important; color: #ffd0a6 !important; border-color: #c96a12 !important; }
 html.platform-desktop.theme-dark .tool-tab-bar,
-html.platform-desktop.theme-dark .tool-tab-actions { background: #142238 !important; border-color: #3b5270 !important; }
-html.platform-desktop.theme-dark .tool-tab { color: #adc0d9 !important; }
+html.platform-desktop.theme-dark .tool-tab-actions { background: #352517 !important; border-color: #a0520c !important; }
+html.platform-desktop.theme-dark .tool-tab { color: #ffb574 !important; }
 html.platform-desktop.theme-dark .tool-tab:hover,
 html.platform-desktop.theme-dark .new-tab:hover,
 html.platform-desktop.theme-dark .panel-close:hover,
-html.platform-desktop.theme-dark .tab-close:hover { background: #283e5d !important; color: #f4f8ff !important; }
-html.platform-desktop.theme-dark .tool-tab.active { background: #223c5f !important; border-color: #4c6d98 !important; color: #eff6ff !important; }
-html.platform-desktop.theme-dark .new-tab-menu { background: #1b2c43 !important; border-color: #46617f !important; }
-html.platform-desktop.theme-dark .new-tab-menu button { color: #d8e5f6 !important; }
-html.platform-desktop.theme-dark .new-tab-menu button:hover { background: #2a4a73 !important; color: #fff !important; }
+html.platform-desktop.theme-dark .tab-close:hover { background: #5d4128 !important; color: #fff6ee !important; }
+html.platform-desktop.theme-dark .tool-tab.active { background: #5a3f27 !important; border-color: #c96a12 !important; color: #fff6ee !important; }
+html.platform-desktop.theme-dark .new-tab-menu { background: #422e1c !important; border-color: #c96a12 !important; }
+html.platform-desktop.theme-dark .new-tab-menu button { color: #ffe9d5 !important; }
+html.platform-desktop.theme-dark .new-tab-menu button:hover { background: #a0520c !important; color: #fff !important; }

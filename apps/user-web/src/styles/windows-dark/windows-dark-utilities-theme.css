@@ -2,18 +2,18 @@
 /* Gaps in user-web's dark utility map, limited to Windows clients. */
 html.platform-desktop.theme-dark .text-slate-950,
 html.platform-desktop.theme-dark .text-gray-950 {
-  color: #edf4ff !important;
+  color: #fff6ee !important;
 }
 
 html.platform-desktop.theme-dark .bg-gray-50\/50,
 html.platform-desktop.theme-dark .bg-gray-50\/60,
 html.platform-desktop.theme-dark .bg-slate-50\/80,
 html.platform-desktop.theme-dark .bg-slate-50\/95 {
-  background-color: rgba(27, 42, 63, .95) !important;
+  background-color: rgba(63, 44, 27, .95) !important;
 }
 
 html.platform-desktop.theme-dark :is(.bg-indigo-50, .bg-indigo-100, .bg-purple-50, .bg-violet-100, .bg-cyan-50) {
-  background-color: #253653 !important;
+  background-color: #533a25 !important;
 }
 
 html.platform-desktop.theme-dark :is(.bg-green-50, .bg-emerald-50) {
@@ -29,13 +29,13 @@ html.platform-desktop.theme-dark :is(.bg-red-50, .bg-rose-50) {
 }
 
 html.platform-desktop.theme-dark :is(.text-indigo-600, .text-purple-600, .text-cyan-600) {
-  color: #a9c5ff !important;
+  color: #ffd0a6 !important;
 }
 
 /* Light-mode callouts are dark surfaces on Windows. Their stronger text
    utilities must change with the surface, not retain near-black ink. */
 html.platform-desktop.theme-dark :is(.text-blue-800, .text-blue-900, .text-indigo-700, .text-indigo-800, .text-indigo-900, .text-purple-700, .text-purple-800, .text-purple-900, .text-cyan-700, .text-cyan-800, .text-cyan-900, .text-violet-600, .text-violet-700) {
-  color: #bdd5ff !important;
+  color: #ffd0a6 !important;
 }
 
 html.platform-desktop.theme-dark :is(.text-green-600, .text-emerald-600) {

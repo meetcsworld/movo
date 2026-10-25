@@ -150,7 +150,7 @@ const suggestionsToShow = computed(() =>
 
 .token-suggestion:hover {
   border-color: #b9cbee;
-  background: #edf3ff;
+  background: #fff6ee;
   color: #2a4d9b;
 }
 
@@ -167,7 +167,7 @@ const suggestionsToShow = computed(() =>
   align-items: center;
   gap: 6px;
   border-radius: 999px;
-  background: #edf3ff;
+  background: #fff6ee;
   color: #2450a6;
   font-size: 12px;
   font-weight: 600;
@@ -187,7 +187,7 @@ const suggestionsToShow = computed(() =>
   min-width: 140px;
   flex: 1;
   border: 0;
-  color: #172033;
+  color: #1f2329;
   font-size: 13px;
   outline: none;
   padding: 6px 0;

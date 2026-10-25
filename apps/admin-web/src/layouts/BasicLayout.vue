@@ -11,8 +11,8 @@
       style="backdrop-filter: blur(16px);"
     >
       <div class="brand-block" :class="{ compact: collapsed }">
-        <img class="brand-logo" :src="movoLogo" alt="MOVO" />
-        <span v-if="!collapsed" class="brand-name">MOVO</span>
+        <img class="brand-logo" :src="movoLogo" alt="QianyiClaw" />
+        <span v-if="!collapsed" class="brand-name">QianyiClaw</span>
       </div>
       <n-menu
         :collapsed="collapsed"
@@ -144,7 +144,7 @@ import { useRoute, useRouter } from 'vue-router';
 import { appRoutes } from '@/router/routes';
 import { useMenuOptions } from '@/composables/useMenuOptions';
 import { useAuthStore } from '@/stores/auth';
-import movoLogo from '@/assets/images/movo-logo.png';
+import movoLogo from '@/assets/images/qianyiclaw-logo.svg';
 import { resolveAdminAssetUrlWithVersion } from '@/composables/adminAsset';
 import { isLocale, useLocale, t, translateSourceText } from '@/composables/i18n';
 import { displayAdminName, isMobileLike } from '@/composables/privacy';
@@ -176,7 +176,7 @@ const currentRouteTitle = computed(() => {
   if (typeof metaTitle === 'string' && metaTitle) {
     return translateSourceText(metaTitle);
   }
-  return routeTitleMap.get(route.path) ? translateSourceText(routeTitleMap.get(route.path)!) : 'MOVO Admin';
+  return routeTitleMap.get(route.path) ? translateSourceText(routeTitleMap.get(route.path)!) : 'QianyiClaw Admin';
 });
 const isToolEditPage = computed(() => route.path === '/tools/new' || route.name === 'ToolEdit');
 const isSkillConfigPage = computed(() => route.name === 'SkillConfig');
@@ -302,8 +302,8 @@ async function handleSelect(key: string) {
 }
 
 html.dark .shell-sider {
-  background: rgba(17, 24, 39, 0.86) !important;
-  border-color: #263044 !important;
+  background: rgba(20, 23, 28, 0.86) !important;
+  border-color: #2a2e36 !important;
 }
 
 .brand-block.compact {
@@ -326,14 +326,14 @@ html.dark .shell-sider {
 }
 
 .brand-name {
-  color: #14213d;
-  font-size: 20px;
+  color: #1f2329;
+  font-size: 19px;
   font-weight: 800;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.01em;
 }
 
 html.dark .brand-name {
-  color: #f8fafc;
+  color: #f7f8fa;
 }
 
 .sider-footer {
@@ -426,7 +426,7 @@ html.dark .shell-header {
 }
 
 html.dark .shell-header::after {
-  background: linear-gradient(90deg, rgba(37, 99, 235, 0.1), rgba(96, 165, 250, 0.38), rgba(37, 99, 235, 0.1));
+  background: linear-gradient(90deg, rgba(232, 129, 31, 0.1), rgba(245, 154, 60, 0.38), rgba(232, 129, 31, 0.1));
 }
 
 .header-left {
@@ -447,18 +447,18 @@ html.dark .shell-header::after {
 
 .header-back-pill:hover {
   border-color: #b7c9ee;
-  background: #eef4ff;
+  background: #fff6ee;
 }
 
 html.dark .header-back-pill {
-  border-color: #334155;
-  background: #111827;
-  color: #bfdbfe;
+  border-color: #374151;
+  background: #14171c;
+  color: #ffd0a6;
 }
 
 html.dark .header-back-pill:hover {
-  border-color: #3b82f6;
-  background: #172033;
+  border-color: #f59a3c;
+  background: #1f2329;
 }
 
 .header-back-icon {
@@ -482,7 +482,7 @@ html.dark .header-back-pill:hover {
 }
 
 html.dark .header-title {
-  color: #f8fafc;
+  color: #f7f8fa;
 }
 
 .header-title-row {
@@ -512,7 +512,7 @@ html.dark .header-type-tag {
 }
 
 .header-subtitle {
-  color: #5f736d;
+  color: #6b7280;
   font-size: 12px;
   margin-top: 1px;
 }
@@ -560,7 +560,7 @@ html.dark .header-subtitle {
 }
 
 .profile-trigger:hover {
-  background: rgba(54, 106, 255, 0.09);
+  background: rgba(232, 129, 31, 0.09);
 }
 
 .header-avatar {
@@ -571,7 +571,7 @@ html.dark .header-subtitle {
   flex: 0 0 28px;
   overflow: hidden;
   border-radius: 50%;
-  background: #366aff;
+  background: #e8811f;
   color: #fff;
   font-size: 14px;
   font-weight: 700;
@@ -586,7 +586,7 @@ html.dark .header-subtitle {
 }
 
 html.dark .profile-trigger:hover {
-  background: rgba(96, 165, 250, 0.14);
+  background: rgba(245, 154, 60, 0.14);
 }
 
 .profile-text {
@@ -595,7 +595,7 @@ html.dark .profile-trigger:hover {
 }
 
 html.dark .profile-text {
-  color: #e5e7eb;
+  color: #e6e9ee;
 }
 
 .shell-footer {
@@ -603,7 +603,7 @@ html.dark .profile-text {
   align-items: center;
   justify-content: space-between;
   padding: 12px 24px;
-  color: #5f736d;
+  color: #6b7280;
   font-size: 12px;
   background: rgba(255,255,255,0.64);
 }
@@ -638,7 +638,7 @@ html.dark .shell-header::after {
 }
 
 html.dark .header-title {
-  color: #e2e8f0;
+  color: #e6e9ee;
 }
 
 html.dark .profile-text {
@@ -667,11 +667,11 @@ html.dark .shell-footer {
   gap: 8px;
   margin-left: 12px;
   padding-left: 12px;
-  border-left: 1px solid #e2e8f0;
+  border-left: 1px solid #e6e9ee;
 }
 
 html.dark .header-title-teleport {
-  border-color: #334155;
+  border-color: #374151;
 }
 
 /* 当传送容器不为空时，自动隐藏原本的全局路由标题，并去除左侧分界线 */

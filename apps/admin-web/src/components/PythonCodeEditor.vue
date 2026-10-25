@@ -29,8 +29,8 @@ let syncingFromEditor = false;
 const editorTheme = EditorView.theme({
   '&': {
     height: '100%',
-    backgroundColor: '#0f172a',
-    color: '#e2e8f0',
+    backgroundColor: '#14171c',
+    color: '#e6e9ee',
     fontSize: '13px',
   },
   '&.cm-focused': {
@@ -45,7 +45,7 @@ const editorTheme = EditorView.theme({
   '.cm-content': {
     minHeight: '100%',
     padding: '12px 0',
-    caretColor: '#93c5fd',
+    caretColor: '#ffb574',
   },
   '.cm-line': {
     padding: '0 16px',
@@ -65,13 +65,13 @@ const editorTheme = EditorView.theme({
   },
   '.cm-activeLineGutter': {
     backgroundColor: '#1d2c49',
-    color: '#bfdbfe',
+    color: '#ffd0a6',
   },
   '.cm-selectionBackground, ::selection': {
     backgroundColor: '#29446f !important',
   },
   '.cm-cursor': {
-    borderLeftColor: '#93c5fd',
+    borderLeftColor: '#ffb574',
   },
   '.cm-searchMatch': {
     backgroundColor: '#725c16',
@@ -81,10 +81,10 @@ const editorTheme = EditorView.theme({
   },
   '.cm-tooltip, .cm-panels': {
     backgroundColor: '#17233b',
-    color: '#e2e8f0',
+    color: '#e6e9ee',
   },
   '.cm-panels': {
-    borderColor: '#334155',
+    borderColor: '#374151',
   },
 }, { dark: true });
 
@@ -136,6 +136,6 @@ onBeforeUnmount(() => {
   height: 100%;
   min-height: 0;
   overflow: hidden;
-  background: #0f172a;
+  background: #14171c;
 }
 </style>

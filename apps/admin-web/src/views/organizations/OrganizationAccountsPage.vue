@@ -622,7 +622,7 @@ onMounted(async () => {
 
 .pager-row {
   margin-top: 12px;
-  border-top: 1px solid #eceff5;
+  border-top: 1px solid #eff1f4;
   padding-top: 10px;
   display: flex;
   align-items: center;
@@ -655,8 +655,8 @@ onMounted(async () => {
 :deep(.action-link) {
   border: 1px solid #d8e2ff;
   border-radius: 6px;
-  background: #f4f7ff;
-  color: #366aff;
+  background: #fff6ee;
+  color: #e8811f;
   cursor: pointer;
   padding: 2px 10px;
   font-size: 12px;
@@ -668,7 +668,7 @@ onMounted(async () => {
 }
 
 :deep(.action-link:hover) {
-  background: #eaf0ff;
+  background: #fff6ee;
   border-color: #b9caff;
 }
 

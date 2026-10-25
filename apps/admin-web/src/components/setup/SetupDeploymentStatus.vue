@@ -82,7 +82,7 @@ function serviceLabel(service: SetupServiceStatus) {
   overflow: hidden;
   border: 1px solid #dfe7f5;
   border-radius: 14px;
-  background: #f8faff;
+  background: #fbfbfc;
 }
 
 .status-summary {
@@ -107,7 +107,7 @@ function serviceLabel(service: SetupServiceStatus) {
 .summary-icon.ready { background: #e6f7f0; color: #168461; }
 .summary-icon svg, .refresh-button svg { width: 19px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2; }
 .summary-copy { display: grid; min-width: 0; flex: 1; gap: 2px; }
-.summary-copy strong { color: #17233d; font-size: 14px; }
+.summary-copy strong { color: #1f2329; font-size: 14px; }
 .summary-copy span { color: #66748f; font-size: 12px; }
 
 .details-button {

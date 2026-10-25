@@ -20,7 +20,7 @@ function actionLabel() {
 <template>
   <div class="composer-action">
     <svg v-if="running" class="composer-action__ring" viewBox="0 0 44 44" aria-hidden="true">
-      <rect x="3" y="3" width="38" height="38" rx="11" fill="none" stroke="rgba(59,130,246,0.2)" stroke-width="2.5" />
+      <rect x="3" y="3" width="38" height="38" rx="11" fill="none" stroke="rgba(232,129,31,0.2)" stroke-width="2.5" />
       <rect
         class="composer-action__ring-dash"
         x="3"
@@ -29,7 +29,7 @@ function actionLabel() {
         height="38"
         rx="11"
         fill="none"
-        stroke="rgba(59,130,246,0.95)"
+        stroke="rgba(232,129,31,0.95)"
         stroke-width="2.5"
         stroke-linecap="round"
         stroke-linejoin="round"

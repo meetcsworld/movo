@@ -2,7 +2,7 @@
   <div class="login-page">
     <div class="login-panel">
       <div class="login-copy">
-        <img class="login-logo" :src="movoLogo" alt="MOVO" />
+        <img class="login-logo" :src="movoLogo" alt="QianyiClaw" />
         <h1>{{ t('legacy.movo_agent_console') }}</h1>
         <p>
           {{ t('legacy.manage_organizations_models_and_process_configurations_to_ensure_stable') }}
@@ -66,7 +66,7 @@ import { useMessage } from 'naive-ui';
 import { login, selectTenantLogin, type TenantCandidate } from '@/api/auth';
 import { useAuthStore } from '@/stores/auth';
 import { t } from '@/composables/i18n';
-import movoLogo from '@/assets/images/movo-logo.png';
+import movoLogo from '@/assets/images/qianyiclaw-logo.svg';
 
 const router = useRouter();
 const message = useMessage();
@@ -203,8 +203,8 @@ async function resetTenantSelection() {
 
 .tenant-option:hover:not(:disabled) {
   border-color: #9db8f8;
-  background: #f8fbff;
-  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.08);
+  background: #fbfbfc;
+  box-shadow: 0 8px 20px rgba(232, 129, 31, 0.08);
 }
 
 .tenant-option:disabled {
@@ -229,18 +229,18 @@ async function resetTenantSelection() {
 
 .tenant-copy small {
   margin-top: 4px;
-  color: #64748b;
+  color: #6b7280;
   font-size: 13px;
 }
 
 .tenant-arrow {
-  color: #94a3b8;
+  color: #98a0ae;
   font-size: 22px;
 }
 
 .tenant-empty {
   padding: 24px 0;
-  color: #64748b;
+  color: #6b7280;
   text-align: center;
 }
 

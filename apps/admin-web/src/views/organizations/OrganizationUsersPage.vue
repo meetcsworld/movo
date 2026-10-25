@@ -830,7 +830,7 @@ function renderCustomFieldValue(row: DirectoryUserItem, field: UserFieldDef) {
         title: revealed ? t('additional.hide_original_information') : t('additional.view_original_information'),
         'aria-label': revealed ? t('additional.hide_original_information') : t('additional.view_original_information'),
         style:
-          'display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;flex:0 0 24px;border:0;border-radius:6px;background:transparent;color:#64748b;cursor:pointer;padding:0;',
+          'display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;flex:0 0 24px;border:0;border-radius:6px;background:transparent;color:#6b7280;cursor:pointer;padding:0;',
         onClick: (event: MouseEvent) => {
           event.stopPropagation();
           toggleMaskedField(row, field.fieldKey);
@@ -1535,7 +1535,7 @@ onMounted(async () => {
 .user-layout-collapsed { grid-template-columns: minmax(0, 1fr); }
 
 .dept-panel {
-  border: 1px solid #eceff5;
+  border: 1px solid #eff1f4;
   border-radius: 10px;
   padding: 10px;
   display: flex;
@@ -1604,7 +1604,7 @@ onMounted(async () => {
 
 :deep(.dept-node-action:hover) {
   border-color: #9fb5ff;
-  color: #366aff;
+  color: #e8811f;
 }
 
 .list-panel {
@@ -1671,7 +1671,7 @@ onMounted(async () => {
 
 .pager-row {
   margin-top: 10px;
-  border-top: 1px solid #eceff5;
+  border-top: 1px solid #eff1f4;
   padding-top: 10px;
   display: flex;
   align-items: center;
@@ -1685,7 +1685,7 @@ onMounted(async () => {
 }
 
 .source-tag {
-  color: #366aff;
+  color: #e8811f;
 }
 
 .masked-field {
@@ -1719,7 +1719,7 @@ onMounted(async () => {
   border: 0;
   border-radius: 6px;
   background: transparent;
-  color: #64748b;
+  color: #6b7280;
   cursor: pointer;
   padding: 0;
   transition: background-color 0.18s ease, color 0.18s ease;
@@ -1727,8 +1727,8 @@ onMounted(async () => {
 
 .masked-field-toggle:hover,
 .masked-field-toggle:focus-visible {
-  background: rgba(54, 106, 255, 0.1);
-  color: #366aff;
+  background: rgba(232, 129, 31, 0.1);
+  color: #e8811f;
   outline: none;
 }
 

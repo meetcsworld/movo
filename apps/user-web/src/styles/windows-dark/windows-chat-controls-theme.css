@@ -2,9 +2,9 @@
 /* The model trigger has a unique upstream class. Target that button itself:
    layout- or open-state selectors stopped matching when the menu changed. */
 html.platform-desktop.theme-dark .app-shell .composer-card button[class*="hover:bg-slate-100"] {
-  color: #e2edfc !important;
-  background-color: #233b59 !important;
-  border: 1px solid #4a6688 !important;
+  color: #ffe9d5 !important;
+  background-color: #573c25 !important;
+  border: 1px solid #c96a12 !important;
   border-radius: 9px !important;
   min-height: 32px !important;
   padding-inline: 11px !important;
@@ -14,53 +14,53 @@ html.platform-desktop.theme-dark .app-shell .composer-card button[class*="hover:
 html.platform-desktop.theme-dark .app-shell .composer-card button[class*="hover:bg-slate-100"]:hover,
 html.platform-desktop.theme-dark .app-shell .composer-card button[class*="hover:bg-slate-100"]:focus-visible {
   color: #fff !important;
-  background-color: #2d4d74 !important;
-  border-color: #79a8e7 !important;
+  background-color: #a0520c !important;
+  border-color: #ffb574 !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .composer-card button[class*="hover:bg-slate-100"] svg {
-  color: #b5cdec !important;
+  color: #ffd0a6 !important;
 }
 
 /* The leftmost composer footer control is the attachment (+) menu. Keep these
    selectors away from the model picker on the right. */
 html.platform-desktop.theme-dark .app-shell .composer-card .composer-footer > .relative:first-child > button {
-  color: #b5cdec !important;
+  color: #ffd0a6 !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .composer-card .composer-footer > .relative:first-child > button:hover,
 html.platform-desktop.theme-dark .app-shell .composer-card .composer-footer > .relative:first-child > button:focus-visible {
-  color: #f1f6ff !important;
-  background: #2b4668 !important;
+  color: #fff6ee !important;
+  background: #67482c !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .composer-card .composer-footer > .relative:first-child > .absolute {
   z-index: 50;
-  background: #1b2b42 !important;
-  border-color: #46607f !important;
+  background: #412d1c !important;
+  border-color: #c96a12 !important;
   box-shadow: 0 18px 42px rgba(0, 0, 0, .4) !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .composer-card .composer-footer > .relative:first-child > .absolute > button {
-  color: #e2edfc !important;
+  color: #ffe9d5 !important;
   background: transparent !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .composer-card .composer-footer > .relative:first-child > .absolute > button:hover,
 html.platform-desktop.theme-dark .app-shell .composer-card .composer-footer > .relative:first-child > .absolute > button:focus-visible {
   color: #fff !important;
-  background: #2b4d76 !important;
+  background: #a0520c !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .composer-card .composer-footer > .relative:first-child > .absolute > button[aria-pressed="true"] {
-  color: #c5ddff !important;
-  background: #25466f !important;
+  color: #ffe9d5 !important;
+  background: #68482c !important;
 }
 
 html.platform-windows:not(.theme-dark) .app-shell .composer-card button[class*="hover:bg-slate-100"] {
-  color: #24476e !important;
-  background-color: #eaf2fc !important;
-  border: 1px solid #c5d8ef !important;
+  color: #66472c !important;
+  background-color: #fff6ee !important;
+  border: 1px solid #ffd0a6 !important;
   border-radius: 9px !important;
   min-height: 32px !important;
   padding-inline: 11px !important;
@@ -68,22 +68,22 @@ html.platform-windows:not(.theme-dark) .app-shell .composer-card button[class*="
 
 html.platform-windows:not(.theme-dark) .app-shell .composer-card button[class*="hover:bg-slate-100"]:hover,
 html.platform-windows:not(.theme-dark) .app-shell .composer-card button[class*="hover:bg-slate-100"]:focus-visible {
-  color: #173c69 !important;
-  background-color: #dceafd !important;
-  border-color: #9bbce5 !important;
+  color: #5a3e26 !important;
+  background-color: #ffe9d5 !important;
+  border-color: #ffb574 !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .composer-card .relative.min-w-0 > .absolute.bottom-9 {
-  background: #1b2940 !important;
-  border-color: #3b5271 !important;
+  background: #402c1b !important;
+  border-color: #a0520c !important;
   box-shadow: 0 18px 46px rgba(0, 0, 0, .38) !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .composer-card .relative.min-w-0 > .absolute.bottom-9 > button,
 html.platform-desktop.theme-dark .app-shell .composer-card .relative.min-w-0 > .absolute.bottom-9 > button:hover,
 html.platform-desktop.theme-dark .app-shell .composer-card .relative.min-w-0 > .absolute.bottom-9 > button:focus-visible {
-  color: #e5eefb !important;
-  background: #1b2940 !important;
+  color: #fff6ee !important;
+  background: #402c1b !important;
   border-color: transparent !important;
 }
 
@@ -91,16 +91,16 @@ html.platform-desktop.theme-dark .app-shell .composer-card .relative.min-w-0 > .
 html.platform-desktop.theme-dark .app-shell .composer-card .relative.min-w-0 > .absolute.bottom-9 > button.bg-blue-50\/80,
 html.platform-desktop.theme-dark .app-shell .composer-card .relative.min-w-0 > .absolute.bottom-9 > button[aria-selected="true"],
 html.platform-desktop.theme-dark .app-shell .composer-card .relative.min-w-0 > .absolute.bottom-9 > button:has(> svg) {
-  background: #284669 !important;
+  background: #66472c !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .composer-card .relative.min-w-0 > .absolute.bottom-9 .text-slate-900,
 html.platform-desktop.theme-dark .app-shell .composer-card .relative.min-w-0 > .absolute.bottom-9 .text-slate-800 {
-  color: #f2f6ff !important;
+  color: #fff6ee !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .composer-card .relative.min-w-0 > .absolute.bottom-9 .text-slate-500 {
-  color: #b4c6dd !important;
+  color: #ffd0a6 !important;
 }
 
 /* Keep the rounded outline fixed; only its highlighted segment travels along
@@ -111,7 +111,7 @@ html.platform-desktop.theme-dark .app-shell .composer-action__ring {
 }
 
 html.platform-desktop.theme-dark .app-shell .composer-action__ring-dash {
-  stroke: #72a9fa !important;
+  stroke: #ffb574 !important;
   stroke-dasharray: 28 72 !important;
   animation: windows-composer-ring-track 1.4s linear infinite !important;
   animation-duration: 1.4s !important;
@@ -119,7 +119,7 @@ html.platform-desktop.theme-dark .app-shell .composer-action__ring-dash {
 }
 
 html.platform-windows:not(.theme-dark) .app-shell .composer-action__ring-dash {
-  stroke: #2563eb !important;
+  stroke: #e8811f !important;
 }
 
 @keyframes windows-composer-ring-track {

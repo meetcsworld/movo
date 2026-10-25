@@ -412,17 +412,17 @@ watch(
   display: flex;
   flex-direction: column;
   gap: 16px;
-  background: #f6f8fc;
+  background: #f7f8fa;
   padding: 12px;
 }
 
 .tasks-header {
   width: 100%;
   padding: 14px 18px;
-  border: 1px solid #e6ebf5;
+  border: 1px solid #e6e9ee;
   border-radius: 8px;
   background: #fff;
-  box-shadow: 0 4px 12px rgba(29, 54, 110, 0.04);
+  box-shadow: 0 4px 12px rgba(97, 68, 42, 0.04);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -431,7 +431,7 @@ watch(
 
 .tasks-header h1 {
   margin: 0;
-  color: #101c3d;
+  color: #362517;
   font-size: 20px;
   line-height: 1.2;
   font-weight: 800;
@@ -445,9 +445,9 @@ watch(
 
 .shell-card {
   border-radius: 14px;
-  border: 1px solid #e6ebf5;
+  border: 1px solid #e6e9ee;
   background: #fff;
-  box-shadow: 0 6px 20px rgba(16, 38, 84, 0.05);
+  box-shadow: 0 6px 20px rgba(70, 49, 30, 0.05);
 }
 
 .list-card {
@@ -486,7 +486,7 @@ watch(
 .list-filter-row {
   padding: 0 44px 12px;
   margin: 0 -44px 12px;
-  border-bottom: 1px solid #edf1f7;
+  border-bottom: 1px solid #eff1f4;
 }
 
 .list-body {
@@ -504,12 +504,12 @@ watch(
 .task-card {
   min-height: 200px;
   padding: 16px;
-  border: 1px solid rgba(28, 45, 82, 0.08);
+  border: 1px solid rgba(77, 54, 33, 0.08);
   border-radius: 8px;
   background: #fff;
   box-shadow:
-    0 8px 18px rgba(15, 31, 69, 0.06),
-    0 1px 2px rgba(15, 31, 69, 0.04);
+    0 8px 18px rgba(59, 41, 25, 0.06),
+    0 1px 2px rgba(59, 41, 25, 0.04);
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -521,10 +521,10 @@ watch(
 }
 
 .task-card:hover {
-  border-color: rgba(54, 106, 255, 0.36);
+  border-color: rgba(245, 154, 60, 0.36);
   box-shadow:
-    0 14px 34px rgba(33, 58, 126, 0.14),
-    0 4px 10px rgba(33, 58, 126, 0.08);
+    0 14px 34px rgba(160, 82, 12, 0.14),
+    0 4px 10px rgba(160, 82, 12, 0.08);
   transform: translateY(-2px);
 }
 
@@ -543,12 +543,12 @@ watch(
 }
 
 .card-time {
-  color: #7a8797;
+  color: #98a0ae;
   font-size: 12px;
 }
 
 .card-title {
-  color: #17233d;
+  color: #1f2329;
   font-size: 16px;
   font-weight: 800;
   white-space: nowrap;
@@ -557,7 +557,7 @@ watch(
 }
 
 .card-desc {
-  color: #5f6f85;
+  color: #6b7280;
   font-size: 13px;
   line-height: 1.55;
   display: -webkit-box;
@@ -571,21 +571,21 @@ watch(
   align-items: center;
   gap: 6px;
   font-size: 12px;
-  color: #708099;
+  color: #6b7280;
   flex-wrap: wrap;
   margin-top: 2px;
 }
 
 .meta-item {
-  color: #65748c;
+  color: #6b7280;
 }
 
 .meta-divider {
-  color: #cbd5e1;
+  color: #d5dae2;
 }
 
 .session-link {
-  color: #2d63ff;
+  color: #e8811f;
   font-weight: 500;
   cursor: pointer;
   background: none;
@@ -618,12 +618,12 @@ watch(
   gap: 8px;
   padding: 4px 10px;
   border-radius: 999px;
-  background: #f6f9ff;
-  border: 1px solid #e3ebfb;
+  background: #fff6ee;
+  border: 1px solid #ffe9d5;
 }
 
 .card-switch-label {
-  color: #4a5d7c;
+  color: #c96a12;
   font-size: 12px;
   line-height: 1;
 }
@@ -643,8 +643,8 @@ watch(
 }
 
 .task-card-disabled {
-  background: linear-gradient(180deg, #fbfcfe, #f6f8fc);
-  border-color: rgba(28, 45, 82, 0.06);
+  background: linear-gradient(180deg, #f7f8fa, #f7f8fa);
+  border-color: rgba(77, 54, 33, 0.06);
 }
 
 .task-card-disabled .card-title,
@@ -655,7 +655,7 @@ watch(
 
 .empty-shell {
   min-height: 320px;
-  border: 1px dashed #d8e2f2;
+  border: 1px dashed #d5dae2;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
@@ -663,7 +663,7 @@ watch(
   justify-content: center;
   gap: 12px;
   text-align: center;
-  background: linear-gradient(180deg, #fbfdff, #fff);
+  background: linear-gradient(180deg, #f7f8fa, #fff);
   margin: 20px 0;
 }
 
@@ -676,8 +676,8 @@ watch(
   width: 54px;
   height: 28px;
   border-radius: 6px;
-  background: #eef4ff;
-  color: #3b82f6;
+  background: #fff6ee;
+  color: #f59a3c;
   font-size: 11px;
   font-weight: 700;
   display: flex;
@@ -687,13 +687,13 @@ watch(
 }
 
 .empty-title {
-  color: #1e293b;
+  color: #1f2329;
   font-size: 16px;
   font-weight: 700;
 }
 
 .empty-desc {
-  color: #64748b;
+  color: #6b7280;
   font-size: 13px;
   max-width: 400px;
 }

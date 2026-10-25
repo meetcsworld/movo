@@ -98,7 +98,7 @@ function close(value: boolean) {
 
 <style scoped>
 .preview-content { display: grid; gap: 14px; }
-.preview-title { color: #101828; font-size: 22px; font-weight: 700; }
-.preview-description, .hint { color: #667085; line-height: 1.65; }
+.preview-title { color: #1f2329; font-size: 22px; font-weight: 700; }
+.preview-description, .hint { color: #6b7280; line-height: 1.65; }
 .hint { margin: 0; font-size: 13px; }
 </style>

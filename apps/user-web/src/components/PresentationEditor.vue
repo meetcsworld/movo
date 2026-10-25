@@ -54,8 +54,8 @@ const toolAlign = ref('left')
 // Shape tools
 const toolFillMode = ref<'solid' | 'gradient'>('solid')
 const toolFillColor = ref('#ffffff')
-const toolGradientFrom = ref('#3b82f6')
-const toolGradientTo = ref('#8b5cf6')
+const toolGradientFrom = ref('#f59a3c')
+const toolGradientTo = ref('#e8811f')
 const toolGradientAngle = ref(135)
 const toolStrokeColor = ref('#000000')
 const toolOpacity = ref(100)
@@ -241,7 +241,7 @@ function addChartPlaceholder(
 ) {
   const rect = new fabric.Rect({
     left, top, width, height,
-    fill: '#f8fafc', stroke: '#94a3b8', strokeWidth: 1,
+    fill: '#f7f8fa', stroke: '#98a0ae', strokeWidth: 1,
     rx: 10, ry: 10, selectable: true,
   })
   ;(rect as any)._blockId = blockId
@@ -249,7 +249,7 @@ function addChartPlaceholder(
   canvas.add(rect)
   canvas.add(new fabric.Text(title, {
     left: left + 10, top: top + 10,
-    fontSize: 14, fill: '#64748b',
+    fontSize: 14, fill: '#6b7280',
     selectable: false, evented: false,
   }))
   canvas.renderAll()
@@ -262,8 +262,8 @@ function addImagePlaceholder(
   const promptText = block.image_prompt || t('ppt.image_placeholder')
   const rect = new fabric.Rect({
     left, top, width, height,
-    fill: '#e8ecf0',
-    stroke: '#b0b8c4',
+    fill: '#e6e9ee',
+    stroke: '#98a0ae',
     strokeWidth: 2,
     strokeDashArray: [6, 4],
     rx: 8, ry: 8,
@@ -275,7 +275,7 @@ function addImagePlaceholder(
   const label = new fabric.Text(promptText, {
     left: left + 10, top: top + height / 2 - 8,
     fontSize: 13,
-    fill: '#8896a7',
+    fill: '#98a0ae',
     selectable: false,
     evented: false,
   })
@@ -314,10 +314,10 @@ function renderBlockContainer(
     const sv = style.box_shadow as string
     // Preset names
     const presets: Record<string, string> = {
-      soft: '0 8px 24px rgba(15,23,42,0.10)',
-      subtle: '0 4px 14px rgba(15,23,42,0.08)',
-      medium: '0 10px 28px rgba(15,23,42,0.14)',
-      strong: '0 16px 40px rgba(15,23,42,0.18)',
+      soft: '0 8px 24px rgba(40, 28, 17,0.10)',
+      subtle: '0 4px 14px rgba(40, 28, 17,0.08)',
+      medium: '0 10px 28px rgba(40, 28, 17,0.14)',
+      strong: '0 16px 40px rgba(40, 28, 17,0.18)',
     }
     const resolved = presets[sv.toLowerCase()] || sv
     // Parse "offsetX offsetY blur color"
@@ -455,8 +455,8 @@ function addBlockToCanvas(
     const bsVal = style.box_shadow
     if (bsVal && bsVal !== 'none') {
       const presets: Record<string, string> = {
-        soft: '0 8px 24px rgba(15,23,42,0.10)', subtle: '0 4px 14px rgba(15,23,42,0.08)',
-        medium: '0 10px 28px rgba(15,23,42,0.14)', strong: '0 16px 40px rgba(15,23,42,0.18)',
+        soft: '0 8px 24px rgba(40, 28, 17,0.10)', subtle: '0 4px 14px rgba(40, 28, 17,0.08)',
+        medium: '0 10px 28px rgba(40, 28, 17,0.14)', strong: '0 16px 40px rgba(40, 28, 17,0.18)',
       }
       const resolved = presets[(bsVal + '').toLowerCase()] || bsVal
       const sm = (resolved + '').match(/(-?\d+)(?:px)?\s+(-?\d+)(?:px)?\s+(\d+)(?:px)?\s+(rgba?\([^)]+\)|#[0-9a-fA-F]{3,8})/)
@@ -532,7 +532,7 @@ function addBlockToCanvas(
 
     let iconName = (block.icon || block.content || 'sparkles').trim()
     iconName = iconName.replace(/^(tabler:|icon[-:])/i, '').trim() || 'sparkles'
-    const iconColor = style.color || props.blueprint?.theme?.accent_color || '#3b82f6'
+    const iconColor = style.color || props.blueprint?.theme?.accent_color || '#f59a3c'
     const colorHex = iconColor.replace('#', '')
     const canvas = fc
     // Match HTML renderer: icon SVG sits inside block's (left,top,width,height)
@@ -587,10 +587,10 @@ function addBlockToCanvas(
     // Build theme from blueprint
     const theme = props.blueprint?.theme || {}
     const chartTheme = {
-      accent_color: theme.accent_color || '#2563eb',
-      title_color: theme.title_color || '#0f172a',
-      body_color: theme.body_color || '#334155',
-      muted_color: theme.muted_color || '#64748b',
+      accent_color: theme.accent_color || '#e8811f',
+      title_color: theme.title_color || '#14171c',
+      body_color: theme.body_color || '#374151',
+      muted_color: theme.muted_color || '#6b7280',
       surface_background: theme.surface_background || '#ffffff',
       page_background: theme.page_background || '#ffffff',
     }
@@ -647,8 +647,8 @@ function addBlockToCanvas(
       const canvasRef = fc!
       const slot = new fabric.Rect({
         left, top, width, height,
-        fill: '#e8ecf0',
-        stroke: '#b0b8c4',
+        fill: '#e6e9ee',
+        stroke: '#98a0ae',
         strokeWidth: 1,
         strokeDashArray: [4, 4],
         rx: 8, ry: 8,
@@ -1100,8 +1100,8 @@ function syncToolbarFromSelection() {
       // It's a gradient
       toolFillMode.value = 'gradient'
       const stops = fill.colorStops || []
-      toolGradientFrom.value = stops[0]?.color || '#3b82f6'
-      toolGradientTo.value = stops[stops.length - 1]?.color || '#8b5cf6'
+      toolGradientFrom.value = stops[0]?.color || '#f59a3c'
+      toolGradientTo.value = stops[stops.length - 1]?.color || '#e8811f'
       // Rough angle extraction from coords
       const coords = fill.coords || {}
       const dx = (coords.x2 ?? 1) - (coords.x1 ?? 0)
@@ -1278,7 +1278,7 @@ function addRect() {
   const rect = new fabric.Rect({
     left: 100, top: 100, width: 200, height: 120,
     fill: '#ffffff',
-    stroke: '#e2e8f0',
+    stroke: '#e6e9ee',
     strokeWidth: 1,
     rx: 8, ry: 8,
     selectable: true,
@@ -2131,23 +2131,23 @@ onBeforeUnmount(() => {
 .pe-overlay {
   position: fixed; inset: 0; z-index: 50;
   display: flex;
-  background: rgba(15, 23, 42, 0.7);
+  background: rgba(40, 28, 17, 0.7);
   backdrop-filter: blur(8px);
 }
 .pe-sidebar {
   width: 200px; flex-shrink: 0;
-  background: #f8fafc;
-  border-right: 1px solid #e2e8f0;
+  background: #f7f8fa;
+  border-right: 1px solid #e6e9ee;
   display: flex; flex-direction: column;
 }
 .pe-sidebar-header {
-  padding: 14px 16px; font-size: 13px; font-weight: 600; color: #334155;
-  border-bottom: 1px solid #e2e8f0;
+  padding: 14px 16px; font-size: 13px; font-weight: 600; color: #374151;
+  border-bottom: 1px solid #e6e9ee;
   display: flex; align-items: center; gap: 8px;
 }
 .pe-badge {
   font-size: 11px; font-weight: 500;
-  background: #e2e8f0; color: #64748b;
+  background: #e6e9ee; color: #6b7280;
   padding: 1px 7px; border-radius: 10px;
 }
 .pe-slide-list {
@@ -2160,39 +2160,39 @@ onBeforeUnmount(() => {
   transition: all 0.15s;
   border: 2px solid transparent;
 }
-.pe-slide-item:hover { background: #f1f5f9; }
+.pe-slide-item:hover { background: #eff1f4; }
 .pe-slide-active {
-  background: #eff6ff !important;
-  border-color: #3b82f6;
+  background: #fff6ee !important;
+  border-color: #f59a3c;
 }
 .pe-slide-num {
   width: 24px; height: 24px; border-radius: 6px;
-  background: #e2e8f0; color: #64748b;
+  background: #e6e9ee; color: #6b7280;
   font-size: 11px; font-weight: 600;
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
 }
 .pe-slide-active .pe-slide-num {
-  background: #3b82f6; color: #fff;
+  background: #f59a3c; color: #fff;
 }
 .pe-slide-info { min-width: 0; }
 .pe-slide-title {
-  font-size: 12px; font-weight: 500; color: #475569;
+  font-size: 12px; font-weight: 500; color: #4b5563;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
-.pe-slide-active .pe-slide-title { color: #1e40af; font-weight: 600; }
+.pe-slide-active .pe-slide-title { color: #a0520c; font-weight: 600; }
 
 .pe-main { flex: 1; display: flex; flex-direction: column; min-width: 0; }
 
 /* ── Toolbar ───────────────────────────────────── */
 .pe-toolbar {
   height: 48px; flex-shrink: 0;
-  background: #fff; border-bottom: 1px solid #e2e8f0;
+  background: #fff; border-bottom: 1px solid #e6e9ee;
   display: flex; align-items: center;
   padding: 0 12px; gap: 6px;
 }
 .pe-toolbar-sep {
-  width: 1px; height: 24px; background: #e2e8f0; margin: 0 4px;
+  width: 1px; height: 24px; background: #e6e9ee; margin: 0 4px;
 }
 .pe-tool-group {
   display: flex; align-items: center; gap: 6px;
@@ -2201,32 +2201,32 @@ onBeforeUnmount(() => {
   display: flex; align-items: center; gap: 4px;
 }
 .pe-tool-label {
-  font-size: 11px; color: #94a3b8; font-weight: 500; user-select: none;
+  font-size: 11px; color: #98a0ae; font-weight: 500; user-select: none;
 }
 .pe-tool-value {
-  font-size: 11px; color: #64748b; min-width: 28px;
+  font-size: 11px; color: #6b7280; min-width: 28px;
 }
 
 /* ── Inputs ────────────────────────────────────── */
 .pe-input-num {
   height: 28px; font-size: 12px;
-  border: 1px solid #e2e8f0; border-radius: 6px;
+  border: 1px solid #e6e9ee; border-radius: 6px;
   padding: 0 6px; text-align: center;
   outline: none; transition: border 0.15s;
 }
-.pe-input-num:focus { border-color: #3b82f6; }
+.pe-input-num:focus { border-color: #f59a3c; }
 
 .pe-color-swatch {
   width: 26px; height: 26px; border-radius: 6px;
-  border: 2px solid #e2e8f0; cursor: pointer;
+  border: 2px solid #e6e9ee; cursor: pointer;
   display: block; transition: border-color 0.15s;
   box-shadow: 0 1px 2px rgba(0,0,0,0.06);
 }
-.pe-color-swatch:hover { border-color: #94a3b8; }
+.pe-color-swatch:hover { border-color: #98a0ae; }
 
 .pe-range {
   width: 72px; height: 28px;
-  accent-color: #3b82f6;
+  accent-color: #f59a3c;
 }
 
 /* ── Buttons ───────────────────────────────────── */
@@ -2245,15 +2245,15 @@ onBeforeUnmount(() => {
 .pe-btn-primary:hover:not(:disabled) { background: #059669; }
 
 .pe-btn-secondary {
-  background: #3b82f6; color: #fff;
+  background: #f59a3c; color: #fff;
 }
-.pe-btn-secondary:hover:not(:disabled) { background: #2563eb; }
+.pe-btn-secondary:hover:not(:disabled) { background: #e8811f; }
 
 .pe-btn-outline {
-  background: #fff; color: #475569;
-  border: 1px solid #e2e8f0;
+  background: #fff; color: #4b5563;
+  border: 1px solid #e6e9ee;
 }
-.pe-btn-outline:hover:not(:disabled) { background: #f8fafc; border-color: #cbd5e1; }
+.pe-btn-outline:hover:not(:disabled) { background: #f7f8fa; border-color: #d5dae2; }
 
 .pe-btn-danger {
   background: #fff; color: #ef4444;
@@ -2263,39 +2263,39 @@ onBeforeUnmount(() => {
 .pe-btn-danger:hover:not(:disabled) { background: #fef2f2; }
 
 .pe-btn-ghost {
-  background: transparent; color: #64748b;
+  background: transparent; color: #6b7280;
   padding: 0 6px;
 }
-.pe-btn-ghost:hover:not(:disabled) { background: #f1f5f9; color: #334155; }
+.pe-btn-ghost:hover:not(:disabled) { background: #eff1f4; color: #374151; }
 
 .pe-btn-icon {
   width: 28px; height: 28px;
   display: flex; align-items: center; justify-content: center;
-  border-radius: 6px; border: 1px solid #e2e8f0;
-  background: #fff; color: #64748b; cursor: pointer;
+  border-radius: 6px; border: 1px solid #e6e9ee;
+  background: #fff; color: #6b7280; cursor: pointer;
   transition: all 0.15s; font-size: 13px;
 }
-.pe-btn-icon:hover { background: #f1f5f9; }
+.pe-btn-icon:hover { background: #eff1f4; }
 .pe-btn-active {
-  background: #1e293b !important; color: #fff !important;
-  border-color: #1e293b !important;
+  background: #1f2329 !important; color: #fff !important;
+  border-color: #1f2329 !important;
 }
 
 .pe-btn-sm {
   height: 26px; padding: 0 8px;
   font-size: 11px; font-weight: 500;
-  border-radius: 5px; border: 1px solid #e2e8f0;
-  background: #fff; color: #64748b; cursor: pointer;
+  border-radius: 5px; border: 1px solid #e6e9ee;
+  background: #fff; color: #6b7280; cursor: pointer;
   transition: all 0.15s;
 }
-.pe-btn-sm:hover { background: #f1f5f9; }
+.pe-btn-sm:hover { background: #eff1f4; }
 .pe-btn-sm.pe-btn-active {
-  background: #1e293b; color: #fff; border-color: #1e293b;
+  background: #1f2329; color: #fff; border-color: #1f2329;
 }
 
 .pe-btn-group {
   display: flex; gap: 1px;
-  background: #e2e8f0; border-radius: 6px; overflow: hidden;
+  background: #e6e9ee; border-radius: 6px; overflow: hidden;
 }
 .pe-btn-group > .pe-btn-icon,
 .pe-btn-group > .pe-btn-sm { border-radius: 0; border: none; }
@@ -2303,28 +2303,28 @@ onBeforeUnmount(() => {
 /* ── Angle dial ────────────────────────────────── */
 .pe-angle-dial {
   width: 26px; height: 26px; border-radius: 50%;
-  border: 2px solid #e2e8f0; background: #fff;
+  border: 2px solid #e6e9ee; background: #fff;
   position: relative; cursor: pointer;
   transition: border-color 0.15s;
 }
-.pe-angle-dial:hover { border-color: #94a3b8; }
+.pe-angle-dial:hover { border-color: #98a0ae; }
 .pe-angle-needle {
   position: absolute; width: 2px; height: 9px;
-  background: #3b82f6; border-radius: 2px;
+  background: #f59a3c; border-radius: 2px;
   left: 50%; top: 2px;
   transform-origin: bottom center;
   margin-left: -1px;
 }
 .pe-angle-dot {
   position: absolute; width: 4px; height: 4px;
-  background: #3b82f6; border-radius: 50%;
+  background: #f59a3c; border-radius: 50%;
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
 }
 
 /* ── Page nav ──────────────────────────────────── */
 .pe-page-label {
-  font-size: 12px; font-weight: 600; color: #475569;
+  font-size: 12px; font-weight: 600; color: #4b5563;
   padding: 0 4px; min-width: 40px; text-align: center;
 }
 
@@ -2332,8 +2332,8 @@ onBeforeUnmount(() => {
 .pe-canvas-area {
   flex: 1; overflow: hidden;
   display: flex; align-items: center; justify-content: center;
-  background: #e5e7eb;
-  background-image: radial-gradient(#d1d5db 1px, transparent 1px);
+  background: #e6e9ee;
+  background-image: radial-gradient(#d5dae2 1px, transparent 1px);
   background-size: 20px 20px;
 }
 .pe-canvas-frame {
@@ -2347,9 +2347,9 @@ onBeforeUnmount(() => {
 .pe-slide-list::-webkit-scrollbar { width: 5px; }
 .pe-slide-list::-webkit-scrollbar-track { background: transparent; }
 .pe-slide-list::-webkit-scrollbar-thumb {
-  background: #cbd5e1; border-radius: 10px;
+  background: #d5dae2; border-radius: 10px;
 }
-.pe-slide-list::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+.pe-slide-list::-webkit-scrollbar-thumb:hover { background: #98a0ae; }
 
 /* ── Fullscreen preview ────────────────────────── */
 .pe-fs-overlay {

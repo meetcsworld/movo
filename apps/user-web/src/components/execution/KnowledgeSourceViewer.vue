@@ -1205,10 +1205,10 @@ onBeforeUnmount(() => {
 .pdf-source-layer :deep(.pdf-source-page) {
   position: relative;
   flex: 0 0 auto;
-  border: 1px solid #d9e2ef;
+  border: 1px solid #ffe9d5;
   border-radius: 8px;
   background: #fff;
-  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.14);
+  box-shadow: 0 10px 28px rgba(40, 28, 17, 0.14);
   overflow: hidden;
 }
 
@@ -1231,6 +1231,6 @@ onBeforeUnmount(() => {
 }
 
 .pdf-source-layer :deep(.has-source-highlight) {
-  box-shadow: 0 0 0 2px rgba(54, 106, 255, 0.35), 0 14px 34px rgba(54, 106, 255, 0.18);
+  box-shadow: 0 0 0 2px rgba(245, 154, 60, 0.35), 0 14px 34px rgba(245, 154, 60, 0.18);
 }
 </style>

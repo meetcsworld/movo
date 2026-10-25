@@ -69,12 +69,12 @@ const riskLabel = computed(() => {
 .approval-error { color:#b91c1c; }
 .approval-actions { display:flex; justify-content:flex-start; flex-wrap:wrap; gap:6px; margin-top:8px; }
 .approval-button { display:inline-flex; min-width:72px; min-height:40px; cursor:pointer; align-items:center; justify-content:center; gap:6px; border-radius:8px; padding:6px 12px; font-size:12px; font-weight:600; transition:background-color .18s ease,border-color .18s ease,color .18s ease; }
-.approval-button:focus-visible { outline:2px solid #2563eb; outline-offset:2px; }
+.approval-button:focus-visible { outline:2px solid #e8811f; outline-offset:2px; }
 .approval-button:disabled { cursor:not-allowed; opacity:.6; }
 .approval-button.secondary { border:1px solid #d4d4d8; background:#fff; color:#52525b; }
 .approval-button.secondary:hover:not(:disabled) { background:#f4f4f5; }
-.approval-button.primary { border:1px solid #2563eb; background:#2563eb; color:#fff; }
-.approval-button.primary:hover:not(:disabled) { border-color:#1d4ed8; background:#1d4ed8; }
+.approval-button.primary { border:1px solid #e8811f; background:#e8811f; color:#fff; }
+.approval-button.primary:hover:not(:disabled) { border-color:#c96a12; background:#c96a12; }
 .approval-spinner { width:13px; height:13px; border:2px solid rgba(255,255,255,.45); border-top-color:#fff; border-radius:50%; animation:approval-spin .8s linear infinite; }
 @keyframes approval-spin { to { transform:rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) { .approval-spinner { animation:none; } }

@@ -606,7 +606,7 @@ watch(() => props.pendingFeedbackCount, (next, previous) => {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  background: #f6f8fc;
+  background: #f7f8fa;
   padding: 12px;
 }
 
@@ -617,9 +617,9 @@ watch(() => props.pendingFeedbackCount, (next, previous) => {
 
 .shell-card {
   border-radius: 14px;
-  border: 1px solid #e6ebf5;
+  border: 1px solid #e6e9ee;
   background: #fff;
-  box-shadow: 0 6px 20px rgba(16, 38, 84, 0.05);
+  box-shadow: 0 6px 20px rgba(70, 49, 30, 0.05);
 }
 
 .metrics-row {
@@ -648,9 +648,9 @@ watch(() => props.pendingFeedbackCount, (next, previous) => {
 }
 
 .metric-card {
-  border: 1px solid #e6ebf5;
+  border: 1px solid #e6e9ee;
   background: #fff;
-  box-shadow: 0 4px 12px rgba(29, 54, 110, 0.04);
+  box-shadow: 0 4px 12px rgba(97, 68, 42, 0.04);
 }
 
 .metric-main {
@@ -686,8 +686,8 @@ watch(() => props.pendingFeedbackCount, (next, previous) => {
 }
 
 .metric-icon-total {
-  color: #2d63ff;
-  background: #eaf0ff;
+  color: #e8811f;
+  background: #fff6ee;
 }
 
 .metric-icon-writing {
@@ -701,18 +701,18 @@ watch(() => props.pendingFeedbackCount, (next, previous) => {
 }
 
 .metric-icon-config {
-  color: #7456e0;
-  background: #f0ebff;
+  color: #f59a3c;
+  background: #fff6ee;
 }
 
 .metric-label {
-  color: #606f8a;
+  color: #6b7280;
   font-size: 12px;
   line-height: 1.3;
 }
 
 .metric-value {
-  color: #0f1f45;
+  color: #3b2919;
   font-size: 24px;
   font-weight: 600;
   line-height: 1.1;
@@ -720,7 +720,7 @@ watch(() => props.pendingFeedbackCount, (next, previous) => {
 
 .metric-note {
   margin-top: 6px;
-  color: #708099;
+  color: #6b7280;
   font-size: 12px;
 }
 
@@ -746,7 +746,7 @@ watch(() => props.pendingFeedbackCount, (next, previous) => {
 .list-filter-row {
   padding: 0 44px 12px;
   margin: 0 -44px 12px;
-  border-bottom: 1px solid #edf1f7;
+  border-bottom: 1px solid #eff1f4;
 }
 
 .list-body {
@@ -764,12 +764,12 @@ watch(() => props.pendingFeedbackCount, (next, previous) => {
 .skill-card {
   min-height: 188px;
   padding: 14px;
-  border: 1px solid rgba(28, 45, 82, 0.08);
+  border: 1px solid rgba(77, 54, 33, 0.08);
   border-radius: 8px;
   background: #fff;
   box-shadow:
-    0 8px 18px rgba(15, 31, 69, 0.06),
-    0 1px 2px rgba(15, 31, 69, 0.04);
+    0 8px 18px rgba(59, 41, 25, 0.06),
+    0 1px 2px rgba(59, 41, 25, 0.04);
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -782,10 +782,10 @@ watch(() => props.pendingFeedbackCount, (next, previous) => {
 }
 
 .skill-card:hover {
-  border-color: rgba(54, 106, 255, 0.36);
+  border-color: rgba(245, 154, 60, 0.36);
   box-shadow:
-    0 14px 34px rgba(33, 58, 126, 0.14),
-    0 4px 10px rgba(33, 58, 126, 0.08);
+    0 14px 34px rgba(160, 82, 12, 0.14),
+    0 4px 10px rgba(160, 82, 12, 0.08);
   transform: translateY(-2px);
 }
 
@@ -805,18 +805,18 @@ watch(() => props.pendingFeedbackCount, (next, previous) => {
 }
 
 .card-time {
-  color: #7a8797;
+  color: #98a0ae;
   font-size: 12px;
 }
 
 .card-title {
-  color: #17233d;
+  color: #1f2329;
   font-size: 16px;
   font-weight: 800;
 }
 
 .card-desc {
-  color: #5f6f85;
+  color: #6b7280;
   font-size: 13px;
   line-height: 1.55;
   display: -webkit-box;
@@ -844,12 +844,12 @@ watch(() => props.pendingFeedbackCount, (next, previous) => {
   gap: 8px;
   padding: 4px 10px;
   border-radius: 999px;
-  background: #f6f9ff;
-  border: 1px solid #e3ebfb;
+  background: #fff6ee;
+  border: 1px solid #ffe9d5;
 }
 
 .card-switch-label {
-  color: #4a5d7c;
+  color: #c96a12;
   font-size: 12px;
   line-height: 1;
 }
@@ -869,7 +869,7 @@ watch(() => props.pendingFeedbackCount, (next, previous) => {
   min-width: 30px;
   padding: 0 7px;
   border-radius: 999px;
-  color: #667085;
+  color: #6b7280;
 }
 
 .feedback-btn :deep(svg) {
@@ -883,8 +883,8 @@ watch(() => props.pendingFeedbackCount, (next, previous) => {
 }
 
 .feedback-btn-unread {
-  color: #2459e8;
-  background: #edf3ff;
+  color: #e8811f;
+  background: #fff6ee;
 }
 
 .feedback-count { margin-left: 4px; font-size: 11px; font-weight: 700; }
@@ -895,8 +895,8 @@ watch(() => props.pendingFeedbackCount, (next, previous) => {
 }
 
 .skill-card-disabled {
-  background: linear-gradient(180deg, #fbfcfe, #f6f8fc);
-  border-color: rgba(28, 45, 82, 0.06);
+  background: linear-gradient(180deg, #f7f8fa, #f7f8fa);
+  border-color: rgba(77, 54, 33, 0.06);
 }
 
 .skill-card-disabled .card-title,
@@ -907,7 +907,7 @@ watch(() => props.pendingFeedbackCount, (next, previous) => {
 
 .empty-shell {
   min-height: 320px;
-  border: 1px dashed #d8e2f2;
+  border: 1px dashed #d5dae2;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
@@ -915,7 +915,7 @@ watch(() => props.pendingFeedbackCount, (next, previous) => {
   justify-content: center;
   gap: 12px;
   text-align: center;
-  background: linear-gradient(180deg, #fbfdff, #fff);
+  background: linear-gradient(180deg, #f7f8fa, #fff);
 }
 
 .empty-visual {
@@ -927,36 +927,36 @@ watch(() => props.pendingFeedbackCount, (next, previous) => {
   width: 54px;
   height: 36px;
   border-radius: 10px;
-  border: 1px solid #d8e2f2;
+  border: 1px solid #d5dae2;
   background: #fff;
-  color: #2d63ff;
+  color: #e8811f;
   display: grid;
   place-items: center;
   font-size: 11px;
   font-weight: 700;
-  box-shadow: 0 4px 10px rgba(45, 99, 255, 0.06);
+  box-shadow: 0 4px 10px rgba(245, 154, 60, 0.06);
 }
 
 .empty-visual span:nth-child(2) {
   transform: translateY(-4px);
-  border-color: #cbd8ef;
-  color: #7456e0;
+  border-color: #ffd0a6;
+  color: #f59a3c;
 }
 
 .empty-title {
-  color: #1a2744;
+  color: #422e1c;
   font-size: 15px;
   font-weight: 700;
 }
 
 .empty-desc {
-  color: #6c7c94;
+  color: #6b7280;
   font-size: 13px;
   margin-bottom: 4px;
 }
 
 .edit-type-value {
-  color: #738096;
+  color: #6b7280;
   font-size: 13px;
 }
 

@@ -28,8 +28,8 @@ const emit = defineEmits<{
 </template>
 
 <style scoped>
-.invite-row { padding:14px 2px; border-bottom:1px solid #e5e7eb; }
+.invite-row { padding:14px 2px; border-bottom:1px solid #e6e9ee; }
 .row-header,.row-actions { display:flex; align-items:center; justify-content:space-between; gap:10px; }
 .row-actions { justify-content:flex-start; flex-wrap:wrap; margin-top:10px; }
-.muted { color:#64748b; font-size:12px; margin-top:4px; }
+.muted { color:#6b7280; font-size:12px; margin-top:4px; }
 </style>

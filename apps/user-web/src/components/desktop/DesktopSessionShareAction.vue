@@ -102,9 +102,9 @@ async function revoke() {
   border: 0;
   border-radius: 8px;
   background: transparent;
-  color: #475569;
+  color: #4b5563;
   cursor: pointer;
   -webkit-app-region: no-drag;
 }
-.desktop-window-chrome__icon-button:hover { background: #eaf0f8; color: #2563eb; }
+.desktop-window-chrome__icon-button:hover { background: #fff6ee; color: #e8811f; }
 </style>

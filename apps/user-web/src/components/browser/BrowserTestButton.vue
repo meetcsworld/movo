@@ -36,13 +36,13 @@ async function openBrowser() {
 </template>
 
 <style scoped>
-.browser-test-button { display: inline-flex; height: 36px; flex: none; align-items: center; justify-content: center; gap: 6px; border: 1px solid #dbe3ee; border-radius: 18px; background: rgba(255, 255, 255, .95); padding: 0 12px; color: #475569; font-size: 13px; font-weight: 500; letter-spacing: 0; cursor: pointer; box-shadow: 0 1px 2px rgba(15, 23, 42, .05); transition: border-color 150ms ease, background-color 150ms ease, color 150ms ease; }
-.browser-test-button:hover { border-color: #bfdbfe; background: #eff6ff; color: #2563eb; }
-.browser-test-button:focus-visible { outline: 2px solid #bfdbfe; outline-offset: 2px; }
+.browser-test-button { display: inline-flex; height: 36px; flex: none; align-items: center; justify-content: center; gap: 6px; border: 1px solid #e6e9ee; border-radius: 18px; background: rgba(255, 255, 255, .95); padding: 0 12px; color: #4b5563; font-size: 13px; font-weight: 500; letter-spacing: 0; cursor: pointer; box-shadow: 0 1px 2px rgba(40, 28, 17, .05); transition: border-color 150ms ease, background-color 150ms ease, color 150ms ease; }
+.browser-test-button:hover { border-color: #ffd0a6; background: #fff6ee; color: #e8811f; }
+.browser-test-button:focus-visible { outline: 2px solid #ffd0a6; outline-offset: 2px; }
 .browser-test-button:disabled { cursor: default; opacity: .45; }
 .browser-test-button svg { width: 17px; height: 17px; }
 .browser-test-button.icon-only { width:36px; height:36px; border:0; border-radius:9px; background:transparent; padding:0; box-shadow:none; }
-.browser-test-button.icon-only:hover { background:#f1f5f9; }
-.browser-test-button.icon-only.active { background:#eaf2ff; color:#2563eb; }
+.browser-test-button.icon-only:hover { background:#eff1f4; }
+.browser-test-button.icon-only.active { background:#fff6ee; color:#e8811f; }
 @media (max-width: 620px) { .browser-test-button { width: 36px; padding: 0; } .browser-test-button span { display: none; } }
 </style>

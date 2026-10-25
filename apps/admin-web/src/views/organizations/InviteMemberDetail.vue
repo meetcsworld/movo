@@ -86,18 +86,18 @@ async function copy(value: string) {
 .member-detail > .n-button { align-self:flex-start; }
 .detail-heading { padding-bottom:4px; }
 .member-detail h3 { margin:0 0 6px; font-size:18px; line-height:1.45; }
-.muted { margin:0; color:#64748b; font-size:13px; }
-.separator { padding:0 8px; color:#cbd5e1; }
-.invite-details { display:grid; gap:10px; padding:16px; border:1px solid #e2e8f0; border-radius:10px; background:#f8fafc; }
+.muted { margin:0; color:#6b7280; font-size:13px; }
+.separator { padding:0 8px; color:#d5dae2; }
+.invite-details { display:grid; gap:10px; padding:16px; border:1px solid #e6e9ee; border-radius:10px; background:#f7f8fa; }
 .invite-source { display:flex; align-items:center; gap:10px; font-size:13px; }
-.invite-source span { width:64px; flex:none; color:#64748b; }
-.invite-source input { min-width:0; flex:1; padding:7px 10px; border:1px solid #e2e8f0; border-radius:6px; color:#334155; background:#fff; text-overflow:ellipsis; }
-.member-section-title { padding-top:2px; font-size:15px; font-weight:600; color:#1e293b; }
+.invite-source span { width:64px; flex:none; color:#6b7280; }
+.invite-source input { min-width:0; flex:1; padding:7px 10px; border:1px solid #e6e9ee; border-radius:6px; color:#374151; background:#fff; text-overflow:ellipsis; }
+.member-section-title { padding-top:2px; font-size:15px; font-weight:600; color:#1f2329; }
 .member-scroll { min-height:0; flex:1; overflow:auto; }
 .member-scroll :deep(.n-table) { min-width:720px; border-radius:8px; overflow:hidden; }
-.member-scroll :deep(th) { white-space:nowrap; background:#f8fafc; font-weight:600; }
+.member-scroll :deep(th) { white-space:nowrap; background:#f7f8fa; font-weight:600; }
 .member-scroll :deep(td) { max-width:230px; overflow-wrap:anywhere; }
-.member-footer { display:flex; align-items:center; justify-content:space-between; gap:12px; padding-top:12px; border-top:1px solid #e2e8f0; color:#64748b; font-size:13px; }
+.member-footer { display:flex; align-items:center; justify-content:space-between; gap:12px; padding-top:12px; border-top:1px solid #e6e9ee; color:#6b7280; font-size:13px; }
 .legacy-notice { flex:none; }
 @media (max-width:650px) { .invite-source { flex-wrap:wrap; } .invite-source span { width:100%; } .invite-source input { flex-basis:60%; } }
 </style>

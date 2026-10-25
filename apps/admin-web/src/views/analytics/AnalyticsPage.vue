@@ -1005,7 +1005,7 @@ watch(
 }
 
 .metric-card-blue {
-  background: linear-gradient(135deg, #366aff 0%, #4a97ff 100%);
+  background: linear-gradient(135deg, #1f2329 0%, #374151 100%);
 }
 
 .metric-card-green {
@@ -1013,15 +1013,15 @@ watch(
 }
 
 .metric-card-purple {
-  background: linear-gradient(135deg, #7c5cf6 0%, #a376f4 100%);
+  background: linear-gradient(135deg, #e8811f 0%, #ffb574 100%);
 }
 
 .metric-card-orange {
-  background: linear-gradient(135deg, #f47a3d 0%, #f5a044 100%);
+  background: linear-gradient(135deg, #c96a12 0%, #f59a3c 100%);
 }
 
 .metric-card-cyan {
-  background: linear-gradient(135deg, #0ea5e9 0%, #26c6da 100%);
+  background: linear-gradient(135deg, #f59a3c 0%, #ffb574 100%);
 }
 
 .metric-label {
@@ -1067,7 +1067,7 @@ watch(
 
 .shell-card {
   border-radius: 14px;
-  border: 1px solid #e6ebf5;
+  border: 1px solid #e6e9ee;
   background: #fff;
   box-shadow: 0 6px 20px rgba(16, 38, 84, 0.05);
 }
@@ -1090,7 +1090,7 @@ watch(
 .list-filter-row {
   padding: 0 20px 14px;
   margin: 0 -20px 14px;
-  border-bottom: 1px solid #edf1f7;
+  border-bottom: 1px solid #eff1f4;
 }
 
 .filter-toolbar {
@@ -1266,7 +1266,7 @@ watch(
   flex: 0 0 auto;
   margin-top: auto;
   padding-top: 10px;
-  border-top: 1px solid #eceff5;
+  border-top: 1px solid #eff1f4;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1294,7 +1294,7 @@ watch(
 
 .message-bubble {
   max-width: 100%;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #e6e9ee;
   padding: 14px 16px;
   background-color: #fff;
   border-radius: 0 !important; /* 直角要求 */
@@ -1302,16 +1302,16 @@ watch(
 }
 
 .bubble-user {
-  background-color: #f0f7ff;
-  border-color: #bfdbfe;
-  color: #1e3a8a;
-  border-left: 4px solid #3b82f6; /* 加强边缘区分 */
+  background-color: #fff6ee;
+  border-color: #ffd0a6;
+  color: #a0520c;
+  border-left: 4px solid #f59a3c; /* 加强边缘区分 */
 }
 
 .bubble-assistant {
   background-color: #fff;
-  border-color: #e2e8f0;
-  color: #334155;
+  border-color: #e6e9ee;
+  color: #374151;
   border-left: 4px solid #10b981;
 }
 
@@ -1321,7 +1321,7 @@ watch(
   align-items: center;
   margin-bottom: 10px;
   font-size: 12px;
-  border-bottom: 1px dashed #e2e8f0;
+  border-bottom: 1px dashed #e6e9ee;
   padding-bottom: 6px;
 }
 
@@ -1330,7 +1330,7 @@ watch(
 }
 
 .bubble-user .role-badge {
-  color: #2563eb;
+  color: #e8811f;
 }
 
 .bubble-assistant .role-badge {
@@ -1338,7 +1338,7 @@ watch(
 }
 
 .msg-time {
-  color: #94a3b8;
+  color: #98a0ae;
 }
 
 .user-text-content {
@@ -1350,8 +1350,8 @@ watch(
 
 .assistant-timeline-box {
   margin-bottom: 16px;
-  background: #f8fafc;
-  border: 1px solid #f1f5f9;
+  background: #f7f8fa;
+  border: 1px solid #eff1f4;
   padding: 12px;
   font-size: 13px;
   border-radius: 0 !important; /* 直角要求 */
@@ -1359,7 +1359,7 @@ watch(
 
 .timeline-title {
   font-weight: 600;
-  color: #475569;
+  color: #4b5563;
   margin-bottom: 8px;
 }
 
@@ -1376,12 +1376,12 @@ watch(
 }
 
 .markdown-body :deep(th), .markdown-body :deep(td) {
-  border: 1px solid #cbd5e1;
+  border: 1px solid #d5dae2;
   padding: 8px 12px;
 }
 
 .markdown-body :deep(th) {
-  background-color: #f1f5f9;
+  background-color: #eff1f4;
 }
 
 .assistant-documents-box {
@@ -1395,7 +1395,7 @@ watch(
   display: flex;
   align-items: center;
   gap: 12px;
-  border: 1px solid #bfdbfe;
+  border: 1px solid #ffd0a6;
   background-color: #f0f9ff;
   padding: 10px 14px;
   border-radius: 0 !important; /* 直角要求 */
@@ -1408,7 +1408,7 @@ watch(
   width: 40px;
   height: 40px;
   background-color: #fff;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #e6e9ee;
 }
 
 .svg-doc-icon {
@@ -1422,7 +1422,7 @@ watch(
 }
 
 .word-color {
-  color: #2563eb;
+  color: #e8811f;
 }
 
 .ppt-color {
@@ -1434,7 +1434,7 @@ watch(
 }
 
 .default-doc-color {
-  color: #64748b;
+  color: #6b7280;
 }
 
 .doc-info-box {
@@ -1445,7 +1445,7 @@ watch(
 .doc-title {
   font-size: 14px;
   font-weight: 600;
-  color: #1e293b;
+  color: #1f2329;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -1453,7 +1453,7 @@ watch(
 
 .doc-meta {
   font-size: 11px;
-  color: #64748b;
+  color: #6b7280;
   margin-top: 2px;
 }
 
@@ -1466,7 +1466,7 @@ watch(
   align-items: center;
   justify-content: center;
   min-height: 200px;
-  color: #94a3b8;
+  color: #98a0ae;
   font-size: 14px;
 }
 

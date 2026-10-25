@@ -144,7 +144,7 @@ function memberDeleted() {
 .group-editor-main { min-height: 0; overflow-y: auto; overscroll-behavior: contain; scrollbar-gutter: stable; padding: 20px 24px 28px; }
 .group-editor-main::-webkit-scrollbar { width: 9px; }
 .group-editor-main::-webkit-scrollbar-thumb { border: 2px solid transparent; border-radius: 8px; background: #b9c5d8; background-clip: padding-box; }
-.group-editor-main::-webkit-scrollbar-track { background: #f5f7fb; }
+.group-editor-main::-webkit-scrollbar-track { background: #fbfbfc; }
 .settings-section, .members-section { padding: 0 0 22px; }
 .members-section { border-top: 1px solid #e4eaf3; padding-top: 22px; }
 h3 { margin: 0 0 14px; font-size: 16px; }

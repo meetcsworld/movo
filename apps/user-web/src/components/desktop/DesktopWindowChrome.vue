@@ -72,8 +72,8 @@ const emit = defineEmits<{
   >
     <div class="desktop-window-chrome__sidebar">
       <span class="desktop-window-chrome__brand">
-        <img src="/movo-logo.png" :alt="windowsTitleBar && (navigationWidth || 260) <= 64 ? 'MOVO' : ''" />
-        <span>MOVO</span>
+        <img src="/qianyiclaw-logo.svg" :alt="windowsTitleBar && (navigationWidth || 260) <= 64 ? 'QianyiClaw' : ''" />
+        <span>QianyiClaw</span>
       </span>
       <button
         v-if="!windowsTitleBar && secondaryNavigationAvailable && !sidebarCollapsed"
@@ -92,9 +92,9 @@ const emit = defineEmits<{
     </div>
     <div class="desktop-window-chrome__content">
       <div class="desktop-window-chrome__context">
-        <span v-if="!windowsTitleBar && sidebarCollapsed" class="desktop-window-chrome__brand desktop-window-chrome__collapsed-brand" aria-label="MOVO">
-          <img src="/movo-logo.png" alt="" />
-          <span>MOVO</span>
+        <span v-if="!windowsTitleBar && sidebarCollapsed" class="desktop-window-chrome__brand desktop-window-chrome__collapsed-brand" aria-label="QianyiClaw">
+          <img src="/qianyiclaw-logo.svg" alt="" />
+          <span>QianyiClaw</span>
         </span>
         <button
           v-if="!windowsTitleBar && secondaryNavigationAvailable && sidebarCollapsed"
@@ -219,7 +219,7 @@ const emit = defineEmits<{
   display: grid;
   grid-template-columns: var(--desktop-navigation-width, 260px) minmax(0, 1fr);
   height: 48px;
-  color: #475569;
+  color: #4b5563;
   -webkit-app-region: drag;
   user-select: none;
 }
@@ -234,12 +234,12 @@ const emit = defineEmits<{
   display: flex;
   min-width: 0;
   align-items: center;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e6e9ee;
 }
 
 .desktop-window-chrome__sidebar {
-  border-right: 1px solid #e5e7eb;
-  background: #f8fafc;
+  border-right: 1px solid #e6e9ee;
+  background: #f7f8fa;
   padding: 0 14px 0 86px;
 }
 
@@ -280,7 +280,7 @@ const emit = defineEmits<{
   align-items: center;
   gap: 7px;
   overflow: hidden;
-  color: #334155;
+  color: #374151;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -321,7 +321,7 @@ const emit = defineEmits<{
 .desktop-window-chrome__title {
   flex: 1;
   overflow: hidden;
-  color: #334155;
+  color: #374151;
   font-size: 13px;
   font-weight: 600;
   text-overflow: ellipsis;
@@ -339,7 +339,7 @@ const emit = defineEmits<{
   border-radius: 8px;
   background: transparent;
   padding: 0;
-  color: #475569;
+  color: #4b5563;
   font-size: 12px;
   font-weight: 500;
   cursor: pointer;
@@ -347,8 +347,8 @@ const emit = defineEmits<{
 }
 
 .desktop-window-chrome__back-button:hover {
-  background: #f1f5f9;
-  color: #1d4ed8;
+  background: #eff1f4;
+  color: #c96a12;
 }
 
 .desktop-window-chrome__sidebar-toggle {
@@ -360,55 +360,55 @@ const emit = defineEmits<{
   border: 0;
   border-radius: 8px;
   background: transparent;
-  color: #475569;
+  color: #4b5563;
   cursor: pointer;
 }
 .desktop-window-chrome__sidebar-toggle svg { width: 18px; height: 18px; }
 .desktop-window-chrome__sidebar-toggle--beside-brand { margin-left: 12px; }
-.desktop-window-chrome__sidebar-toggle:hover { background: #f1f5f9; color: #1d4ed8; }
-.desktop-window-chrome__sidebar-toggle:focus-visible { outline: 2px solid #bfdbfe; outline-offset: 1px; }
+.desktop-window-chrome__sidebar-toggle:hover { background: #eff1f4; color: #c96a12; }
+.desktop-window-chrome__sidebar-toggle:focus-visible { outline: 2px solid #ffd0a6; outline-offset: 1px; }
 
 .desktop-window-chrome__back-button svg {
   width: 17px;
   height: 17px;
 }
 
-.desktop-window-chrome__icon-button { position:relative; display:grid; width:36px; height:36px; place-items:center; border:0; border-radius:9px; background:transparent; color:#475569; cursor:pointer; transition:background-color 160ms ease,color 160ms ease; }
-.desktop-window-chrome__icon-button:hover:not(:disabled) { background:#f1f5f9; color:#2563eb; }
-.desktop-window-chrome__icon-button.active { background:#eaf2ff; color:#2563eb; }
-.desktop-window-chrome__icon-button:focus-visible { outline:2px solid #bfdbfe; outline-offset:1px; }
+.desktop-window-chrome__icon-button { position:relative; display:grid; width:36px; height:36px; place-items:center; border:0; border-radius:9px; background:transparent; color:#4b5563; cursor:pointer; transition:background-color 160ms ease,color 160ms ease; }
+.desktop-window-chrome__icon-button:hover:not(:disabled) { background:#eff1f4; color:#e8811f; }
+.desktop-window-chrome__icon-button.active { background:#fff6ee; color:#e8811f; }
+.desktop-window-chrome__icon-button:focus-visible { outline:2px solid #ffd0a6; outline-offset:1px; }
 .desktop-window-chrome__icon-button:disabled { cursor:default; opacity:.35; }
 .desktop-window-chrome__icon-button svg { width:18px; height:18px; }
-.desktop-window-chrome__badge { position:absolute; top:1px; right:1px; min-width:14px; height:14px; border:1px solid #fff; border-radius:7px; background:#2563eb; padding:0 3px; color:#fff; font-size:8px; line-height:12px; }
+.desktop-window-chrome__badge { position:absolute; top:1px; right:1px; min-width:14px; height:14px; border:1px solid #fff; border-radius:7px; background:#e8811f; padding:0 3px; color:#fff; font-size:8px; line-height:12px; }
 
 :global(html.theme-dark .desktop-window-chrome__sidebar) {
-  border-color: #334155;
-  background: #0b1220;
+  border-color: #374151;
+  background: #1f2329;
 }
 
 :global(html.theme-dark .desktop-window-chrome__content) {
-  border-color: #334155;
-  background: rgba(17, 24, 39, 0.96);
+  border-color: #374151;
+  background: rgba(39, 27, 17, 0.96);
 }
 
 :global(html.theme-dark .desktop-window-chrome__brand),
 :global(html.theme-dark .desktop-window-chrome__title) {
-  color: #e2e8f0;
+  color: #e6e9ee;
 }
 
 :global(html.theme-dark .desktop-window-chrome__back-button) {
-  color: #cbd5e1;
+  color: #d5dae2;
 }
 
-:global(html.theme-dark .desktop-window-chrome__sidebar-toggle) { color: #cbd5e1; }
-:global(html.theme-dark .desktop-window-chrome__sidebar-toggle:hover) { background: #1e293b; color: #93c5fd; }
+:global(html.theme-dark .desktop-window-chrome__sidebar-toggle) { color: #d5dae2; }
+:global(html.theme-dark .desktop-window-chrome__sidebar-toggle:hover) { background: #1f2329; color: #ffb574; }
 
 :global(html.theme-dark .desktop-window-chrome__back-button:hover) {
-  background: #1e293b;
-  color: #93c5fd;
+  background: #1f2329;
+  color: #ffb574;
 }
 
-:global(html.theme-dark .desktop-window-chrome__icon-button) { color:#94a3b8; }
-:global(html.theme-dark .desktop-window-chrome__icon-button:hover:not(:disabled)) { background:#1e293b; color:#93c5fd; }
+:global(html.theme-dark .desktop-window-chrome__icon-button) { color:#98a0ae; }
+:global(html.theme-dark .desktop-window-chrome__icon-button:hover:not(:disabled)) { background:#1f2329; color:#ffb574; }
 
 </style>

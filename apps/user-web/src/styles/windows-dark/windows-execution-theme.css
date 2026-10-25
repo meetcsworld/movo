@@ -3,19 +3,19 @@
    Keep this override within the Windows desktop dark theme. */
 html.platform-desktop.theme-dark .app-shell .execution-v3 .execution-v3-toggle,
 html.platform-desktop.theme-dark .app-shell .execution-v3 .execution-v3-elapsed {
-  color: #a9bfdb !important;
+  color: #ffb574 !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .execution-v3 .commentary-copy,
 html.platform-desktop.theme-dark .app-shell .execution-v3 .provisional-assistant-copy {
-  color: #e4edfa !important;
+  color: #ffe9d5 !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .execution-v3 .activity-row:not(.status-failed):not(.category-warning):not(.category-error),
 html.platform-desktop.theme-dark .app-shell .execution-v3 .repeated-tool-group,
 html.platform-desktop.theme-dark .app-shell .execution-v3 .repeated-tool-group ol {
-  --activity-color: #b6c8df;
-  color: #b6c8df !important;
+  --activity-color: #ffd0a6;
+  color: #ffd0a6 !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .execution-v3 .activity-row.status-failed,
@@ -28,18 +28,18 @@ html.platform-desktop.theme-dark .app-shell .execution-v3 .repeated-tool-group s
 
 html.platform-desktop.theme-dark .app-shell .execution-v3 .activity-detail,
 html.platform-desktop.theme-dark .app-shell .execution-v3 .tool-call-summary {
-  color: #9fb5d2 !important;
+  color: #ffb574 !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .execution-v3 .tool-call-name {
-  color: #d7e5f8 !important;
+  color: #ffe9d5 !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .execution-v3 .actively-running .activity-copy,
 html.platform-desktop.theme-dark .app-shell .execution-v3 summary.running .repeated-tool-label,
 html.platform-desktop.theme-dark .app-shell .execution-v3 .execution-v3-thinking {
-  color: #a8cbff !important;
-  background-image: linear-gradient(100deg, #8bb9fa 15%, #edf5ff 48%, #8bb9fa 85%) !important;
+  color: #ffd0a6 !important;
+  background-image: linear-gradient(100deg, #ffb574 15%, #fff6ee 48%, #ffb574 85%) !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -47,6 +47,6 @@ html.platform-desktop.theme-dark .app-shell .execution-v3 .execution-v3-thinking
 html.platform-desktop.theme-dark .app-shell .execution-v3 summary.running .repeated-tool-label,
 html.platform-desktop.theme-dark .app-shell .execution-v3 .execution-v3-thinking {
     background: none !important;
-    color: #a8cbff !important;
+    color: #ffd0a6 !important;
   }
 }

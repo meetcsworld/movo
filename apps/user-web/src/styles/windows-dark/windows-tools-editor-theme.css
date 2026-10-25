@@ -1,25 +1,25 @@
 /* Windows-only dark user-web styles. */
 /* The Tool wizard already has dark panels; its fixed light labels do not. */
 html.platform-desktop.theme-dark .app-shell .tools-page :is(.content-title, .section-title, .editor-card-header, .debug-group-title) {
-  color: #f0f5ff !important;
+  color: #fff6ee !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .tools-page :is(.muted, .debug-param-row label, .debug-overview span) {
-  color: #b5c7de !important;
+  color: #ffd0a6 !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .tools-page :is(.debug-overview, .debug-param-row, .step-panel) {
-  border-color: #40536f !important;
+  border-color: #4b5563 !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .tools-page .debug-overview {
-  background: #1c2b42 !important;
+  background: #422e1c !important;
 }
 
 html.platform-desktop.theme-dark .app-shell .tools-page :is(.n-input, .n-base-selection) {
-  --n-color: #142238 !important;
-  --n-color-active: #142238 !important;
-  --n-text-color: #edf4ff !important;
-  --n-placeholder-color: #a4b7ce !important;
-  --n-border: 1px solid #415674 !important;
+  --n-color: #352517 !important;
+  --n-color-active: #352517 !important;
+  --n-text-color: #fff6ee !important;
+  --n-placeholder-color: #ffb574 !important;
+  --n-border: 1px solid #a0520c !important;
 }

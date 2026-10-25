@@ -75,7 +75,7 @@ const detail = computed(() => props.item.kind === 'tool' ? toolCallSummary(props
 
 <style scoped>
 .activity-row {
-  --activity-color:#475569;
+  --activity-color:#4b5563;
   display:flex;
   align-items:center;
   gap:10px;
@@ -92,26 +92,26 @@ const detail = computed(() => props.item.kind === 'tool' ? toolCallSummary(props
   text-overflow:ellipsis;
   white-space:nowrap;
 }
-.activity-detail { min-width:0; flex:1 1 auto; overflow:hidden; color:#94a3b8; font-size:12px; text-overflow:ellipsis; white-space:nowrap; }
-.status-running { --activity-color:#64748b; }
-.status-running.actively-running { --activity-color:#2563eb; }
+.activity-detail { min-width:0; flex:1 1 auto; overflow:hidden; color:#98a0ae; font-size:12px; text-overflow:ellipsis; white-space:nowrap; }
+.status-running { --activity-color:#6b7280; }
+.status-running.actively-running { --activity-color:#e8811f; }
 .status-running.actively-running .activity-copy {
   color:transparent;
-  background:linear-gradient(100deg,#2563eb 16%,#93c5fd 38%,#2563eb 60%);
+  background:linear-gradient(100deg,#e8811f 16%,#ffb574 38%,#e8811f 60%);
   background-size:240% 100%;
   background-clip:text;
   -webkit-background-clip:text;
   animation:activity-sheen 1.7s linear infinite;
 }
-.status-completed { --activity-color:#64748b; }
+.status-completed { --activity-color:#6b7280; }
 .status-failed,.category-warning,.category-error,.outcome-inconclusive { --activity-color:#b45309; }
 .outcome-needs_repair { --activity-color:#9a3412; }
-.status-abandoned { --activity-color:#64748b; }
+.status-abandoned { --activity-color:#6b7280; }
 .activity-state { margin-left:auto; flex:none; color:var(--activity-color); font-size:11px; }
 .activity-actions { display:inline-flex; gap:6px; margin-left:auto; }
-.activity-actions button { min-height:28px; border:1px solid #cbd5e1; border-radius:7px; background:#fff; padding:3px 10px; color:#475569; cursor:pointer; font-size:12px; }
-.activity-actions .primary { border-color:#2563eb; background:#2563eb; color:#fff; }
-.activity-actions button:focus-visible { outline:2px solid #2563eb; outline-offset:2px; }
+.activity-actions button { min-height:28px; border:1px solid #d5dae2; border-radius:7px; background:#fff; padding:3px 10px; color:#4b5563; cursor:pointer; font-size:12px; }
+.activity-actions .primary { border-color:#e8811f; background:#e8811f; color:#fff; }
+.activity-actions button:focus-visible { outline:2px solid #e8811f; outline-offset:2px; }
 @keyframes activity-sheen { from { background-position:100% 0; } to { background-position:-140% 0; } }
 @media (max-width:640px) {
   .tool-activity-row {
@@ -135,6 +135,6 @@ const detail = computed(() => props.item.kind === 'tool' ? toolCallSummary(props
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .status-running.actively-running .activity-copy { color:#2563eb; background:none; animation:none; }
+  .status-running.actively-running .activity-copy { color:#e8811f; background:none; animation:none; }
 }
 </style>

@@ -1751,7 +1751,7 @@ async function renderChartBlocks() {
           }))
           .filter((link: any) => nameSet.has(link.from) && nameSet.has(link.to)),
         colorMode: 'gradient',
-        colorFrom: '#7aa6ff',
+        colorFrom: '#ffb574',
         colorTo: '#7ecf9a',
         borderWidth: 1,
         borderColor: 'rgba(0,0,0,0.08)'
@@ -2666,23 +2666,23 @@ function formatErrorMessage(raw: string): string {
   align-items: center;
   gap: 7px;
   border-radius: 999px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #e6e9ee;
   background: rgba(255, 255, 255, 0.92);
   padding: 0 12px;
-  color: #475569;
+  color: #4b5563;
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 8px 22px rgba(40, 28, 17, 0.06);
   transition: border-color 180ms ease, background-color 180ms ease, color 180ms ease, box-shadow 180ms ease;
 }
 .prompt-guide-tab:hover,
 .prompt-guide-tab:focus-visible,
 .prompt-guide-tab.is-active {
-  border-color: #bfdbfe;
-  background: #eff6ff;
-  color: #1d4ed8;
-  box-shadow: 0 10px 26px rgba(37, 99, 235, 0.12);
+  border-color: #ffd0a6;
+  background: #fff6ee;
+  color: #c96a12;
+  box-shadow: 0 10px 26px rgba(232, 129, 31, 0.12);
   outline: none;
 }
 .prompt-guide-tab-icon,
@@ -2718,11 +2718,11 @@ function formatErrorMessage(raw: string): string {
   height: 14px;
   width: 34px;
   transform: translateX(-50%);
-  border: 1px solid #dbeafe;
+  border: 1px solid #ffe9d5;
   border-bottom: 0;
   border-radius: 18px 18px 0 0;
   background: rgba(255, 255, 255, 0.96);
-  box-shadow: 0 -4px 12px rgba(37, 99, 235, 0.04);
+  box-shadow: 0 -4px 12px rgba(232, 129, 31, 0.04);
 }
 .prompt-guide-arc {
   position: relative;
@@ -2731,12 +2731,12 @@ function formatErrorMessage(raw: string): string {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 10px 12px;
   overflow: hidden;
-  border: 1px solid #dbe5f1;
+  border: 1px solid #ffe9d5;
   border-radius: 22px;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 251, 255, 0.98) 100%);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 246, 238, 0.98) 100%);
   padding: 16px 18px 18px;
-  box-shadow: 0 20px 46px rgba(15, 23, 42, 0.11), 0 1px 0 rgba(255, 255, 255, 0.9) inset;
+  box-shadow: 0 20px 46px rgba(40, 28, 17, 0.11), 0 1px 0 rgba(255, 255, 255, 0.9) inset;
 }
 .prompt-guide-arc::before {
   content: "";
@@ -2744,8 +2744,8 @@ function formatErrorMessage(raw: string): string {
   inset: 0;
   border-radius: inherit;
   background:
-    radial-gradient(80% 52% at 50% 0%, rgba(219, 234, 254, 0.58) 0%, rgba(219, 234, 254, 0) 70%),
-    radial-gradient(75% 55% at 50% 120%, rgba(226, 232, 240, 0.42) 0%, rgba(226, 232, 240, 0) 68%);
+    radial-gradient(80% 52% at 50% 0%, rgba(255, 233, 213, 0.58) 0%, rgba(255, 233, 213, 0) 70%),
+    radial-gradient(75% 55% at 50% 120%, rgba(230, 233, 238, 0.42) 0%, rgba(230, 233, 238, 0) 68%);
   pointer-events: none;
 }
 .prompt-guide-arc::after {
@@ -2755,7 +2755,7 @@ function formatErrorMessage(raw: string): string {
   right: 16px;
   bottom: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(148, 163, 184, 0.34), transparent);
+  background: linear-gradient(90deg, transparent, rgba(152, 160, 174, 0.34), transparent);
   pointer-events: none;
 }
 .prompt-guide-item {
@@ -2768,10 +2768,10 @@ function formatErrorMessage(raw: string): string {
   justify-content: center;
   gap: 7px;
   border-radius: 999px;
-  border: 1px solid #dbe5f1;
+  border: 1px solid #ffe9d5;
   background: rgba(255, 255, 255, 0.82);
   padding: 0 12px;
-  color: #1f2937;
+  color: #372a1f;
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
@@ -2779,21 +2779,21 @@ function formatErrorMessage(raw: string): string {
 }
 .prompt-guide-item:hover,
 .prompt-guide-item:focus-visible {
-  border-color: #bfdbfe;
+  border-color: #ffd0a6;
   background: #ffffff;
-  color: #1d4ed8;
-  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.10);
+  color: #c96a12;
+  box-shadow: 0 8px 20px rgba(232, 129, 31, 0.10);
   outline: none;
 }
 .prompt-guide-item.is-locked {
-  color: #64748b;
-  background: rgba(248, 250, 252, 0.92);
+  color: #6b7280;
+  background: rgba(255, 246, 238, 0.92);
 }
 .prompt-guide-item.is-locked:hover,
 .prompt-guide-item.is-locked:focus-visible {
-  border-color: #cbd5e1;
-  color: #334155;
-  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+  border-color: #d5dae2;
+  color: #374151;
+  box-shadow: 0 8px 20px rgba(40, 28, 17, 0.08);
 }
 .prompt-guide-item-icon :deep(svg) {
   display: block;
@@ -2811,9 +2811,9 @@ function formatErrorMessage(raw: string): string {
   align-items: center;
   gap: 3px;
   border-radius: 999px;
-  background: #f1f5f9;
+  background: #eff1f4;
   padding: 2px 6px;
-  color: #64748b;
+  color: #6b7280;
   font-size: 11px;
   font-weight: 700;
 }
@@ -2828,11 +2828,11 @@ function formatErrorMessage(raw: string): string {
   align-items: center;
   gap: 10px;
   border-radius: 14px;
-  border: 1px solid #dbeafe;
-  background: #f8fbff;
+  border: 1px solid #ffe9d5;
+  background: #f7f8fa;
   padding: 10px 12px;
-  color: #334155;
-  box-shadow: 0 10px 26px rgba(37, 99, 235, 0.08);
+  color: #374151;
+  box-shadow: 0 10px 26px rgba(232, 129, 31, 0.08);
 }
 .prompt-guide-notice-icon {
   display: inline-flex;
@@ -2841,8 +2841,8 @@ function formatErrorMessage(raw: string): string {
   height: 30px;
   width: 30px;
   border-radius: 10px;
-  background: #eff6ff;
-  color: #2563eb;
+  background: #fff6ee;
+  color: #e8811f;
 }
 .prompt-guide-notice-icon :deep(svg) {
   display: block;
@@ -2850,13 +2850,13 @@ function formatErrorMessage(raw: string): string {
   height: 17px;
 }
 .prompt-guide-notice-title {
-  color: #0f172a;
+  color: #14171c;
   font-size: 13px;
   font-weight: 700;
 }
 .prompt-guide-notice-desc {
   margin-top: 2px;
-  color: #64748b;
+  color: #6b7280;
   font-size: 12px;
   line-height: 1.4;
 }
@@ -2864,7 +2864,7 @@ function formatErrorMessage(raw: string): string {
   flex: 0 0 auto;
   min-height: 34px;
   border-radius: 999px;
-  background: #2563eb;
+  background: #e8811f;
   padding: 0 12px;
   color: #fff;
   font-size: 12px;
@@ -2874,8 +2874,8 @@ function formatErrorMessage(raw: string): string {
 }
 .prompt-guide-config-btn:hover,
 .prompt-guide-config-btn:focus-visible {
-  background: #1d4ed8;
-  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.22);
+  background: #c96a12;
+  box-shadow: 0 8px 18px rgba(232, 129, 31, 0.22);
   outline: none;
 }
 @media (prefers-reduced-motion: reduce) {

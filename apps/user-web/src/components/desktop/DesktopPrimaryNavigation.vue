@@ -104,18 +104,18 @@ const items = computed<NavigationItem[]>(() => [
 
 <style scoped>
 .desktop-primary-nav {
-  --desktop-nav-bg: #e5eaf1;
-  --desktop-nav-border: #d3dae5;
-  --desktop-nav-ink: #475569;
-  --desktop-nav-hover-bg: #d7dee9;
-  --desktop-nav-hover-ink: #174f96;
+  --desktop-nav-bg: #eff1f4;
+  --desktop-nav-border: #e6e9ee;
+  --desktop-nav-ink: #4b5563;
+  --desktop-nav-hover-bg: #e6e9ee;
+  --desktop-nav-hover-ink: #a0520c;
   --desktop-nav-active-bg: #fff;
-  --desktop-nav-active-ink: #1d5fbd;
-  --desktop-nav-active-border: #dce5f2;
-  --desktop-nav-tooltip-bg: #172033;
-  --desktop-nav-tooltip-ink: #f8fafc;
-  --desktop-nav-avatar-border: #c3cdda;
-  --desktop-nav-avatar-shadow: rgba(15, 23, 42, .14);
+  --desktop-nav-active-ink: #c96a12;
+  --desktop-nav-active-border: #ffd0a6;
+  --desktop-nav-tooltip-bg: #1f2329;
+  --desktop-nav-tooltip-ink: #f7f8fa;
+  --desktop-nav-avatar-border: #ffd0a6;
+  --desktop-nav-avatar-shadow: rgba(40, 28, 17, .14);
   display: flex;
   width: 52px;
   min-height: 0;
@@ -157,11 +157,11 @@ const items = computed<NavigationItem[]>(() => [
 .desktop-primary-nav__item.active {
   color: var(--desktop-nav-active-ink);
   background: var(--desktop-nav-active-bg);
-  box-shadow: 0 1px 3px rgba(15, 23, 42, .08), inset 0 0 0 1px var(--desktop-nav-active-border);
+  box-shadow: 0 1px 3px rgba(40, 28, 17, .08), inset 0 0 0 1px var(--desktop-nav-active-border);
 }
 
 .desktop-primary-nav__item:focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid #e8811f;
   outline-offset: 1px;
 }
 
@@ -195,7 +195,7 @@ const items = computed<NavigationItem[]>(() => [
   border-radius: 7px;
   color: var(--desktop-nav-tooltip-ink);
   background: var(--desktop-nav-tooltip-bg);
-  box-shadow: 0 6px 18px rgba(15, 23, 42, .18);
+  box-shadow: 0 6px 18px rgba(40, 28, 17, .18);
   content: attr(data-tooltip);
   font-size: 12px;
   font-weight: 600;
@@ -222,7 +222,7 @@ const items = computed<NavigationItem[]>(() => [
   height: 15px;
   place-items: center;
   padding: 0 2px;
-  border: 2px solid #f3f6fa;
+  border: 2px solid #fff6ee;
   border-radius: 999px;
   color: #fff;
   background: #ef4444;
@@ -245,7 +245,7 @@ const items = computed<NavigationItem[]>(() => [
   border: 1px solid var(--desktop-nav-avatar-border);
   border-radius: 10px;
   color: #fff;
-  background: linear-gradient(145deg, #3b82f6, #4f46e5);
+  background: linear-gradient(145deg, #f59a3c, #c96a12);
   box-shadow: 0 2px 7px var(--desktop-nav-avatar-shadow);
   cursor: pointer;
 }
@@ -256,7 +256,7 @@ const items = computed<NavigationItem[]>(() => [
 }
 
 .desktop-primary-nav__account:focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid #e8811f;
   outline-offset: 2px;
 }
 
@@ -281,7 +281,7 @@ const items = computed<NavigationItem[]>(() => [
   border-radius: 7px;
   color: var(--desktop-nav-tooltip-ink);
   background: var(--desktop-nav-tooltip-bg);
-  box-shadow: 0 6px 18px rgba(15, 23, 42, .18);
+  box-shadow: 0 6px 18px rgba(40, 28, 17, .18);
   content: attr(data-tooltip);
   font-size: 12px;
   font-weight: 600;
@@ -300,22 +300,22 @@ const items = computed<NavigationItem[]>(() => [
 }
 
 :global(html.platform-desktop.theme-dark .desktop-primary-nav) {
-  --desktop-nav-bg: #24272c;
+  --desktop-nav-bg: #1f2329;
   --desktop-nav-border: #393d44;
-  --desktop-nav-ink: #a6adb8;
-  --desktop-nav-hover-bg: #34383f;
-  --desktop-nav-hover-ink: #f1f5f9;
+  --desktop-nav-ink: #98a0ae;
+  --desktop-nav-hover-bg: #374151;
+  --desktop-nav-hover-ink: #eff1f4;
   --desktop-nav-active-bg: #3b3f46;
   --desktop-nav-active-ink: #fff;
   --desktop-nav-active-border: #50555e;
-  --desktop-nav-tooltip-bg: #e2e8f0;
-  --desktop-nav-tooltip-ink: #0f172a;
-  --desktop-nav-avatar-border: #525a66;
+  --desktop-nav-tooltip-bg: #e6e9ee;
+  --desktop-nav-tooltip-ink: #14171c;
+  --desktop-nav-avatar-border: #4b5563;
   --desktop-nav-avatar-shadow: rgba(0, 0, 0, .34);
 }
 
 :global(html.platform-desktop.theme-dark .desktop-primary-nav__badge) {
-  border-color: #24272c;
+  border-color: #1f2329;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -127,9 +127,9 @@ watch(() => props.value, () => { void resolveSelected(); }, { immediate: true })
 </script>
 
 <style scoped>
-.picker-trigger { display:flex; align-items:center; gap:11px; width:100%; min-height:58px; padding:10px 13px; border:1px solid #cfdcf6; border-radius:10px; background:#f8faff; text-align:left; cursor:pointer; }
+.picker-trigger { display:flex; align-items:center; gap:11px; width:100%; min-height:58px; padding:10px 13px; border:1px solid #cfdcf6; border-radius:10px; background:#fbfbfc; text-align:left; cursor:pointer; }
 .picker-trigger:hover { border-color:#7395ec; background:#f2f6ff; }
-.picker-trigger:focus-visible { outline:2px solid #4775e7; outline-offset:2px; }
+.picker-trigger:focus-visible { outline:2px solid #e8811f; outline-offset:2px; }
 .trigger-icon, .document-icon { display:grid; place-items:center; flex:0 0 32px; height:32px; border-radius:9px; background:#e9f0ff; color:#4473da; font-size:18px; }
 .trigger-copy, .document-copy { display:grid; gap:3px; min-width:0; }
 .trigger-copy strong { color:#28446d; font-size:13px; }
@@ -143,15 +143,15 @@ watch(() => props.value, () => { void resolveSelected(); }, { immediate: true })
 .empty-state { padding:55px 16px; color:#7c8aa0; text-align:center; font-size:13px; }
 .error-state { color:#b45309; }
 .error-state button { margin-left:6px; border:0; background:none; color:#3768dc; cursor:pointer; }
-.document-row { display:flex; align-items:center; gap:10px; width:100%; min-height:61px; padding:9px 13px; border:0; border-bottom:1px solid #edf1f7; background:#fff; text-align:left; cursor:pointer; }
+.document-row { display:flex; align-items:center; gap:10px; width:100%; min-height:61px; padding:9px 13px; border:0; border-bottom:1px solid #eff1f4; background:#fff; text-align:left; cursor:pointer; }
 .document-row:last-child { border-bottom:0; }
-.document-row:hover, .document-row.selected { background:#f4f7ff; }
+.document-row:hover, .document-row.selected { background:#fff6ee; }
 .document-row.unavailable { opacity:.55; cursor:not-allowed; }
 .document-copy { flex:1; overflow:hidden; }
 .document-copy strong { overflow:hidden; color:#2d3c55; text-overflow:ellipsis; white-space:nowrap; font-size:13px; }
 .document-status { color:#9b6b26; font-size:11px; white-space:nowrap; }
 .document-status.ready { color:#258260; }
-.document-check { width:18px; color:#4775e7; font-weight:800; }
+.document-check { width:18px; color:#e8811f; font-weight:800; }
 .picker-footer { display:flex; align-items:center; gap:9px; flex-wrap:wrap; padding-top:15px; }
 .footer-selection { flex:1; min-width:130px; overflow:hidden; color:#738198; font-size:12px; white-space:nowrap; text-overflow:ellipsis; }
 .footer-selection strong { color:#2e4263; }

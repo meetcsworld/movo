@@ -451,7 +451,7 @@ async function chooseProjectFolder(): Promise<void> {
     ])
     trace(identityReady ? 'identity-sync-ready' : 'identity-sync-failed')
     if (!identityReady) throw new Error(locale.value === 'en' ? 'Desktop login is not ready. Sign in again and retry.' : '桌面登录状态尚未同步，请重新登录后重试。')
-    createProjectSelectionPhase.value = locale.value === 'en' ? 'Choose a folder; MOVO will then register it with DSH…' : '请选择文件夹，随后 MOVO 会将其注册到 DSH…'
+    createProjectSelectionPhase.value = locale.value === 'en' ? 'Choose a folder; QianyiClaw will then register it with DSH…' : '请选择文件夹，随后 QianyiClaw 会将其注册到 DSH…'
     trace('workspace-select-invoking')
     const workspace = await selectDshWorkspace()
     trace(workspace ? 'workspace-select-completed' : 'workspace-select-cancelled')
@@ -2269,10 +2269,10 @@ onBeforeUnmount(() => {
   <div
     v-if="capabilities.isDesktop && desktopServerState === 'checking'"
     class="flex h-screen items-center justify-center bg-slate-50"
-    aria-label="Loading MOVO"
+    aria-label="Loading QianyiClaw"
   >
     <div class="flex h-14 w-16 items-center justify-center rounded-2xl bg-white shadow-lg" aria-hidden="true">
-      <img src="/movo-logo.png" alt="" class="h-10 w-12 object-contain" />
+      <img src="/qianyiclaw-logo.svg" alt="" class="h-10 w-10 object-contain" />
     </div>
   </div>
   <DesktopServerSetup
@@ -2371,10 +2371,10 @@ onBeforeUnmount(() => {
       @avatar-error="handleAvatarError"
     />
     <!-- SIDEBAR -->
-    <aside v-show="!capabilities.isDesktop || desktopSecondaryNavigationVisible" class="app-sidebar w-[260px] bg-[#f8fafc] flex flex-col border-r border-gray-200 shadow-[1px_0_0_rgba(0,0,0,0.02)]">
-      <div v-if="!capabilities.isDesktop" class="flex h-14 items-center gap-2.5 px-5" aria-label="MOVO">
-        <img src="/movo-logo.png" alt="" class="h-8 w-10 object-contain" />
-        <span class="text-[15px] font-extrabold tracking-[0.14em] text-slate-800">MOVO</span>
+    <aside v-show="!capabilities.isDesktop || desktopSecondaryNavigationVisible" class="app-sidebar w-[260px] bg-brand-50 flex flex-col border-r border-gray-200 shadow-[1px_0_0_rgba(0,0,0,0.02)]">
+      <div v-if="!capabilities.isDesktop" class="flex h-14 items-center gap-2.5 px-5" aria-label="QianyiClaw">
+        <img src="/qianyiclaw-logo.svg" alt="" class="h-8 w-8 object-contain" />
+        <span class="text-[15px] font-extrabold tracking-[0.14em] text-slate-800">QianyiClaw</span>
       </div>
       <!-- Top Actions -->
       <div class="space-y-0.5 px-3 pb-1 pt-3">
@@ -2649,7 +2649,7 @@ onBeforeUnmount(() => {
           class="flex items-center gap-3 p-2 rounded-xl hover:bg-gray-200/70 cursor-pointer transition-colors"
           @click.stop="toggleUserMenu"
         >
-          <div class="w-9 h-9 rounded-xl overflow-hidden bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white font-bold shadow-sm">
+          <div class="w-9 h-9 rounded-xl overflow-hidden bg-gradient-to-br from-accent-500 to-accent-600 flex items-center justify-center text-white font-bold shadow-sm">
             <img v-if="displayAvatar()" :src="displayAvatar()" alt="" class="w-full h-full object-cover" @error="handleAvatarError" />
             <span v-else>{{ displayAvatarText() }}</span>
           </div>
@@ -2672,7 +2672,7 @@ onBeforeUnmount(() => {
         <Teleport to="body">
           <div
             v-if="userMenuOpen && isLoggedIn"
-            class="fixed bottom-20 z-[80] w-[360px] max-w-[calc(100vw-2rem)] rounded-2xl border border-gray-200 bg-white p-3 text-sm text-gray-700 shadow-[0_18px_56px_rgba(15,23,42,0.14)] animate-in fade-in slide-in-from-bottom-2 duration-200"
+            class="fixed bottom-20 z-[80] w-[360px] max-w-[calc(100vw-2rem)] rounded-2xl border border-gray-200 bg-white p-3 text-sm text-gray-700 shadow-[0_18px_56px_rgb(40, 28, 17,0.14)] animate-in fade-in slide-in-from-bottom-2 duration-200"
             :class="capabilities.isDesktop ? 'left-[72px]' : 'left-4'"
             data-user-menu
           >
@@ -2917,7 +2917,7 @@ onBeforeUnmount(() => {
               class="absolute inset-0 z-20 flex items-start justify-center bg-white/45 backdrop-blur-[2px] px-6 pt-20"
               @click.self="closeSessionSearch"
             >
-              <div class="w-full max-w-[720px] overflow-hidden rounded-[28px] border border-gray-200 bg-white shadow-[0_24px_80px_rgba(15,23,42,0.12)]">
+              <div class="w-full max-w-[720px] overflow-hidden rounded-[28px] border border-gray-200 bg-white shadow-[0_24px_80px_rgb(40, 28, 17,0.12)]">
                 <div class="flex items-center gap-3 border-b border-gray-100 px-6 py-5">
                   <n-input
                     v-model:value="sessionSearchQuery"
@@ -3161,7 +3161,7 @@ onBeforeUnmount(() => {
       class="fixed inset-0 z-[70] flex items-center justify-center bg-slate-900/22 px-4 backdrop-blur-[2px]"
       @click.self="cancelDeleteSession"
     >
-      <div class="w-full max-w-md rounded-[24px] border border-gray-200 bg-white p-6 shadow-[0_24px_80px_rgba(15,23,42,0.18)]">
+      <div class="w-full max-w-md rounded-[24px] border border-gray-200 bg-white p-6 shadow-[0_24px_80px_rgb(40, 28, 17,0.18)]">
         <div class="text-lg font-semibold text-gray-900">{{ t('app.delete_chat.title') }}</div>
         <div class="mt-3 text-sm leading-6 text-gray-500">
           {{ t('app.delete_chat.body', { title: pendingDeleteSession.title || t('app.sidebar.new_chat') }) }}
@@ -3303,7 +3303,7 @@ onBeforeUnmount(() => {
     class="fixed inset-0 z-[90] flex items-center justify-center bg-slate-900/30 px-4 backdrop-blur-[2px]"
     @click.self="closePersonalization"
   >
-    <div class="max-h-[calc(100vh-48px)] w-full max-w-3xl overflow-y-auto rounded-2xl border border-gray-200 bg-white p-5 shadow-[0_24px_80px_rgba(15,23,42,0.18)]">
+    <div class="max-h-[calc(100vh-48px)] w-full max-w-3xl overflow-y-auto rounded-2xl border border-gray-200 bg-white p-5 shadow-[0_24px_80px_rgb(40, 28, 17,0.18)]">
       <div class="mb-5 flex items-start justify-between gap-4">
         <div>
           <div class="text-lg font-semibold text-gray-900">{{ t('app.account.personalization') }}</div>
@@ -3412,7 +3412,7 @@ onBeforeUnmount(() => {
       role="dialog"
       aria-modal="true"
       aria-labelledby="desktop-settings-title"
-      class="flex max-h-[calc(100vh-80px)] w-full max-w-2xl flex-col overflow-hidden rounded-[28px] border border-gray-200 bg-white shadow-[0_24px_80px_rgba(15,23,42,0.18)]"
+      class="flex max-h-[calc(100vh-80px)] w-full max-w-2xl flex-col overflow-hidden rounded-[28px] border border-gray-200 bg-white shadow-[0_24px_80px_rgb(40, 28, 17,0.18)]"
     >
       <div class="flex shrink-0 items-center justify-between border-b border-gray-100 py-2 pl-6 pr-3">
         <div id="desktop-settings-title" class="text-lg font-semibold text-gray-900">{{ t('settings.modal.title') }}</div>
@@ -3473,9 +3473,9 @@ onBeforeUnmount(() => {
   grid-template-columns: 168px minmax(0, 1fr);
   min-height: 420px;
   overflow: hidden;
-  border: 1px solid #e8edf5;
+  border: 1px solid #eff1f4;
   border-radius: 16px;
-  background: #fbfcfe;
+  background: #f7f8fa;
 }
 
 .personalization-nav {
@@ -3483,8 +3483,8 @@ onBeforeUnmount(() => {
   flex-direction: column;
   gap: 4px;
   padding: 14px 10px;
-  border-right: 1px solid #e8edf5;
-  background: #f6f8fc;
+  border-right: 1px solid #eff1f4;
+  background: #f7f8fa;
 }
 
 .personalization-nav-item {
@@ -3495,7 +3495,7 @@ onBeforeUnmount(() => {
   padding: 0 12px;
   border: 0;
   border-radius: 9px;
-  color: #64748b;
+  color: #6b7280;
   background: transparent;
   font-size: 13px;
   text-align: left;
@@ -3504,13 +3504,13 @@ onBeforeUnmount(() => {
 }
 
 .personalization-nav-item:hover {
-  color: #2563eb;
-  background: #eef4ff;
+  color: #c96a12;
+  background: #fff6ee;
 }
 
 .personalization-nav-item.active {
-  color: #2563eb;
-  background: #e8f0ff;
+  color: #c96a12;
+  background: #ffe9d5;
   font-weight: 600;
 }
 
@@ -3539,7 +3539,7 @@ onBeforeUnmount(() => {
   .personalization-nav {
     flex-direction: row;
     border-right: 0;
-    border-bottom: 1px solid #e8edf5;
+    border-bottom: 1px solid #eff1f4;
   }
 
   .personalization-nav-item {

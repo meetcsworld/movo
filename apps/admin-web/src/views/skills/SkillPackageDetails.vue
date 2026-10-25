@@ -66,14 +66,14 @@ const typeLabel = computed(() => {
 
 <style scoped>
 .skill-details { display: flex; flex-direction: column; gap: 16px; }
-.summary-card { display: grid; gap: 14px; padding: 16px; border: 1px solid #e4eaf4; border-radius: 12px; background: #f8faff; }
-.summary-row { display: grid; grid-template-columns: 88px minmax(0, 1fr); gap: 14px; color: #17233d; }
-.summary-row p { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.7; color: #52627d; }
+.summary-card { display: grid; gap: 14px; padding: 16px; border: 1px solid #e6e9ee; border-radius: 12px; background: #fbfbfc; }
+.summary-row { display: grid; grid-template-columns: 88px minmax(0, 1fr); gap: 14px; color: #1f2329; }
+.summary-row p { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.7; color: #6b7280; }
 .summary-label { color: #8491a7; }
 .digest { overflow-wrap: anywhere; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; }
-.children-section h3 { margin: 0 0 10px; color: #17233d; font-size: 15px; }
-.child-card { margin-top: 10px; padding: 12px 14px; border: 1px solid #e4eaf4; border-radius: 10px; }
+.children-section h3 { margin: 0 0 10px; color: #1f2329; font-size: 15px; }
+.child-card { margin-top: 10px; padding: 12px 14px; border: 1px solid #e6e9ee; border-radius: 10px; }
 .child-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-.child-card p { margin: 8px 0 4px; color: #52627d; line-height: 1.6; }
+.child-card p { margin: 8px 0 4px; color: #6b7280; line-height: 1.6; }
 .child-card > span { color: #9aa5b8; font-size: 12px; }
 </style>

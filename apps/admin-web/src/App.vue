@@ -44,13 +44,17 @@ watch(
 
 const themeOverrides = {
   common: {
-    primaryColor: '#366AFF',
-    primaryColorHover: '#5a84ff',
-    primaryColorPressed: '#2757e6',
-    borderRadius: '14px',
+    primaryColor: '#e8811f',
+    primaryColorHover: '#c96a12',
+    primaryColorPressed: '#a0520c',
+    primaryColorSuppl: '#e8811f',
+    infoColor: '#e8811f',
+    infoColorHover: '#c96a12',
+    infoColorPressed: '#a0520c',
+    borderRadius: '8px',
   },
   Card: {
-    borderRadius: '18px',
+    borderRadius: '12px',
   },
 };
 </script>

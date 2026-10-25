@@ -2,98 +2,98 @@
 /* KnowledgeSourceViewer is teleported to body. Scope to its two-pane shape;
    keep document pages light, while the surrounding desktop chrome is dark. */
 html.platform-desktop.theme-dark body > .fixed.inset-0.z-50:has(> section > .grid > main + aside) {
-  background: rgba(4, 11, 23, .78) !important;
+  background: rgba(19, 13, 8, .78) !important;
 }
 
 html.platform-desktop.theme-dark body > .fixed.inset-0.z-50 > section:has(> .grid > main + aside) {
-  background: #121e30 !important;
-  border: 1px solid #405777 !important;
+  background: #2e2014 !important;
+  border: 1px solid #a0520c !important;
   box-shadow: 0 28px 80px rgba(0, 0, 0, .52) !important;
 }
 
 html.platform-desktop.theme-dark body > .fixed.inset-0.z-50 > section:has(> .grid > main + aside) > header {
-  background: #192b43 !important;
-  border-color: #405777 !important;
+  background: #402d1c !important;
+  border-color: #a0520c !important;
 }
 
 html.platform-desktop.theme-dark body > .fixed.inset-0.z-50 > section:has(> .grid > main + aside) > .grid {
-  background: #111d2e !important;
+  background: #2c1f13 !important;
 }
 
 html.platform-desktop.theme-dark body > .fixed.inset-0.z-50 > section:has(> .grid > main + aside) main {
-  border-color: #405777 !important;
+  border-color: #a0520c !important;
 }
 
 html.platform-desktop.theme-dark body > .fixed.inset-0.z-50 > section:has(> .grid > main + aside) main > div {
-  background: #1c2c42 !important;
-  border-color: #405777 !important;
+  background: #422e1c !important;
+  border-color: #a0520c !important;
 }
 
 html.platform-desktop.theme-dark body > .fixed.inset-0.z-50 > section:has(> .grid > main + aside) main > div > .relative {
-  background: #25364e !important;
+  background: #4e3825 !important;
 }
 
 html.platform-desktop.theme-dark body > .fixed.inset-0.z-50 > section:has(> .grid > main + aside) .native-preview {
-  background: #f8fafc !important;
-  color: #172238 !important;
+  background: #f7f8fa !important;
+  color: #372618 !important;
 }
 
 html.platform-desktop.theme-dark body > .fixed.inset-0.z-50 > section:has(> .grid > main + aside) .native-preview table {
   background: #fff !important;
-  color: #172238 !important;
+  color: #372618 !important;
 }
 
 html.platform-desktop.theme-dark body > .fixed.inset-0.z-50 > section:has(> .grid > main + aside) main .absolute.rounded-full {
-  background: #284365 !important;
-  color: #d5e6fc !important;
+  background: #63452a !important;
+  color: #ffe9d5 !important;
 }
 
 html.platform-desktop.theme-dark body > .fixed.inset-0.z-50 > section:has(> .grid > main + aside) aside {
-  background: #17263b !important;
-  color: #e6effc !important;
+  background: #392819 !important;
+  color: #fff6ee !important;
 }
 
 html.platform-desktop.theme-dark body > .fixed.inset-0.z-50 > section:has(> .grid > main + aside) .text-slate-950,
 html.platform-desktop.theme-dark body > .fixed.inset-0.z-50 > section:has(> .grid > main + aside) .text-slate-900 {
-  color: #edf4ff !important;
+  color: #fff6ee !important;
 }
 
 html.platform-desktop.theme-dark body > .fixed.inset-0.z-50 > section:has(> .grid > main + aside) .text-slate-500 {
-  color: #b0c3dc !important;
+  color: #ffb574 !important;
 }
 
 html.platform-desktop.theme-dark body > .fixed.inset-0.z-50 > section:has(> .grid > main + aside) aside > .space-y-2 > button {
-  background: #1d3049 !important;
-  border-color: #415b7b !important;
-  color: #e7f0fc !important;
+  background: #47321f !important;
+  border-color: #a0520c !important;
+  color: #fff6ee !important;
 }
 
 html.platform-desktop.theme-dark body > .fixed.inset-0.z-50 > section:has(> .grid > main + aside) aside > .space-y-2 > button:hover,
 html.platform-desktop.theme-dark body > .fixed.inset-0.z-50 > section:has(> .grid > main + aside) aside > .space-y-2 > button:focus-visible {
-  background: #29476c !important;
-  border-color: #79abec !important;
+  background: #68492d !important;
+  border-color: #ffb574 !important;
 }
 
 html.platform-desktop.theme-dark body > .fixed.inset-0.z-50 > section:has(> .grid > main + aside) aside > .space-y-2 > button.bg-blue-50 {
-  background: #28517e !important;
-  border-color: #83b8ff !important;
-  box-shadow: inset 3px 0 0 #83b8ff !important;
+  background: #a0520c !important;
+  border-color: #ffb574 !important;
+  box-shadow: inset 3px 0 0 #ffb574 !important;
 }
 
 html.platform-desktop.theme-dark body > .fixed.inset-0.z-50 > section:has(> .grid > main + aside) aside .bg-slate-100 {
-  background: #314862 !important;
-  color: #d5e5fa !important;
+  background: #624831 !important;
+  color: #ffe9d5 !important;
 }
 
 html.platform-desktop.theme-dark body > .fixed.inset-0.z-50 > section:has(> .grid > main + aside) aside > section {
-  background: #223d5e !important;
-  border-color: #4e79ac !important;
+  background: #5a3e26 !important;
+  border-color: #e8811f !important;
 }
 
 html.platform-desktop.theme-dark body > .fixed.inset-0.z-50 > section:has(> .grid > main + aside) aside > section pre {
-  background: #13253b !important;
-  color: #e0ecfb !important;
-  border: 1px solid #405b7d !important;
+  background: #372617 !important;
+  color: #ffe9d5 !important;
+  border: 1px solid #a0520c !important;
 }
 
 @media (max-width: 1050px) {

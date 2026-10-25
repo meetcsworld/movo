@@ -3,10 +3,10 @@
     <div class="setup-panel">
       <header class="setup-copy">
         <div class="brand-mark">
-          <img :src="movoLogo" alt="MOVO" />
+          <img :src="movoLogo" alt="QianyiClaw" />
         </div>
         <div>
-          <div class="eyebrow">MOVO INITIAL SETUP</div>
+          <div class="eyebrow">QianyiClaw INITIAL SETUP</div>
           <h1>{{ setupCompleted ? t('legacy.system_ready') : t('legacy.set_up_enterprise_service') }}</h1>
           <p>{{ heroDescription }}</p>
         </div>
@@ -89,7 +89,7 @@ import { computed, onMounted, reactive, ref, watch } from 'vue';
 import { useRouter } from 'vue-router';
 import { useMessage } from 'naive-ui';
 import axios from 'axios';
-import movoLogo from '@/assets/images/movo-logo.png';
+import movoLogo from '@/assets/images/qianyiclaw-logo.svg';
 import {
   fetchSetupModelProviders,
   fetchSetupSearchProviders,
@@ -177,7 +177,7 @@ const searchForm = reactive<SetupSearchForm>({
   endpoint: 'https://api.deepseek.com/v1/tools/search',
   baseUrl: '',
   model: '',
-  query: 'MOVO enterprise AI',
+  query: 'QianyiClaw enterprise AI',
 });
 
 function updateSearchForm(value: SetupSearchForm) {
@@ -378,19 +378,19 @@ onMounted(async () => {
   min-height: 100vh;
   padding: 36px 20px 56px;
   background:
-    radial-gradient(circle at 12% 4%, rgba(99, 142, 255, .15), transparent 30%),
-    radial-gradient(circle at 88% 88%, rgba(69, 112, 229, .1), transparent 28%),
-    #f1f5ff;
+    radial-gradient(circle at 12% 4%, rgba(232, 129, 31, .12), transparent 30%),
+    radial-gradient(circle at 88% 88%, rgba(232, 129, 31, .07), transparent 28%),
+    #f7f8fa;
 }
 
 .setup-panel { display: grid; width: min(820px, 100%); margin: 0 auto; gap: 16px; }
-.setup-copy { display: flex; align-items: center; gap: 20px; padding: 22px 26px; border-radius: 22px; background: linear-gradient(135deg, #1d3e91, #315ec8); color: #fff; box-shadow: 0 18px 48px rgba(35, 73, 160, .2); }
+.setup-copy { display: flex; align-items: center; gap: 20px; padding: 22px 26px; border-radius: 22px; background: linear-gradient(135deg, #1f2329, #2f343d); color: #fff; box-shadow: 0 18px 48px rgba(20, 23, 28, .2); }
 .brand-mark { display: grid; width: 64px; height: 58px; flex: 0 0 64px; place-items: center; border: 1px solid rgba(255,255,255,.22); border-radius: 17px; background: rgba(255,255,255,.12); }
-.brand-mark img { display: block; width: 48px; height: 40px; object-fit: contain; }
+.brand-mark img { display: block; width: 40px; height: 40px; object-fit: contain; }
 .eyebrow { font-size: 11px; font-weight: 700; letter-spacing: .18em; color: rgba(255,255,255,.72); }
 .setup-copy h1 { margin: 5px 0 4px; font-size: clamp(26px, 4vw, 34px); line-height: 1.2; }
 .setup-copy p { max-width: 650px; margin: 0; color: rgba(255,255,255,.82); font-size: 14px; line-height: 1.6; }
-.setup-card { border-radius: 22px; box-shadow: 0 24px 70px rgba(27, 55, 116, .12); }
+.setup-card { border-radius: 12px; box-shadow: 0 24px 70px rgba(20, 23, 28, .10); }
 .readiness-alert { margin-bottom: 18px; }
 .deployment-actions { margin-top: 4px; }
 
@@ -398,7 +398,7 @@ onMounted(async () => {
   .setup-page { padding: 18px 12px 32px; }
   .setup-copy { align-items: flex-start; padding: 20px; border-radius: 18px; }
   .brand-mark { width: 48px; height: 44px; flex-basis: 48px; border-radius: 13px; }
-  .brand-mark img { width: 38px; height: 32px; }
+  .brand-mark img { width: 32px; height: 32px; }
   .setup-copy h1 { font-size: 25px; }
 }
 </style>

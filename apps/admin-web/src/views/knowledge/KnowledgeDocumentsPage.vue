@@ -625,7 +625,7 @@ const columns = computed<DataTableColumns<KnowledgeDocumentItem>>(() => [
               padding: '0',
               border: '0',
               background: 'transparent',
-              color: '#17233d',
+              color: '#1f2329',
               fontSize: '14px',
               overflow: 'hidden',
               cursor: 'pointer',
@@ -635,10 +635,10 @@ const columns = computed<DataTableColumns<KnowledgeDocumentItem>>(() => [
               lineHeight: '1.4',
             },
             onMouseenter: (event: MouseEvent) => {
-              (event.currentTarget as HTMLElement).style.color = '#366aff';
+              (event.currentTarget as HTMLElement).style.color = '#e8811f';
             },
             onMouseleave: (event: MouseEvent) => {
-              (event.currentTarget as HTMLElement).style.color = '#17233d';
+              (event.currentTarget as HTMLElement).style.color = '#1f2329';
             },
             onClick: () => openDetail(row),
           },
@@ -1711,7 +1711,7 @@ watch(documents, syncProcessingPoll, { deep: true });
 }
 
 .shell-card {
-  border: 1px solid #e6ebf5;
+  border: 1px solid #e6e9ee;
   border-radius: 14px;
   background: #fff;
   box-shadow: 0 6px 20px rgba(16, 38, 84, 0.05);
@@ -1742,7 +1742,7 @@ watch(documents, syncProcessingPoll, { deep: true });
 
 .metric-card {
   position: relative;
-  border: 1px solid #e6ebf5;
+  border: 1px solid #e6e9ee;
   background: #fff;
   box-shadow: 0 4px 12px rgba(29, 54, 110, 0.04);
 }
@@ -1778,8 +1778,8 @@ watch(documents, syncProcessingPoll, { deep: true });
 }
 
 .metric-icon-total {
-  color: #2d63ff;
-  background: #eaf0ff;
+  color: #c96a12;
+  background: #fff6ee;
 }
 
 .metric-icon-indexed {
@@ -1788,8 +1788,8 @@ watch(documents, syncProcessingPoll, { deep: true });
 }
 
 .metric-icon-storage {
-  color: #7456e0;
-  background: #f0ebff;
+  color: #e8811f;
+  background: #fff6ee;
 }
 
 .metric-icon-failed {
@@ -1798,13 +1798,13 @@ watch(documents, syncProcessingPoll, { deep: true });
 }
 
 .metric-label {
-  color: #606f8a;
+  color: #6b7280;
   font-size: 12px;
   line-height: 1.3;
 }
 
 .metric-value {
-  color: #0f1f45;
+  color: #1f2329;
   font-size: 24px;
   font-weight: 600;
   line-height: 1.1;
@@ -1837,7 +1837,7 @@ watch(documents, syncProcessingPoll, { deep: true });
 
 .metric-help-icon:hover,
 .metric-help-icon:focus {
-  color: #366aff;
+  color: #e8811f;
 }
 
 .metric-help-tooltip {
@@ -1933,7 +1933,7 @@ watch(documents, syncProcessingPoll, { deep: true });
 .list-filter-row {
   padding: 0 0 10px;
   margin: 0 0 12px;
-  border-bottom: 1px solid #edf1f7;
+  border-bottom: 1px solid #eff1f4;
   overflow-x: auto;
   overflow-y: hidden;
   scrollbar-width: thin;
@@ -2002,7 +2002,7 @@ watch(documents, syncProcessingPoll, { deep: true });
   padding: 0;
   border: 0;
   background: transparent;
-  color: #17233d;
+  color: #1f2329;
   font-size: 14px;
   font-weight: 400;
   overflow: hidden;
@@ -2013,7 +2013,7 @@ watch(documents, syncProcessingPoll, { deep: true });
 }
 
 :deep(.doc-title-link:hover) {
-  color: #366aff;
+  color: #e8811f;
 }
 
 :deep(.doc-directory-path) {
@@ -2025,7 +2025,7 @@ watch(documents, syncProcessingPoll, { deep: true });
   padding: 2px 6px;
   border-radius: 4px;
   background: #f1f5fb;
-  color: #64748b;
+  color: #6b7280;
   font-size: 12px;
   line-height: 1.4;
 }
@@ -2081,7 +2081,7 @@ watch(documents, syncProcessingPoll, { deep: true });
   padding: 28px;
   border: 1px dashed #b8c7e6;
   border-radius: 8px;
-  background: #f8fbff;
+  background: #fbfbfc;
   color: inherit;
   cursor: pointer;
   display: grid;
@@ -2095,14 +2095,14 @@ watch(documents, syncProcessingPoll, { deep: true });
 }
 
 .upload-drop:hover {
-  border-color: #366aff;
+  border-color: #e8811f;
   background: #f3f7ff;
 }
 
 .upload-picker.is-dragging .upload-drop {
-  border-color: #366aff;
-  background: #eef4ff;
-  box-shadow: inset 0 0 0 1px rgba(54, 106, 255, 0.18);
+  border-color: #e8811f;
+  background: #fff6ee;
+  box-shadow: inset 0 0 0 1px rgba(232, 129, 31, 0.18);
 }
 
 .upload-drop-icon {
@@ -2111,8 +2111,8 @@ watch(documents, syncProcessingPoll, { deep: true });
   height: 54px;
   place-items: center;
   border-radius: 12px;
-  background: #eaf0ff;
-  color: #366aff;
+  background: #fff6ee;
+  color: #e8811f;
 }
 
 .upload-drop-icon svg {
@@ -2126,14 +2126,14 @@ watch(documents, syncProcessingPoll, { deep: true });
 }
 
 .upload-drop-title {
-  color: #17233d;
+  color: #1f2329;
   font-size: 16px;
   font-weight: 800;
 }
 
 .upload-drop-copy {
   max-width: 320px;
-  color: #687789;
+  color: #6b7280;
   font-size: 13px;
   line-height: 1.6;
 }
@@ -2141,7 +2141,7 @@ watch(documents, syncProcessingPoll, { deep: true });
 .upload-queue-panel {
   min-width: 0;
   overflow: hidden;
-  border: 1px solid #edf1f7;
+  border: 1px solid #eff1f4;
   border-radius: 8px;
   background: #fff;
 }
@@ -2152,18 +2152,18 @@ watch(documents, syncProcessingPoll, { deep: true });
   align-items: center;
   gap: 10px;
   padding: 10px 12px;
-  border-bottom: 1px solid #edf1f7;
+  border-bottom: 1px solid #eff1f4;
 }
 
 .upload-queue-title {
   min-width: 0;
-  color: #17233d;
+  color: #1f2329;
   font-size: 14px;
   font-weight: 700;
 }
 
 .upload-queue-count {
-  color: #687789;
+  color: #6b7280;
   font-size: 12px;
   white-space: nowrap;
 }
@@ -2172,7 +2172,7 @@ watch(documents, syncProcessingPoll, { deep: true });
 .upload-queue-remove {
   border: 0;
   background: transparent;
-  color: #687789;
+  color: #6b7280;
   cursor: pointer;
 }
 
@@ -2235,7 +2235,7 @@ watch(documents, syncProcessingPoll, { deep: true });
 }
 
 .upload-queue-item:hover {
-  background: #f8fbff;
+  background: #fbfbfc;
 }
 
 .upload-queue-file-icon {
@@ -2244,8 +2244,8 @@ watch(documents, syncProcessingPoll, { deep: true });
   height: 34px;
   place-items: center;
   border-radius: 8px;
-  background: #eef4ff;
-  color: #366aff;
+  background: #fff6ee;
+  color: #e8811f;
 }
 
 .upload-queue-file-icon svg {
@@ -2264,7 +2264,7 @@ watch(documents, syncProcessingPoll, { deep: true });
 
 .upload-queue-file-name {
   overflow: hidden;
-  color: #17233d;
+  color: #1f2329;
   font-size: 13px;
   font-weight: 600;
   line-height: 1.35;
@@ -2276,7 +2276,7 @@ watch(documents, syncProcessingPoll, { deep: true });
 .upload-file-path {
   overflow: hidden;
   margin-top: 2px;
-  color: #8a96a8;
+  color: #98a0ae;
   font-size: 12px;
   line-height: 1.35;
   text-overflow: ellipsis;
@@ -2288,7 +2288,7 @@ watch(documents, syncProcessingPoll, { deep: true });
   align-items: center;
   gap: 6px;
   margin-top: 3px;
-  color: #687789;
+  color: #6b7280;
   font-size: 12px;
 }
 
@@ -2353,7 +2353,7 @@ watch(documents, syncProcessingPoll, { deep: true });
   align-items: center;
   justify-content: space-between;
   padding-bottom: 12px;
-  border-bottom: 1px solid #f1f5f9;
+  border-bottom: 1px solid #eff1f4;
   margin-bottom: 12px;
 }
 
@@ -2365,17 +2365,17 @@ watch(documents, syncProcessingPoll, { deep: true });
 
 .upload-progress-icon {
   display: flex;
-  color: #366aff;
+  color: #e8811f;
 }
 
 .upload-progress-title {
-  color: #1e293b;
+  color: #1f2329;
   font-size: 15px;
   font-weight: 600;
 }
 
 .upload-progress-count {
-  color: #64748b;
+  color: #6b7280;
   font-size: 13px;
   font-weight: 500;
 }
@@ -2389,14 +2389,14 @@ watch(documents, syncProcessingPoll, { deep: true });
   border: none;
   border-radius: 6px;
   background: transparent;
-  color: #64748b;
+  color: #6b7280;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .upload-progress-close:hover {
-  background: #f1f5f9;
-  color: #0f172a;
+  background: #eff1f4;
+  color: #14171c;
 }
 
 .upload-progress-list {
@@ -2417,11 +2417,11 @@ watch(documents, syncProcessingPoll, { deep: true });
   background: transparent;
 }
 .upload-progress-list::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: #d5dae2;
   border-radius: 3px;
 }
 .upload-progress-list::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: #98a0ae;
 }
 
 .upload-progress-item {
@@ -2429,20 +2429,20 @@ watch(documents, syncProcessingPoll, { deep: true });
   align-items: flex-start;
   gap: 12px;
   padding: 12px;
-  border: 1px solid #f1f5f9;
+  border: 1px solid #eff1f4;
   border-radius: 8px;
-  background: #f8fafc;
+  background: #f7f8fa;
   transition: all 0.2s ease;
 }
 
 .upload-progress-item:hover {
-  border-color: #e2e8f0;
-  background: #f1f5f9;
+  border-color: #e6e9ee;
+  background: #eff1f4;
 }
 
 .upload-file-icon {
   display: flex;
-  color: #64748b;
+  color: #6b7280;
   padding-top: 2px;
 }
 
@@ -2452,7 +2452,7 @@ watch(documents, syncProcessingPoll, { deep: true });
 }
 
 .upload-file-name {
-  color: #1e293b;
+  color: #1f2329;
   font-size: 13px;
   font-weight: 600;
   overflow: hidden;
@@ -2466,12 +2466,12 @@ watch(documents, syncProcessingPoll, { deep: true });
   align-items: center;
   gap: 6px;
   margin-top: 2px;
-  color: #64748b;
+  color: #6b7280;
   font-size: 11px;
 }
 
 .meta-divider {
-  color: #cbd5e1;
+  color: #d5dae2;
 }
 
 .status-text {
@@ -2487,7 +2487,7 @@ watch(documents, syncProcessingPoll, { deep: true });
 }
 
 .status-uploading {
-  color: #3b82f6;
+  color: #f59a3c;
 }
 
 .progress-bar-container {
@@ -2522,7 +2522,7 @@ watch(documents, syncProcessingPoll, { deep: true });
 }
 
 .spinning-icon {
-  color: #3b82f6;
+  color: #f59a3c;
 }
 
 .spinning-icon .spinner {
@@ -2536,7 +2536,7 @@ watch(documents, syncProcessingPoll, { deep: true });
 }
 
 .pending-icon {
-  color: #94a3b8;
+  color: #98a0ae;
 }
 
 .hidden-file-input {
@@ -2554,7 +2554,7 @@ watch(documents, syncProcessingPoll, { deep: true });
 }
 
 .dept-panel {
-  border: 1px solid #eceff5;
+  border: 1px solid #eff1f4;
   border-radius: 10px;
   padding: 10px;
   display: flex;
@@ -2623,7 +2623,7 @@ watch(documents, syncProcessingPoll, { deep: true });
 
 :deep(.dept-node-action:hover) {
   border-color: #9fb5ff;
-  color: #366aff;
+  color: #e8811f;
 }
 
 .list-panel {
@@ -2678,7 +2678,7 @@ watch(documents, syncProcessingPoll, { deep: true });
 }
 
 .delete-confirm-copy {
-  color: #64748b;
+  color: #6b7280;
   font-size: 13px;
   line-height: 1.7;
 }

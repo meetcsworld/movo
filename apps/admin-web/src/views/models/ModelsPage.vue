@@ -863,7 +863,7 @@ onMounted(reload);
 
 <style scoped>
 .alert-link {
-  color: #2563eb;
+  color: #e8811f;
   font-weight: 600;
   text-decoration: underline;
 }
@@ -877,7 +877,7 @@ onMounted(reload);
 
 .shell-card {
   border-radius: 14px;
-  border: 1px solid #e6ebf5;
+  border: 1px solid #e6e9ee;
   background: #fff;
   box-shadow: 0 6px 20px rgba(16, 38, 84, 0.05);
 }
@@ -909,7 +909,7 @@ onMounted(reload);
 }
 
 .metric-card {
-  border: 1px solid #e6ebf5;
+  border: 1px solid #e6e9ee;
   background: #fff;
   box-shadow: 0 4px 12px rgba(29, 54, 110, 0.04);
 }
@@ -947,8 +947,8 @@ onMounted(reload);
 }
 
 .metric-icon-total {
-  color: #2d63ff;
-  background: #eaf0ff;
+  color: #c96a12;
+  background: #fff6ee;
 }
 
 .metric-icon-active {
@@ -957,23 +957,23 @@ onMounted(reload);
 }
 
 .metric-icon-default {
-  color: #d9860a;
-  background: #fff2df;
+  color: #c96a12;
+  background: #fff6ee;
 }
 
 .metric-icon-providers {
-  color: #7456e0;
-  background: #f0ebff;
+  color: #e8811f;
+  background: #fff6ee;
 }
 
 .metric-label {
-  color: #606f8a;
+  color: #6b7280;
   font-size: 12px;
   line-height: 1.3;
 }
 
 .metric-value {
-  color: #0f1f45;
+  color: #1f2329;
   font-size: 24px;
   font-weight: 600;
   line-height: 1.1;
@@ -981,7 +981,7 @@ onMounted(reload);
 
 .metric-note {
   margin-top: 6px;
-  color: #708099;
+  color: #6b7280;
   font-size: 12px;
 }
 
@@ -1017,7 +1017,7 @@ onMounted(reload);
 .list-filter-row {
   padding: 0 44px 12px;
   margin: 0 -44px 12px;
-  border-bottom: 1px solid #edf1f7;
+  border-bottom: 1px solid #eff1f4;
 }
 
 .list-body {
@@ -1051,7 +1051,7 @@ onMounted(reload);
 }
 
 .model-config-card:hover {
-  border-color: rgba(54, 106, 255, 0.36);
+  border-color: rgba(232, 129, 31, 0.36);
   box-shadow: 0 10px 28px rgba(33, 58, 126, 0.1);
 }
 
@@ -1069,7 +1069,7 @@ onMounted(reload);
 }
 
 .provider-badge {
-  color: #366aff;
+  color: #e8811f;
   font-size: 12px;
   font-weight: 700;
 }
@@ -1079,14 +1079,14 @@ onMounted(reload);
 }
 
 .card-title {
-  color: #17233d;
+  color: #1f2329;
   font-size: 16px;
   font-weight: 800;
 }
 
 .card-model-id {
   margin-top: 3px;
-  color: #687789;
+  color: #6b7280;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   font-size: 12px;
 }
@@ -1100,12 +1100,12 @@ onMounted(reload);
 }
 
 .capability-tag {
-  background: #f1f5f9;
+  background: #eff1f4;
 }
 
 .card-footnote {
   margin-top: auto;
-  color: #7a8797;
+  color: #6b7280;
   font-size: 12px;
 }
 
@@ -1115,17 +1115,17 @@ onMounted(reload);
 }
 
 .test-summary span {
-  color: #7a8797;
+  color: #6b7280;
   font-size: 12px;
 }
 
 .test-image-preview {
   width: 100%;
   max-height: 260px;
-  border: 1px solid #e6ebf5;
+  border: 1px solid #e6e9ee;
   border-radius: 8px;
   object-fit: contain;
-  background: #f8fafc;
+  background: #f7f8fa;
 }
 
 .test-summary strong {
@@ -1162,7 +1162,7 @@ onMounted(reload);
   height: 38px;
   place-items: center;
   border-radius: 8px;
-  background: #366aff;
+  background: #e8811f;
   color: #fff;
   font-size: 26px;
   line-height: 1;
@@ -1170,14 +1170,14 @@ onMounted(reload);
 
 .add-title {
   margin-top: 12px;
-  color: #17233d;
+  color: #1f2329;
   font-weight: 800;
 }
 
 .add-copy {
   max-width: 230px;
   margin-top: 6px;
-  color: #687789;
+  color: #6b7280;
   font-size: 12px;
   line-height: 1.5;
 }
@@ -1199,11 +1199,11 @@ onMounted(reload);
   padding: 14px;
   border: 1px solid rgba(28, 45, 82, 0.1);
   border-radius: 8px;
-  background: #f8fbff;
+  background: #fbfbfc;
 }
 
 .test-title {
-  color: #17233d;
+  color: #1f2329;
   font-size: 15px;
   font-weight: 800;
 }
@@ -1218,7 +1218,7 @@ onMounted(reload);
   padding: 10px;
   border-radius: 8px;
   background: #fff;
-  color: #687789;
+  color: #6b7280;
   font-size: 12px;
   line-height: 1.5;
 }

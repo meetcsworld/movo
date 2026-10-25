@@ -135,11 +135,11 @@ onMounted(load);
   align-items: flex-start;
   gap: 20px;
   padding-bottom: 18px;
-  border-bottom: 1px solid #eef1f6;
+  border-bottom: 1px solid #eff1f4;
 }
 
 .panel-title {
-  color: #172033;
+  color: #1f2329;
   font-size: 22px;
   font-weight: 700;
 }
@@ -147,7 +147,7 @@ onMounted(load);
 .panel-subtitle,
 .section-help,
 .field-help {
-  color: #667085;
+  color: #6b7280;
   font-size: 13px;
   line-height: 1.6;
 }
@@ -158,11 +158,11 @@ onMounted(load);
 
 .settings-section {
   padding: 24px 0;
-  border-bottom: 1px solid #eef1f6;
+  border-bottom: 1px solid #eff1f4;
 }
 
 .section-title {
-  color: #172033;
+  color: #1f2329;
   font-size: 16px;
   font-weight: 700;
 }
@@ -190,7 +190,7 @@ onMounted(load);
 
 :global(html.dark) .panel-header,
 :global(html.dark) .settings-section {
-  border-color: #263044;
+  border-color: #2a2e36;
 }
 
 @media (max-width: 760px) {

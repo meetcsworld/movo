@@ -225,15 +225,15 @@ function imageSettingsJson() {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0 14px;
   padding: 14px 14px 4px;
-  border: 1px solid #e6ebf5;
+  border: 1px solid #e6e9ee;
   border-radius: 8px;
-  background: #f8faff;
+  background: #fbfbfc;
 }
 
 .runtime-help {
   grid-column: 1 / -1;
   margin: -2px 0 10px;
-  color: #667085;
+  color: #6b7280;
   font-size: 12px;
   line-height: 1.6;
 }
@@ -279,7 +279,7 @@ function imageSettingsJson() {
 }
 
 :global(html.dark) .image-runtime-fields {
-  border-color: #263044;
+  border-color: #2a2e36;
   background: #151c2b;
 }
 

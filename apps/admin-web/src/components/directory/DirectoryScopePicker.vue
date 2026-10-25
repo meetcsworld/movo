@@ -145,15 +145,15 @@ function apply() {
 <style scoped>
 .scope-trigger { min-width: 160px; justify-content: flex-start; }
 .scope-modes { display: flex; gap: 8px; margin-bottom: 16px; }
-.scope-hint { color: #64748b; min-height: 280px; }
+.scope-hint { color: #6b7280; min-height: 280px; }
 .scope-content { display: grid; grid-template-columns: minmax(220px, 1fr) minmax(240px, 1fr); gap: 20px; min-height: 330px; }
 .scope-departments, .scope-users { min-width: 0; display: flex; flex-direction: column; gap: 10px; }
 .scope-tree { height: 310px; overflow: auto; border: 1px solid #e5eaf0; border-radius: 8px; padding: 6px; }
 .scope-user-list { height: 268px; overflow: auto; border: 1px solid #e5eaf0; border-radius: 8px; }
-.scope-user { width: 100%; display: flex; flex-direction: column; align-items: flex-start; gap: 2px; padding: 10px; border: 0; border-bottom: 1px solid #edf0f5; background: white; cursor: pointer; text-align: left; }
-.scope-user:hover, .scope-user.selected { background: #eef4ff; }
-.scope-user span { color: #64748b; font-size: 12px; }
-.scope-selection { display: flex; flex-direction: column; gap: 10px; padding: 18px; background: #f8fafc; border-radius: 8px; }
+.scope-user { width: 100%; display: flex; flex-direction: column; align-items: flex-start; gap: 2px; padding: 10px; border: 0; border-bottom: 1px solid #eff1f4; background: white; cursor: pointer; text-align: left; }
+.scope-user:hover, .scope-user.selected { background: #fff6ee; }
+.scope-user span { color: #6b7280; font-size: 12px; }
+.scope-selection { display: flex; flex-direction: column; gap: 10px; padding: 18px; background: #f7f8fa; border-radius: 8px; }
 .scope-footer { display: flex; justify-content: flex-end; gap: 8px; }
 :global(.scope-modal) { width: min(760px, calc(100vw - 32px)); }
 @media (max-width: 640px) { .scope-content { grid-template-columns: 1fr; } .scope-tree { height: 180px; } }

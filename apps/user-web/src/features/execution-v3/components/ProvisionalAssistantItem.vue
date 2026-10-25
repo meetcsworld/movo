@@ -17,6 +17,6 @@ defineProps<{ item: ExecutionItemV3 }>()
 <style scoped>
 .provisional-assistant-copy {
   margin: 5px 0 8px;
-  color: #27364a;
+  color: #4a3727;
 }
 </style>

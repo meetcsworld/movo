@@ -61,16 +61,16 @@ watch(() => props.dark, (dark) => { void bridge?.setDark(dark) }, { immediate: t
 </template>
 
 <style scoped>
-.windows-titlebar { position:absolute; inset:0 0 auto; z-index:50; display:flex; align-items:center; height:40px; padding-right:138px; border-bottom:1px solid #dbe3ef; background:#f8fafc; color:#475569; user-select:none; -webkit-app-region:drag; }
+.windows-titlebar { position:absolute; inset:0 0 auto; z-index:50; display:flex; align-items:center; height:40px; padding-right:138px; border-bottom:1px solid #e6e9ee; background:#f7f8fa; color:#4b5563; user-select:none; -webkit-app-region:drag; }
 .windows-titlebar__toggle, .windows-titlebar__menus button { height:32px; border:0; border-radius:7px; background:transparent; color:inherit; cursor:pointer; -webkit-app-region:no-drag; }
 .windows-titlebar__toggle { display:grid; flex:none; width:40px; margin-left:2px; place-items:center; }
 .windows-titlebar__toggle svg { width:18px; height:18px; }
 .windows-titlebar__menus { display:flex; align-items:center; gap:2px; -webkit-app-region:no-drag; }
 .windows-titlebar__menus button { min-width:40px; padding:0 9px; font-size:12px; }
-.windows-titlebar__toggle:hover, .windows-titlebar__menus button:hover { background:#e8eef7; color:#1d4ed8; }
-.windows-titlebar__toggle:focus-visible, .windows-titlebar__menus button:focus-visible { outline:2px solid #2563eb; outline-offset:-2px; }
+.windows-titlebar__toggle:hover, .windows-titlebar__menus button:hover { background:#ffe9d5; color:#c96a12; }
+.windows-titlebar__toggle:focus-visible, .windows-titlebar__menus button:focus-visible { outline:2px solid #e8811f; outline-offset:-2px; }
 .windows-titlebar__drag { flex:1; align-self:stretch; }
-.windows-titlebar--dark { border-color:#334155; background:#0b1220; color:#cbd5e1; }
-.windows-titlebar--dark .windows-titlebar__toggle:hover, .windows-titlebar--dark .windows-titlebar__menus button:hover { background:#1e293b; color:#bfdbfe; }
-.windows-titlebar--dark .windows-titlebar__toggle:focus-visible, .windows-titlebar--dark .windows-titlebar__menus button:focus-visible { outline-color:#93c5fd; }
+.windows-titlebar--dark { border-color:#374151; background:#1f2329; color:#d5dae2; }
+.windows-titlebar--dark .windows-titlebar__toggle:hover, .windows-titlebar--dark .windows-titlebar__menus button:hover { background:#1f2329; color:#ffd0a6; }
+.windows-titlebar--dark .windows-titlebar__toggle:focus-visible, .windows-titlebar--dark .windows-titlebar__menus button:focus-visible { outline-color:#ffb574; }
 </style>

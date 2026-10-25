@@ -24,10 +24,10 @@ defineProps<{ messages: SessionSnapshot['messages'] }>()
 .snapshot-conversation { display: flex; flex-direction: column; gap: 28px; padding: 40px 0 88px; }
 .snapshot-turn { display: flex; min-width: 0; }
 .snapshot-turn--user { justify-content: flex-end; }
-.snapshot-user-message { max-width: min(78%, 740px); border-radius: 22px; background: #f3f4f6; padding: 15px 20px; }
+.snapshot-user-message { max-width: min(78%, 740px); border-radius: 22px; background: #eff1f4; padding: 15px 20px; }
 .snapshot-assistant-message { width: 100%; padding: 0 2px; }
-.snapshot-speaker { margin-bottom: 8px; color: #64748b; font-size: 12px; font-weight: 600; }
-.snapshot-copy { color: #1f2937; font-size: 15px; line-height: 1.85; white-space: pre-wrap; overflow-wrap: anywhere; }
+.snapshot-speaker { margin-bottom: 8px; color: #6b7280; font-size: 12px; font-weight: 600; }
+.snapshot-copy { color: #372a1f; font-size: 15px; line-height: 1.85; white-space: pre-wrap; overflow-wrap: anywhere; }
 @media (max-width: 640px) {
   .snapshot-conversation { gap: 22px; padding: 24px 0 56px; }
   .snapshot-user-message { max-width: 92%; }

@@ -27,14 +27,14 @@ const metrics = computed(() => [
 
 <style scoped>
 .metrics-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
-.metric-card{border:1px solid #e6ebf5;border-radius:8px;background:#fff;box-shadow:0 4px 12px rgba(29,54,110,.04)}
+.metric-card{border:1px solid #e6e9ee;border-radius:8px;background:#fff;box-shadow:0 4px 12px rgba(97, 68, 42,.04)}
 .metric-main{display:flex;align-items:flex-start;gap:12px}.metric-body{display:flex;flex-direction:column;gap:4px}
 .metric-icon{width:44px;height:44px;flex:none;border-radius:50%;display:grid;place-items:center}
 .metric-icon :deep(svg){width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.metric-icon-total{color:#2d63ff;background:#eaf0ff}.metric-icon-personal{color:#0f9964;background:#e8f8ef}
-.metric-icon-enterprise{color:#d9860a;background:#fff2df}.metric-icon-enabled{color:#7456e0;background:#f0ebff}
-.metric-label{color:#606f8a;font-size:12px;line-height:1.3}.metric-value{color:#0f1f45;font-size:24px;font-weight:600;line-height:1.1}
-.metric-note{margin-top:6px;color:#708099;font-size:12px}
+.metric-icon-total{color:#e8811f;background:#fff6ee}.metric-icon-personal{color:#0f9964;background:#e8f8ef}
+.metric-icon-enterprise{color:#d9860a;background:#fff2df}.metric-icon-enabled{color:#f59a3c;background:#fff6ee}
+.metric-label{color:#6b7280;font-size:12px;line-height:1.3}.metric-value{color:#3b2919;font-size:24px;font-weight:600;line-height:1.1}
+.metric-note{margin-top:6px;color:#6b7280;font-size:12px}
 @media(max-width:1200px){.metrics-row{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:768px){.metrics-row{grid-template-columns:minmax(0,1fr)}}
 </style>

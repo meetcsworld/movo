@@ -123,11 +123,11 @@ function closeMiniView() {
 .browser-workspace.dragging { user-select: none; cursor: col-resize; }
 .chat-pane, .browser-pane { height: 100%; min-width: 0; }
 .chat-pane { flex:1; }
-.browser-pane { display:flex; max-width:82vw; flex:none; flex-direction:column; border-left: 1px solid #cbd5e1; background: #0f172a; }
+.browser-pane { display:flex; max-width:82vw; flex:none; flex-direction:column; border-left: 1px solid #d5dae2; background: #14171c; }
 .browser-pane :deep(.electron-browser) { min-height:0; flex:1; }
-.split-handle { position: relative; z-index: 20; width: 7px; flex: 0 0 7px; cursor: col-resize; background: #f8fafc; outline: none; }
-.split-handle span { position: absolute; top: 50%; left: 2px; width: 3px; height: 36px; transform: translateY(-50%); border-radius: 2px; background: #cbd5e1; }
-.split-handle:hover span, .split-handle:focus-visible span { background: #2563eb; }
+.split-handle { position: relative; z-index: 20; width: 7px; flex: 0 0 7px; cursor: col-resize; background: #f7f8fa; outline: none; }
+.split-handle span { position: absolute; top: 50%; left: 2px; width: 3px; height: 36px; transform: translateY(-50%); border-radius: 2px; background: #d5dae2; }
+.split-handle:hover span, .split-handle:focus-visible span { background: #e8811f; }
 @media (max-width: 900px) {
   .browser-workspace { display: block; }
   .chat-pane { width: 100% !important; }

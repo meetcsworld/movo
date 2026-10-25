@@ -29,12 +29,12 @@ let syncingFromEditor = false;
 const editorTheme = EditorView.theme({
   '&': {
     height: '100%',
-    backgroundColor: '#0f172a',
-    color: '#e2e8f0',
+    backgroundColor: '#14171c',
+    color: '#e6e9ee',
     fontSize: '13px',
   },
   '&.cm-focused': {
-    outline: '2px solid #4f8cff',
+    outline: '2px solid #f59a3c',
     outlineOffset: '-2px',
   },
   '.cm-scroller': {
@@ -45,33 +45,33 @@ const editorTheme = EditorView.theme({
   '.cm-content': {
     minHeight: '100%',
     padding: '12px 0',
-    caretColor: '#93c5fd',
+    caretColor: '#ffb574',
   },
   '.cm-line': {
     padding: '0 16px',
   },
   '.cm-gutters': {
     minWidth: '48px',
-    borderRight: '1px solid #26344f',
-    backgroundColor: '#111c31',
-    color: '#70809d',
+    borderRight: '1px solid #4f3926',
+    backgroundColor: '#2e2014',
+    color: '#6b7280',
   },
   '.cm-lineNumbers .cm-gutterElement': {
     minWidth: '38px',
     padding: '0 10px 0 6px',
   },
   '.cm-activeLine': {
-    backgroundColor: '#17233b',
+    backgroundColor: '#392819',
   },
   '.cm-activeLineGutter': {
-    backgroundColor: '#1d2c49',
-    color: '#bfdbfe',
+    backgroundColor: '#47321f',
+    color: '#ffd0a6',
   },
   '.cm-selectionBackground, ::selection': {
-    backgroundColor: '#29446f !important',
+    backgroundColor: '#6a4a2e !important',
   },
   '.cm-cursor': {
-    borderLeftColor: '#93c5fd',
+    borderLeftColor: '#ffb574',
   },
   '.cm-searchMatch': {
     backgroundColor: '#725c16',
@@ -80,11 +80,11 @@ const editorTheme = EditorView.theme({
     backgroundColor: '#8b6f19',
   },
   '.cm-tooltip, .cm-panels': {
-    backgroundColor: '#17233b',
-    color: '#e2e8f0',
+    backgroundColor: '#392819',
+    color: '#e6e9ee',
   },
   '.cm-panels': {
-    borderColor: '#334155',
+    borderColor: '#374151',
   },
 }, { dark: true });
 
@@ -136,6 +136,6 @@ onBeforeUnmount(() => {
   height: 100%;
   min-height: 0;
   overflow: hidden;
-  background: #0f172a;
+  background: #14171c;
 }
 </style>

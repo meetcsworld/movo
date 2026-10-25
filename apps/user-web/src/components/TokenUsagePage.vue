@@ -184,7 +184,7 @@ onMounted(() => {
     <div class="usage-content">
       <div class="shrink-0 overflow-x-auto pb-1">
         <div class="flex gap-3" style="min-width: 980px">
-        <div class="flex-1 rounded-2xl border border-slate-200 bg-white p-4 shadow-[0_10px_30px_rgba(15,23,42,0.05)]">
+        <div class="flex-1 rounded-2xl border border-slate-200 bg-white p-4 shadow-[0_10px_30px_rgb(40, 28, 17,0.05)]">
           <div class="flex items-center justify-between gap-3">
             <div class="flex items-center gap-2 text-xs font-semibold text-slate-500">
               <span class="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-blue-50 text-blue-600">
@@ -200,7 +200,7 @@ onMounted(() => {
           </div>
         </div>
 
-        <div class="flex-1 rounded-2xl border border-slate-200 bg-white p-4 shadow-[0_10px_30px_rgba(15,23,42,0.05)]">
+        <div class="flex-1 rounded-2xl border border-slate-200 bg-white p-4 shadow-[0_10px_30px_rgb(40, 28, 17,0.05)]">
           <div class="flex items-center gap-2 text-xs font-semibold text-slate-500">
             <span class="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-indigo-50 text-indigo-600">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5"/><path d="M4 19h16"/><rect x="7" y="11" width="3" height="5" rx="1"/><rect x="12" y="7" width="3" height="9" rx="1"/><rect x="17" y="9" width="3" height="7" rx="1"/></svg>
@@ -211,7 +211,7 @@ onMounted(() => {
           <div class="mt-2 text-xs text-slate-500">{{ t('usage.requests_count', { count: formatNumber(summary.total_calls) }) }}</div>
         </div>
 
-        <div class="flex-1 rounded-2xl border border-slate-200 bg-white p-4 shadow-[0_10px_30px_rgba(15,23,42,0.05)]">
+        <div class="flex-1 rounded-2xl border border-slate-200 bg-white p-4 shadow-[0_10px_30px_rgb(40, 28, 17,0.05)]">
           <div class="flex items-center gap-2 text-xs font-semibold text-slate-500">
             <span class="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-cyan-50 text-cyan-600">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h11"/><path d="m15 4 3 3-3 3"/><path d="M17 17H6"/><path d="m9 14-3 3 3 3"/></svg>
@@ -225,7 +225,7 @@ onMounted(() => {
           <div class="mt-2 text-xs text-slate-500">{{ t('usage.input_output_desc') }}</div>
         </div>
 
-        <div class="flex-1 rounded-2xl border border-slate-200 bg-white p-4 shadow-[0_10px_30px_rgba(15,23,42,0.05)]">
+        <div class="flex-1 rounded-2xl border border-slate-200 bg-white p-4 shadow-[0_10px_30px_rgb(40, 28, 17,0.05)]">
           <div class="flex items-center gap-2 text-xs font-semibold text-slate-500">
             <span class="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-amber-50 text-amber-600">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/><path d="M5 5.5 3.5 4"/><path d="M19 5.5 20.5 4"/></svg>
@@ -236,7 +236,7 @@ onMounted(() => {
           <div class="mt-2 text-xs text-slate-500">{{ t('usage.last_24h_summary_format', { requests: formatNumber(summary.last_24h_calls), calls: formatNumber(summary.last_24h_internal_calls) }) }}</div>
         </div>
 
-        <div class="flex-1 rounded-2xl border border-slate-200 bg-slate-900 p-4 text-white shadow-[0_14px_40px_rgba(15,23,42,0.16)]">
+        <div class="flex-1 rounded-2xl border border-slate-200 bg-slate-900 p-4 text-white shadow-[0_14px_40px_rgb(40, 28, 17,0.16)]">
           <div class="flex items-center gap-2 text-xs font-semibold text-slate-400">
             <span class="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-white/10 text-white">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M10 3v4"/><path d="M14 3v4"/><path d="M10 17v4"/><path d="M14 17v4"/><path d="M3 10h4"/><path d="M3 14h4"/><path d="M17 10h4"/><path d="M17 14h4"/></svg>
@@ -354,17 +354,17 @@ onMounted(() => {
   gap: 16px;
   overflow: hidden;
   padding-top: 12px;
-  background: #f6f8fc;
+  background: #f7f8fa;
 }
 
 .usage-header {
   width: calc(100% - 24px);
   margin: 0 12px;
   padding: 14px 18px;
-  border: 1px solid #e6ebf5;
+  border: 1px solid #e6e9ee;
   border-radius: 8px;
   background: #fff;
-  box-shadow: 0 4px 12px rgba(29, 54, 110, 0.04);
+  box-shadow: 0 4px 12px rgba(97, 68, 42, 0.04);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -373,7 +373,7 @@ onMounted(() => {
 
 .usage-header h1 {
   margin: 0;
-  color: #101c3d;
+  color: #362517;
   font-size: 20px;
   line-height: 1.2;
   font-weight: 800;
@@ -381,7 +381,7 @@ onMounted(() => {
 
 .usage-header p {
   margin: 4px 0 0;
-  color: #65748c;
+  color: #6b7280;
   font-size: 13px;
 }
 
@@ -393,7 +393,7 @@ onMounted(() => {
 }
 
 .usage-updated {
-  color: #7a8797;
+  color: #98a0ae;
   font-size: 12px;
   white-space: nowrap;
 }
@@ -407,9 +407,9 @@ onMounted(() => {
 }
 
 .usage-list-card {
-  border: 1px solid #e6ebf5;
+  border: 1px solid #e6e9ee;
   border-radius: 8px;
-  box-shadow: 0 6px 20px rgba(16, 38, 84, 0.05);
+  box-shadow: 0 6px 20px rgba(70, 49, 30, 0.05);
 }
 
 @media (max-width: 768px) {

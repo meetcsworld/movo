@@ -40,7 +40,7 @@ const items = computed(() => [
 
 function downloadConnectionFile() {
   const lines = [
-    'MOVO SELF-HOSTED CONNECTION',
+    'QianyiClaw SELF-HOSTED CONNECTION',
     '===========================',
     `Organization: ${props.orgName}`,
     `Tenant ID: ${props.mainId}`,
@@ -67,10 +67,10 @@ function downloadConnectionFile() {
 <style scoped>
 .complete-content { display: grid; gap: 20px; }
 .connection-list { display: grid; gap: 12px; }
-.connection-item { display: grid; grid-template-columns: 132px minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 12px 14px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8fafc; }
-.connection-label { color: #475569; font-weight: 600; }
-.connection-item code { overflow: hidden; color: #0f172a; font-size: 12px; text-overflow: ellipsis; white-space: nowrap; }
-.desktop-note { margin: -8px 2px 0; color: #64748b; font-size: 13px; line-height: 1.6; }
+.connection-item { display: grid; grid-template-columns: 132px minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 12px 14px; border: 1px solid #e6e9ee; border-radius: 12px; background: #f7f8fa; }
+.connection-label { color: #4b5563; font-weight: 600; }
+.connection-item code { overflow: hidden; color: #14171c; font-size: 12px; text-overflow: ellipsis; white-space: nowrap; }
+.desktop-note { margin: -8px 2px 0; color: #6b7280; font-size: 13px; line-height: 1.6; }
 .complete-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 @media (max-width: 600px) { .connection-item { grid-template-columns: 1fr auto; } .connection-label { grid-column: 1 / -1; } }
 @media (max-width: 600px) { .complete-actions { grid-template-columns: 1fr; } }

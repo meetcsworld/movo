@@ -280,7 +280,7 @@ onMounted(() => {
   min-height: 100%;
   overflow: auto;
   padding: 24px;
-  color: #0f172a;
+  color: #14171c;
   line-height: 1.75;
 }
 
@@ -329,8 +329,8 @@ onMounted(() => {
 .native-preview :deep(pre) {
   overflow: auto;
   border-radius: 8px;
-  background: #0f172a;
-  color: #e2e8f0;
+  background: #14171c;
+  color: #e6e9ee;
   padding: 12px;
 }
 
@@ -354,7 +354,7 @@ onMounted(() => {
 }
 
 .native-preview :deep(th) {
-  background: #f8fafc;
+  background: #f7f8fa;
   font-weight: 700;
 }
 

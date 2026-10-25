@@ -1549,7 +1549,7 @@ watch(
 
 .shell-card {
   border-radius: 14px;
-  border: 1px solid #e6ebf5;
+  border: 1px solid #e6e9ee;
   background: #fff;
   box-shadow: 0 6px 20px rgba(16, 38, 84, 0.05);
 }
@@ -1651,7 +1651,7 @@ watch(
 }
 
 .section-muted {
-  color: #64748b;
+  color: #6b7280;
   font-size: 13px;
   line-height: 1.5;
   margin-top: 4px;
@@ -1660,7 +1660,7 @@ watch(
 
 .content-title,
 .section-title {
-  color: #172033;
+  color: #1f2329;
   font-size: 16px;
   font-weight: 700;
 }
@@ -1752,7 +1752,7 @@ watch(
 .compact-row,
 :deep(.schema-grid) {
   align-items: center;
-  border-bottom: 1px solid #edf1f7;
+  border-bottom: 1px solid #eff1f4;
   display: grid;
   gap: 10px;
   padding: 10px 12px;
@@ -1766,7 +1766,7 @@ watch(
 .compact-head,
 :deep(.schema-head) {
   background: #f7f9fd;
-  color: #64748b;
+  color: #6b7280;
   font-size: 12px;
   font-weight: 700;
 }
@@ -1814,7 +1814,7 @@ watch(
 }
 
 .debug-param-row label {
-  color: #334155;
+  color: #374151;
   font-size: 13px;
   font-weight: 600;
 }
@@ -1831,7 +1831,7 @@ watch(
 
 .result-title {
   background: #f7f9fd;
-  color: #334155;
+  color: #374151;
   font-size: 13px;
   font-weight: 700;
   padding: 10px 12px;
@@ -1845,7 +1845,7 @@ watch(
 }
 
 .mcp-tool-card {
-  border-bottom: 1px solid #edf1f7;
+  border-bottom: 1px solid #eff1f4;
   padding: 14px;
 }
 
@@ -1860,7 +1860,7 @@ watch(
 }
 
 .mcp-tool-name {
-  color: #172033;
+  color: #1f2329;
   font-weight: 700;
 }
 
@@ -1921,13 +1921,13 @@ watch(
 
 .aside-desc {
   margin-top: 4px;
-  color: #5f6f85;
+  color: #4b5563;
   font-size: 13px;
   line-height: 1.45;
 }
 
 .debug-overview {
-  border: 1px solid #e6ebf5;
+  border: 1px solid #e6e9ee;
   border-radius: 10px;
   display: grid;
   grid-template-columns: 56px minmax(0, 1fr);
@@ -1937,13 +1937,13 @@ watch(
 }
 
 .debug-overview span {
-  color: #64748b;
+  color: #6b7280;
   font-size: 12px;
   font-weight: 700;
 }
 
 .debug-overview strong {
-  color: #172033;
+  color: #1f2329;
   font-size: 12px;
   font-weight: 600;
   line-height: 1.35;
@@ -1957,7 +1957,7 @@ watch(
 }
 
 .debug-group-title {
-  color: #64748b;
+  color: #6b7280;
   font-size: 12px;
   font-weight: 700;
 }
@@ -1976,8 +1976,8 @@ watch(
 }
 
 .test-summary {
-  background: #f8fafc;
-  border: 1px solid #e6ebf5;
+  background: #f7f8fa;
+  border: 1px solid #e6e9ee;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -1990,12 +1990,12 @@ watch(
   display: flex;
   justify-content: space-between;
   gap: 10px;
-  color: #64748b;
+  color: #6b7280;
   font-size: 12px;
 }
 
 .test-summary-row strong {
-  color: #172033;
+  color: #1f2329;
   font-weight: 700;
 }
 
@@ -2018,13 +2018,13 @@ watch(
 }
 
 .test-metrics-row span {
-  color: #64748b;
+  color: #6b7280;
   font-size: 12px;
   flex: none;
 }
 
 .test-metrics-row strong {
-  color: #172033;
+  color: #1f2329;
   font-size: 12px;
   font-weight: 700;
   overflow: hidden;
@@ -2041,7 +2041,7 @@ watch(
 }
 
 .response-summary {
-  color: #334155;
+  color: #374151;
   font-size: 12px;
   line-height: 1.45;
   max-height: 58px;
@@ -2050,7 +2050,7 @@ watch(
 }
 
 .debug-json-scroll {
-  border-top: 1px solid #edf1f7;
+  border-top: 1px solid #eff1f4;
   flex: 1;
   min-height: 120px;
   overflow: auto;
@@ -2070,7 +2070,7 @@ watch(
 }
 
 .json-panel-header span {
-  color: #334155;
+  color: #374151;
   font-size: 13px;
   font-weight: 700;
 }
@@ -2078,7 +2078,7 @@ watch(
 .json-pre-panel {
   background:
     linear-gradient(90deg, rgba(64, 109, 246, 0.1) 0, rgba(64, 109, 246, 0.1) 3px, transparent 3px),
-    #0f172a;
+    #14171c;
   border: 1px solid #1e2b45;
   border-radius: 8px;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
@@ -2089,7 +2089,7 @@ watch(
 }
 
 .json-code-panel {
-  color: #dbeafe;
+  color: #ffe9d5;
   display: block;
   font-family: "SFMono-Regular", "Menlo", "Consolas", "Liberation Mono", monospace;
   font-size: 12px;
