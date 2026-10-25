@@ -59,7 +59,7 @@ async function connect() {
           v-model:value="address"
           size="large"
           class="mt-2"
-          placeholder="https://movo.company.com"
+          placeholder="https://qianyiclaw.com"
           :disabled="connecting"
           :input-props="{ spellcheck: false, autocomplete: 'url', inputmode: 'url' }"
         />
