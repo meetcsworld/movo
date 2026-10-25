@@ -58,6 +58,11 @@ const knowledgeSource = ref<KnowledgeSourceSummary>({ mode: 'movo', displayName:
 const knowledgeLabel = computed(() => knowledgeSource.value.mode === 'external'
   ? t('chat.external_knowledge_name', { name: knowledgeSource.value.displayName })
   : t('chat.knowledge_qa'))
+const onboardingSteps = computed(() => [
+  { title: t('chat.onboarding.step1_title'), desc: t('chat.onboarding.step1_desc') },
+  { title: t('chat.onboarding.step2_title'), desc: t('chat.onboarding.step2_desc') },
+  { title: t('chat.onboarding.step3_title'), desc: t('chat.onboarding.step3_desc') },
+])
 async function refreshKnowledgeSource() {
   if (!props.userId) return
   try {
@@ -609,8 +614,22 @@ watch(() => props.allowSkills, (allowed) => {
       : 'shrink-0 w-full bg-white pt-2 pb-6 px-4 border-t border-gray-100'"
   >
     <div class="max-w-4xl mx-auto">
-      <div v-if="isNewSessionView" class="mb-6 text-center text-4xl font-semibold text-slate-800">
-        {{ t('chat.welcome_title') }}
+      <div v-if="isNewSessionView" class="mb-5 text-center">
+        <div class="welcome-eyebrow">
+          <span class="welcome-eyebrow-dot"></span>
+          {{ t('chat.welcome_eyebrow') }}
+        </div>
+        <h1 class="text-4xl font-semibold text-slate-800">{{ t('chat.welcome_title') }}</h1>
+        <p class="mx-auto mt-2 max-w-xl text-sm leading-6 text-slate-500">{{ t('chat.welcome_subtitle') }}</p>
+      </div>
+      <div v-if="isNewSessionView" class="mb-4 grid gap-2 sm:grid-cols-3">
+        <div v-for="(step, index) in onboardingSteps" :key="step.title" class="onboarding-step">
+          <span class="onboarding-step-index">{{ index + 1 }}</span>
+          <div class="min-w-0">
+            <div class="onboarding-step-title">{{ step.title }}</div>
+            <div class="onboarding-step-desc">{{ step.desc }}</div>
+          </div>
+        </div>
       </div>
       <div v-if="pendingImages.length" class="mb-2 flex flex-wrap gap-2">
         <div
@@ -910,6 +929,74 @@ watch(() => props.allowSkills, (allowed) => {
 </template>
 
 <style scoped>
+.welcome-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+  border: 1px solid #ffe9d5;
+  border-radius: 999px;
+  background: #fff6ee;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #c96a12;
+}
+
+.welcome-eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: #e8811f;
+}
+
+.onboarding-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  border: 1px solid #e6e9ee;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px 12px;
+  box-shadow: 0 8px 22px rgba(20, 23, 28, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.onboarding-step:hover {
+  border-color: #ffd0a6;
+  box-shadow: 0 10px 26px rgba(40, 28, 17, 0.08);
+}
+
+.onboarding-step-index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background: #fff6ee;
+  border: 1px solid #ffe9d5;
+  font-size: 12px;
+  font-weight: 700;
+  color: #c96a12;
+}
+
+.onboarding-step-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1f2329;
+  line-height: 1.3;
+}
+
+.onboarding-step-desc {
+  margin-top: 2px;
+  font-size: 12px;
+  line-height: 1.45;
+  color: #6b7280;
+}
+
 .composer-context-slot:empty {
   display: none;
 }

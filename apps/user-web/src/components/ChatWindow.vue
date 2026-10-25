@@ -908,6 +908,20 @@ watch(
   { deep: true }
 )
 
+// Opening a new-session landing page should surface the recommended task panel
+// immediately, so a first-time user sees concrete starting points instead of a
+// blank prompt. Only auto-open once per mount to avoid fighting manual closes.
+let promptGuideAutoOpened = false
+watch(
+  () => [isNewSessionView.value, visiblePromptGuideCategories.value.length] as const,
+  ([isNew, count]) => {
+    if (promptGuideAutoOpened || !isNew || !count || activePromptGuideKey.value) return
+    promptGuideAutoOpened = true
+    selectPromptGuideCategory(visiblePromptGuideCategories.value[0].key)
+  },
+  { immediate: true }
+)
+
 watch(
   () => {
     const lastAssistant = [...messages.value].reverse().find((m) => m.role === 'assistant')
@@ -2465,6 +2479,10 @@ function formatErrorMessage(raw: string): string {
           @mouseenter="cancelPromptGuideClose"
           @mouseleave="schedulePromptGuideClose"
         >
+          <div class="prompt-guide-heading">
+            <span class="prompt-guide-heading-label">{{ t('chat.guide.heading') }}</span>
+            <span class="prompt-guide-heading-hint">{{ t('chat.guide.hint') }}</span>
+          </div>
           <div class="prompt-guide-tabs" role="tablist" :aria-label="t('legacy.task_guide')">
             <button
               v-for="category in visiblePromptGuideCategories"
@@ -2659,6 +2677,23 @@ function formatErrorMessage(raw: string): string {
   flex-wrap: wrap;
   justify-content: center;
   gap: 8px;
+}
+.prompt-guide-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.prompt-guide-heading-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1f2329;
+}
+.prompt-guide-heading-hint {
+  font-size: 12px;
+  color: #98a0ae;
 }
 .prompt-guide-tab {
   display: inline-flex;
