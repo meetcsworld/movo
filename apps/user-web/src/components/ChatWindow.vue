@@ -430,6 +430,12 @@ const {
   getMainId: () => props.mainId || 'default',
   getLocale: () => locale.value,
   getPreferredModelId: () => props.modelInstanceId || '',
+  // 仅在已登录（存在鉴权凭证）时加载模型，避免首屏未登录请求返回 401。
+  canLoad: () => Boolean(props.authToken) || Boolean(window.localStorage.getItem('auth_token')),
+})
+watch(() => props.authToken, (token) => {
+  // 登录完成后（首次拿到 token）再补拉模型列表。
+  if (token) loadChatModels()
 })
 watch(() => props.modelInstanceId, (modelId) => {
   if (modelId) selectChatModel(modelId)

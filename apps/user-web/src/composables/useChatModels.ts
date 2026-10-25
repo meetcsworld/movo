@@ -6,6 +6,7 @@ export function useChatModels(options: {
   getMainId: () => string
   getLocale: () => Locale
   getPreferredModelId?: () => string
+  canLoad?: () => boolean
 }) {
   const chatModels = ref<ChatModelOption[]>([])
   const selectedModelId = ref('')
@@ -22,7 +23,20 @@ export function useChatModels(options: {
     return fallback
   })
 
+  function isAuthError(error: any) {
+    const status = error?.response?.status ?? error?.status
+    return status === 401 || status === 403
+  }
+
   async function loadChatModels() {
+    // 未登录 / 无可用凭证时不发起模型请求，避免首屏出现 401 与「模型加载失败」误导文案。
+    if (options.canLoad && !options.canLoad()) {
+      chatModels.value = []
+      selectedModelId.value = ''
+      modelLoadError.value = ''
+      modelsLoading.value = false
+      return
+    }
     try {
       modelsLoading.value = true
       modelLoadError.value = ''
@@ -39,7 +53,8 @@ export function useChatModels(options: {
     } catch (error: any) {
       chatModels.value = []
       selectedModelId.value = ''
-      modelLoadError.value = String(error?.message || t('chat.models_load_failed'))
+      // 认证类错误（如登录前/凭证过期）静默降级，不向用户抛出「加载失败」。
+      modelLoadError.value = isAuthError(error) ? '' : String(error?.message || t('chat.models_load_failed'))
     } finally {
       modelsLoading.value = false
     }
